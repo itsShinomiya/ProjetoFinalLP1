@@ -16,5 +16,10 @@ namespace ProjetoFinalLP1
         {
             InitializeComponent();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

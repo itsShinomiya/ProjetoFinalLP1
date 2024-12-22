@@ -50,15 +50,15 @@ namespace ProjetoFinalLP1
                         switch (nivel)
                         {
                             case "usuario":
-                                MessageBox.Show("Bem-vindo, usuário!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show($"Seja bem-vindo, {userTxt.Text}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 break;
 
                             case "vendedor":
-                                MessageBox.Show("Bem-vindo, vendedor!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show($"Seja bem-vindo, {userTxt.Text}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 break;
 
                             case "administrador":
-                                MessageBox.Show("Bem-vindo, administrador!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Seja bem-vindo, administrador!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 PainelAdministrador PainelAdm = new PainelAdministrador();  
                                 this.Hide();
                                 PainelAdm.ShowDialog();

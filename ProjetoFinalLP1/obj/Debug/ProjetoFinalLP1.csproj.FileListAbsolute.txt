@@ -15,3 +15,4 @@ C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\bin\Debug\System.Num
 C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\bin\Debug\System.Buffers.dll
 C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\bin\Debug\MySql.Data.xml
 C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoF.94BA473D.Up2Date
+C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.PainelAdministrador.resources
