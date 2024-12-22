@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace ProjetoFinalLP1
 {
+    // Login padrão pra administrador: admin admin
     public partial class Login : Form
     {
         private MySqlConnection Obj_Conn = new MySqlConnection();
@@ -58,6 +59,10 @@ namespace ProjetoFinalLP1
 
                             case "administrador":
                                 MessageBox.Show("Bem-vindo, administrador!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                PainelAdministrador PainelAdm = new PainelAdministrador();  
+                                this.Hide();
+                                PainelAdm.ShowDialog();
+                                this.Close();
                                 break;
 
                             default:
