@@ -1,0 +1,10 @@
+C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\bin\Debug\ProjetoFinalLP1.exe.config
+C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\bin\Debug\ProjetoFinalLP1.exe
+C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\bin\Debug\ProjetoFinalLP1.pdb
+C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.csproj.AssemblyReference.cache
+C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.Login.resources
+C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.Properties.Resources.resources
+C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.csproj.GenerateResource.cache
+C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.csproj.CoreCompileInputs.cache
+C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.exe
+C:\Users\dud11\source\repos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.pdb
