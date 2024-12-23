@@ -28,34 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gerenciaSala));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.buscaTexto = new System.Windows.Forms.ToolStripTextBox();
+            this.buscaBotao = new System.Windows.Forms.ToolStripButton();
+            this.buscaSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.ajudaStrip = new System.Windows.Forms.ToolStripDropDownButton();
+            this.arquivoStrip = new System.Windows.Forms.ToolStripDropDownButton();
+            this.ferramentasStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripLabel2});
+            this.arquivoStrip,
+            this.ferramentasStrip,
+            this.ajudaStrip,
+            this.buscaSeparator1,
+            this.buscaTexto,
+            this.buscaBotao,
+            this.buscaSeparator2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1105, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel1
+            // buscaTexto
             // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel1.Text = "toolStripLabel1";
+            this.buscaTexto.AutoSize = false;
+            this.buscaTexto.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buscaTexto.Name = "buscaTexto";
+            this.buscaTexto.Size = new System.Drawing.Size(100, 25);
             // 
-            // toolStripLabel2
+            // buscaBotao
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel2.Text = "toolStripLabel2";
+            this.buscaBotao.Image = ((System.Drawing.Image)(resources.GetObject("buscaBotao.Image")));
+            this.buscaBotao.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.buscaBotao.Name = "buscaBotao";
+            this.buscaBotao.Size = new System.Drawing.Size(62, 22);
+            this.buscaBotao.Text = "&Buscar";
+            // 
+            // buscaSeparator1
+            // 
+            this.buscaSeparator1.Name = "buscaSeparator1";
+            this.buscaSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // buscaSeparator2
+            // 
+            this.buscaSeparator2.Name = "buscaSeparator2";
+            this.buscaSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // ajudaStrip
+            // 
+            this.ajudaStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ajudaStrip.Image = ((System.Drawing.Image)(resources.GetObject("ajudaStrip.Image")));
+            this.ajudaStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ajudaStrip.Name = "ajudaStrip";
+            this.ajudaStrip.Size = new System.Drawing.Size(51, 22);
+            this.ajudaStrip.Text = "&Ajuda";
+            // 
+            // arquivoStrip
+            // 
+            this.arquivoStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.arquivoStrip.Image = ((System.Drawing.Image)(resources.GetObject("arquivoStrip.Image")));
+            this.arquivoStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.arquivoStrip.Name = "arquivoStrip";
+            this.arquivoStrip.Size = new System.Drawing.Size(62, 22);
+            this.arquivoStrip.Text = "&Arquivo";
+            // 
+            // ferramentasStrip
+            // 
+            this.ferramentasStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ferramentasStrip.Image = ((System.Drawing.Image)(resources.GetObject("ferramentasStrip.Image")));
+            this.ferramentasStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ferramentasStrip.Name = "ferramentasStrip";
+            this.ferramentasStrip.Size = new System.Drawing.Size(85, 22);
+            this.ferramentasStrip.Text = "&Ferramentas";
             // 
             // gerenciaSala
             // 
@@ -77,7 +128,12 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripSeparator buscaSeparator1;
+        private System.Windows.Forms.ToolStripTextBox buscaTexto;
+        private System.Windows.Forms.ToolStripButton buscaBotao;
+        private System.Windows.Forms.ToolStripSeparator buscaSeparator2;
+        private System.Windows.Forms.ToolStripDropDownButton ajudaStrip;
+        private System.Windows.Forms.ToolStripDropDownButton arquivoStrip;
+        private System.Windows.Forms.ToolStripDropDownButton ferramentasStrip;
     }
 }
