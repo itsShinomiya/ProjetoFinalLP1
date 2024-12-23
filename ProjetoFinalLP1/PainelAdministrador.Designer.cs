@@ -30,52 +30,46 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PainelAdministrador));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.arquivoStrip = new System.Windows.Forms.ToolStripDropDownButton();
+            this.sairToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciaSalas = new System.Windows.Forms.Button();
             this.gerenciaFuncionario = new System.Windows.Forms.Button();
             this.gerenciaVenda = new System.Windows.Forms.Button();
             this.gerenciaCliente = new System.Windows.Forms.Button();
             this.gerenciaFilme = new System.Windows.Forms.Button();
             this.obterAjuda = new System.Windows.Forms.Button();
+            this.ferramentasStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1,
-            this.toolStripLabel2});
+            this.arquivoStrip,
+            this.ferramentasStrip});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripDropDownButton1
+            // arquivoStrip
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sairToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(62, 22);
-            this.toolStripDropDownButton1.Text = "&Arquivo";
+            this.arquivoStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.arquivoStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sairToolStrip});
+            this.arquivoStrip.Image = ((System.Drawing.Image)(resources.GetObject("arquivoStrip.Image")));
+            this.arquivoStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.arquivoStrip.Name = "arquivoStrip";
+            this.arquivoStrip.Size = new System.Drawing.Size(62, 22);
+            this.arquivoStrip.Text = "&Arquivo";
             // 
-            // sairToolStripMenuItem
+            // sairToolStrip
             // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sairToolStripMenuItem.Text = "&Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(72, 22);
-            this.toolStripLabel2.Text = "&Ferramentas";
+            this.sairToolStrip.Name = "sairToolStrip";
+            this.sairToolStrip.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStrip.Text = "&Sair";
+            this.sairToolStrip.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // gerenciaSalas
             // 
@@ -132,6 +126,15 @@
             this.obterAjuda.Text = "Ajuda";
             this.obterAjuda.UseVisualStyleBackColor = true;
             // 
+            // ferramentasStrip
+            // 
+            this.ferramentasStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ferramentasStrip.Image = ((System.Drawing.Image)(resources.GetObject("ferramentasStrip.Image")));
+            this.ferramentasStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ferramentasStrip.Name = "ferramentasStrip";
+            this.ferramentasStrip.Size = new System.Drawing.Size(85, 22);
+            this.ferramentasStrip.Text = "&Ferramentas";
+            // 
             // PainelAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,14 +162,14 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton arquivoStrip;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStrip;
         private System.Windows.Forms.Button gerenciaSalas;
         private System.Windows.Forms.Button gerenciaFuncionario;
         private System.Windows.Forms.Button gerenciaVenda;
         private System.Windows.Forms.Button gerenciaCliente;
         private System.Windows.Forms.Button gerenciaFilme;
         private System.Windows.Forms.Button obterAjuda;
+        private System.Windows.Forms.ToolStripDropDownButton ferramentasStrip;
     }
 }

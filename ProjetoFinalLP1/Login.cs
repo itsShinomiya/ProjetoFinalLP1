@@ -21,6 +21,18 @@ namespace ProjetoFinalLP1
         public Login()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            userTxt.KeyDown += new KeyEventHandler(CliqueEnter);
+            passTxt.KeyDown += new KeyEventHandler(CliqueEnter);
+        }
+
+        public void CliqueEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnEntrar.PerformClick();
+                e.Handled = true;
+            }
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
