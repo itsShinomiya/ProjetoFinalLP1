@@ -38,13 +38,13 @@
             this.buscaBotao = new System.Windows.Forms.ToolStripButton();
             this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.buscaExibir = new System.Windows.Forms.DataGridView();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adicionaSala = new System.Windows.Forms.Button();
             this.removeSala = new System.Windows.Forms.Button();
             this.atualizaBtn = new System.Windows.Forms.Button();
             this.alteraSala = new System.Windows.Forms.Button();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.SuspendLayout();
@@ -134,9 +134,28 @@
             this.buscaExibir.Location = new System.Drawing.Point(12, 124);
             this.buscaExibir.MultiSelect = false;
             this.buscaExibir.Name = "buscaExibir";
+            this.buscaExibir.ReadOnly = true;
             this.buscaExibir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.buscaExibir.Size = new System.Drawing.Size(793, 502);
             this.buscaExibir.TabIndex = 1;
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "Número da Sala";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            // 
+            // tipo
+            // 
+            this.tipo.HeaderText = "Tipo";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            // 
+            // assentos
+            // 
+            this.assentos.HeaderText = "Número de Assentos";
+            this.assentos.Name = "assentos";
+            this.assentos.ReadOnly = true;
             // 
             // adicionaSala
             // 
@@ -177,21 +196,6 @@
             this.alteraSala.Text = "Alterar";
             this.alteraSala.UseVisualStyleBackColor = true;
             this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "Número da Sala";
-            this.numero.Name = "numero";
-            // 
-            // tipo
-            // 
-            this.tipo.HeaderText = "Tipo";
-            this.tipo.Name = "tipo";
-            // 
-            // assentos
-            // 
-            this.assentos.HeaderText = "Número de Assentos";
-            this.assentos.Name = "assentos";
             // 
             // gerenciaSala
             // 
