@@ -132,6 +132,7 @@
             this.adicionaSala.TabIndex = 2;
             this.adicionaSala.Text = "Adicionar";
             this.adicionaSala.UseVisualStyleBackColor = true;
+            this.adicionaSala.Click += new System.EventHandler(this.adicionaSala_Click);
             // 
             // removeSala
             // 
@@ -159,6 +160,7 @@
             this.alteraSala.TabIndex = 5;
             this.alteraSala.Text = "Alterar";
             this.alteraSala.UseVisualStyleBackColor = true;
+            this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
             // 
             // gerenciaSala
             // 
@@ -172,6 +174,7 @@
             this.Controls.Add(this.buscaExibir);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "gerenciaSala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciador de Salas";

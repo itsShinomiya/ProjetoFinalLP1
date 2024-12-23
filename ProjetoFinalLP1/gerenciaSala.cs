@@ -16,5 +16,17 @@ namespace ProjetoFinalLP1
         {
             InitializeComponent();
         }
+
+        private void adicionaSala_Click(object sender, EventArgs e)
+        {
+            editSala adicionaSala = new editSala();
+            adicionaSala.ShowDialog();
+        }
+
+        private void alteraSala_Click(object sender, EventArgs e)
+        {
+            editSala alteraSala = new editSala();
+            alteraSala.ShowDialog();
+        }
     }
 }
