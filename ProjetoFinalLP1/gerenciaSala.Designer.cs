@@ -37,7 +37,12 @@
             this.ajudaStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.arquivoStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.ferramentasStrip = new System.Windows.Forms.ToolStripDropDownButton();
+            this.buscaExibir = new System.Windows.Forms.DataGridView();
+            this.adicionarBtn = new System.Windows.Forms.Button();
+            this.removerBtn = new System.Windows.Forms.Button();
+            this.atualizarBtn = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -108,11 +113,51 @@
             this.ferramentasStrip.Size = new System.Drawing.Size(85, 22);
             this.ferramentasStrip.Text = "&Ferramentas";
             // 
+            // buscaExibir
+            // 
+            this.buscaExibir.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buscaExibir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.buscaExibir.Location = new System.Drawing.Point(0, 124);
+            this.buscaExibir.Name = "buscaExibir";
+            this.buscaExibir.Size = new System.Drawing.Size(805, 514);
+            this.buscaExibir.TabIndex = 1;
+            // 
+            // adicionarBtn
+            // 
+            this.adicionarBtn.Location = new System.Drawing.Point(0, 54);
+            this.adicionarBtn.Name = "adicionarBtn";
+            this.adicionarBtn.Size = new System.Drawing.Size(75, 64);
+            this.adicionarBtn.TabIndex = 2;
+            this.adicionarBtn.Text = "Adicionar";
+            this.adicionarBtn.UseVisualStyleBackColor = true;
+            // 
+            // removerBtn
+            // 
+            this.removerBtn.Location = new System.Drawing.Point(81, 54);
+            this.removerBtn.Name = "removerBtn";
+            this.removerBtn.Size = new System.Drawing.Size(75, 64);
+            this.removerBtn.TabIndex = 3;
+            this.removerBtn.Text = "Remover";
+            this.removerBtn.UseVisualStyleBackColor = true;
+            // 
+            // atualizarBtn
+            // 
+            this.atualizarBtn.Location = new System.Drawing.Point(162, 54);
+            this.atualizarBtn.Name = "atualizarBtn";
+            this.atualizarBtn.Size = new System.Drawing.Size(75, 64);
+            this.atualizarBtn.TabIndex = 4;
+            this.atualizarBtn.Text = "Atualizar";
+            this.atualizarBtn.UseVisualStyleBackColor = true;
+            // 
             // gerenciaSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 638);
+            this.Controls.Add(this.atualizarBtn);
+            this.Controls.Add(this.removerBtn);
+            this.Controls.Add(this.adicionarBtn);
+            this.Controls.Add(this.buscaExibir);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "gerenciaSala";
@@ -120,6 +165,7 @@
             this.Text = "Gerenciador de Salas";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +181,9 @@
         private System.Windows.Forms.ToolStripDropDownButton ajudaStrip;
         private System.Windows.Forms.ToolStripDropDownButton arquivoStrip;
         private System.Windows.Forms.ToolStripDropDownButton ferramentasStrip;
+        private System.Windows.Forms.DataGridView buscaExibir;
+        private System.Windows.Forms.Button adicionarBtn;
+        private System.Windows.Forms.Button removerBtn;
+        private System.Windows.Forms.Button atualizarBtn;
     }
 }
