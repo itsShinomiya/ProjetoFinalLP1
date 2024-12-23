@@ -123,5 +123,27 @@ namespace ProjetoFinalLP1
 
             }
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void adicionarStrip_Click(object sender, EventArgs e)
+        {
+            adicionaSala.PerformClick();
+        }
+
+        private void alterarStrip_Click(object sender, EventArgs e)
+        {
+            controle = 2;
+
+            //DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+            //int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
+
+            editSala alteraSala = new editSala(controle, -1);
+            alteraSala.ShowDialog();
+            refresh();
+        }
     }
 }

@@ -47,11 +47,7 @@
             this.salaNmr.Name = "salaNmr";
             this.salaNmr.Size = new System.Drawing.Size(120, 20);
             this.salaNmr.TabIndex = 0;
-            this.salaNmr.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.salaNmr.ValueChanged += new System.EventHandler(this.salaNmr_ValueChanged);
             // 
             // label1
             // 

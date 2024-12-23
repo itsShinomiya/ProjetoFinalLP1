@@ -45,6 +45,9 @@
             this.removeSala = new System.Windows.Forms.Button();
             this.atualizaBtn = new System.Windows.Forms.Button();
             this.alteraSala = new System.Windows.Forms.Button();
+            this.sairStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +71,8 @@
             // arquivoStrip
             // 
             this.arquivoStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.arquivoStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sairStrip});
             this.arquivoStrip.Image = ((System.Drawing.Image)(resources.GetObject("arquivoStrip.Image")));
             this.arquivoStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.arquivoStrip.Name = "arquivoStrip";
@@ -77,6 +82,9 @@
             // ferramentasStrip
             // 
             this.ferramentasStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ferramentasStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adicionarStrip,
+            this.alterarStrip});
             this.ferramentasStrip.Image = ((System.Drawing.Image)(resources.GetObject("ferramentasStrip.Image")));
             this.ferramentasStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ferramentasStrip.Name = "ferramentasStrip";
@@ -197,6 +205,27 @@
             this.alteraSala.UseVisualStyleBackColor = true;
             this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
             // 
+            // sairStrip
+            // 
+            this.sairStrip.Name = "sairStrip";
+            this.sairStrip.Size = new System.Drawing.Size(180, 22);
+            this.sairStrip.Text = "&Sair";
+            this.sairStrip.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // adicionarStrip
+            // 
+            this.adicionarStrip.Name = "adicionarStrip";
+            this.adicionarStrip.Size = new System.Drawing.Size(180, 22);
+            this.adicionarStrip.Text = "&Adicionar";
+            this.adicionarStrip.Click += new System.EventHandler(this.adicionarStrip_Click);
+            // 
+            // alterarStrip
+            // 
+            this.alterarStrip.Name = "alterarStrip";
+            this.alterarStrip.Size = new System.Drawing.Size(180, 22);
+            this.alterarStrip.Text = "&Alterar";
+            this.alterarStrip.Click += new System.EventHandler(this.alterarStrip_Click);
+            // 
             // gerenciaSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,5 +269,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn assentos;
+        private System.Windows.Forms.ToolStripMenuItem sairStrip;
+        private System.Windows.Forms.ToolStripMenuItem adicionarStrip;
+        private System.Windows.Forms.ToolStripMenuItem alterarStrip;
     }
 }
