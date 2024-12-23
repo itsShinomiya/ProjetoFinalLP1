@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gerenciaSala));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.buscaTexto = new System.Windows.Forms.ToolStripTextBox();
-            this.buscaBotao = new System.Windows.Forms.ToolStripButton();
-            this.buscaSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.ajudaStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.arquivoStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.ferramentasStrip = new System.Windows.Forms.ToolStripDropDownButton();
+            this.ajudaStrip = new System.Windows.Forms.ToolStripDropDownButton();
+            this.buscaSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.buscaTexto = new System.Windows.Forms.ToolStripTextBox();
+            this.buscaBotao = new System.Windows.Forms.ToolStripButton();
+            this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.buscaExibir = new System.Windows.Forms.DataGridView();
             this.adicionaSala = new System.Windows.Forms.Button();
             this.removeSala = new System.Windows.Forms.Button();
@@ -62,40 +62,6 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // buscaTexto
-            // 
-            this.buscaTexto.AutoSize = false;
-            this.buscaTexto.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buscaTexto.Name = "buscaTexto";
-            this.buscaTexto.Size = new System.Drawing.Size(100, 25);
-            // 
-            // buscaBotao
-            // 
-            this.buscaBotao.Image = ((System.Drawing.Image)(resources.GetObject("buscaBotao.Image")));
-            this.buscaBotao.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.buscaBotao.Name = "buscaBotao";
-            this.buscaBotao.Size = new System.Drawing.Size(62, 22);
-            this.buscaBotao.Text = "&Buscar";
-            // 
-            // buscaSeparator1
-            // 
-            this.buscaSeparator1.Name = "buscaSeparator1";
-            this.buscaSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // buscaSeparator2
-            // 
-            this.buscaSeparator2.Name = "buscaSeparator2";
-            this.buscaSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // ajudaStrip
-            // 
-            this.ajudaStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.ajudaStrip.Image = ((System.Drawing.Image)(resources.GetObject("ajudaStrip.Image")));
-            this.ajudaStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ajudaStrip.Name = "ajudaStrip";
-            this.ajudaStrip.Size = new System.Drawing.Size(51, 22);
-            this.ajudaStrip.Text = "&Ajuda";
-            // 
             // arquivoStrip
             // 
             this.arquivoStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -113,6 +79,41 @@
             this.ferramentasStrip.Name = "ferramentasStrip";
             this.ferramentasStrip.Size = new System.Drawing.Size(85, 22);
             this.ferramentasStrip.Text = "&Ferramentas";
+            // 
+            // ajudaStrip
+            // 
+            this.ajudaStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ajudaStrip.Image = ((System.Drawing.Image)(resources.GetObject("ajudaStrip.Image")));
+            this.ajudaStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ajudaStrip.Name = "ajudaStrip";
+            this.ajudaStrip.Size = new System.Drawing.Size(51, 22);
+            this.ajudaStrip.Text = "&Ajuda";
+            // 
+            // buscaSeparator1
+            // 
+            this.buscaSeparator1.Name = "buscaSeparator1";
+            this.buscaSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // buscaTexto
+            // 
+            this.buscaTexto.AutoSize = false;
+            this.buscaTexto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.buscaTexto.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buscaTexto.Name = "buscaTexto";
+            this.buscaTexto.Size = new System.Drawing.Size(100, 23);
+            // 
+            // buscaBotao
+            // 
+            this.buscaBotao.Image = ((System.Drawing.Image)(resources.GetObject("buscaBotao.Image")));
+            this.buscaBotao.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.buscaBotao.Name = "buscaBotao";
+            this.buscaBotao.Size = new System.Drawing.Size(62, 22);
+            this.buscaBotao.Text = "&Buscar";
+            // 
+            // buscaSeparator2
+            // 
+            this.buscaSeparator2.Name = "buscaSeparator2";
+            this.buscaSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // buscaExibir
             // 
@@ -134,7 +135,7 @@
             // 
             // removeSala
             // 
-            this.removeSala.Location = new System.Drawing.Point(93, 54);
+            this.removeSala.Location = new System.Drawing.Point(255, 54);
             this.removeSala.Name = "removeSala";
             this.removeSala.Size = new System.Drawing.Size(75, 64);
             this.removeSala.TabIndex = 3;
@@ -143,7 +144,7 @@
             // 
             // atualizaBtn
             // 
-            this.atualizaBtn.Location = new System.Drawing.Point(255, 54);
+            this.atualizaBtn.Location = new System.Drawing.Point(174, 54);
             this.atualizaBtn.Name = "atualizaBtn";
             this.atualizaBtn.Size = new System.Drawing.Size(75, 64);
             this.atualizaBtn.TabIndex = 4;
@@ -152,7 +153,7 @@
             // 
             // alteraSala
             // 
-            this.alteraSala.Location = new System.Drawing.Point(174, 54);
+            this.alteraSala.Location = new System.Drawing.Point(93, 54);
             this.alteraSala.Name = "alteraSala";
             this.alteraSala.Size = new System.Drawing.Size(75, 64);
             this.alteraSala.TabIndex = 5;
