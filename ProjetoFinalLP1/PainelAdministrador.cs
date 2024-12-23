@@ -21,5 +21,11 @@ namespace ProjetoFinalLP1
         {
             this.Close();
         }
+
+        private void gerenciaSalas_Click(object sender, EventArgs e)
+        {
+            gerenciaSala gerenciarSala = new gerenciaSala();
+            gerenciarSala.ShowDialog();
+        }
     }
 }

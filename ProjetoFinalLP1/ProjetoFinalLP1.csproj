@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="gerenciaSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gerenciaSala.Designer.cs">
+      <DependentUpon>gerenciaSala.cs</DependentUpon>
+    </Compile>
     <Compile Include="PainelAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="gerenciaSala.resx">
+      <DependentUpon>gerenciaSala.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

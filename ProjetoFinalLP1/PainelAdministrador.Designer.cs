@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PainelAdministrador));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.gerenciaSalas = new System.Windows.Forms.Button();
             this.gerenciaFuncionario = new System.Windows.Forms.Button();
             this.gerenciaVenda = new System.Windows.Forms.Button();
@@ -53,12 +53,6 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(72, 22);
-            this.toolStripLabel2.Text = "&Ferramentas";
-            // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -77,6 +71,12 @@
             this.sairToolStripMenuItem.Text = "&Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(72, 22);
+            this.toolStripLabel2.Text = "&Ferramentas";
+            // 
             // gerenciaSalas
             // 
             this.gerenciaSalas.Location = new System.Drawing.Point(28, 168);
@@ -85,6 +85,7 @@
             this.gerenciaSalas.TabIndex = 1;
             this.gerenciaSalas.Text = "Gerenciar Salas";
             this.gerenciaSalas.UseVisualStyleBackColor = true;
+            this.gerenciaSalas.Click += new System.EventHandler(this.gerenciaSalas_Click);
             // 
             // gerenciaFuncionario
             // 
@@ -143,7 +144,10 @@
             this.Controls.Add(this.gerenciaFuncionario);
             this.Controls.Add(this.gerenciaSalas);
             this.Controls.Add(this.toolStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "PainelAdministrador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
