@@ -99,5 +99,29 @@ namespace ProjetoFinalLP1
         {
             refresh();
         }
+
+        private void removeSala_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+            int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
+            DialogResult exc = MessageBox.Show("Deseja realmente deletar essa sala?", "Excluir?", MessageBoxButtons.YesNo);
+            if (exc == DialogResult.Yes)
+            {
+                try
+                {
+                    Obj_CmdSQL.CommandText = "DELETE FROM sala WHERE numero = " + valor.ToString();
+                    int deletar = Obj_CmdSQL.ExecuteNonQuery();
+                    refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Houve um erro a deletar a sala!", "Erro", MessageBoxButtons.OK);
+                }
+            }
+            else if (exc == DialogResult.No)
+            {
+
+            }
+        }
     }
 }

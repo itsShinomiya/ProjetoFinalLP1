@@ -156,6 +156,7 @@
             this.removeSala.TabIndex = 3;
             this.removeSala.Text = "Remover";
             this.removeSala.UseVisualStyleBackColor = true;
+            this.removeSala.Click += new System.EventHandler(this.removeSala_Click);
             // 
             // atualizaBtn
             // 
