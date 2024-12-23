@@ -12,9 +12,21 @@ namespace ProjetoFinalLP1
 {
     public partial class editSala : Form
     {
-        public editSala()
+        int controle;
+        public editSala(int controleF1)
         {
+            controle = controleF1;
             InitializeComponent();
+            
+            if (controle == 1)
+            {
+
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

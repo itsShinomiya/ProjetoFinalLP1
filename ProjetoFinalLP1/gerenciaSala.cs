@@ -12,6 +12,7 @@ namespace ProjetoFinalLP1
 {
     public partial class gerenciaSala : Form
     {
+        int controle = 0;
         public gerenciaSala()
         {
             InitializeComponent();
@@ -19,13 +20,15 @@ namespace ProjetoFinalLP1
 
         private void adicionaSala_Click(object sender, EventArgs e)
         {
-            editSala adicionaSala = new editSala();
+            controle = 0;
+            editSala adicionaSala = new editSala(controle);
             adicionaSala.ShowDialog();
         }
 
         private void alteraSala_Click(object sender, EventArgs e)
         {
-            editSala alteraSala = new editSala();
+            controle = 1;
+            editSala alteraSala = new editSala(controle);
             alteraSala.ShowDialog();
         }
     }
