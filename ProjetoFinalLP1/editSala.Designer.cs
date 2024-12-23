@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.salaNmr = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.salaTipo = new System.Windows.Forms.ComboBox();
@@ -36,17 +36,22 @@
             this.assentosTxt = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salaNmr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeroAssentos)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericUpDown1
+            // salaNmr
             // 
-            this.numericUpDown1.Enabled = false;
-            this.numericUpDown1.Location = new System.Drawing.Point(12, 29);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 0;
+            this.salaNmr.Enabled = false;
+            this.salaNmr.Location = new System.Drawing.Point(12, 29);
+            this.salaNmr.Name = "salaNmr";
+            this.salaNmr.Size = new System.Drawing.Size(120, 20);
+            this.salaNmr.TabIndex = 0;
+            this.salaNmr.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label1
             // 
@@ -118,6 +123,7 @@
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -141,13 +147,14 @@
             this.Controls.Add(this.salaTipo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.salaNmr);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "editSala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editor de Sala";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.Load += new System.EventHandler(this.editSala_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.salaNmr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeroAssentos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -156,7 +163,7 @@
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown salaNmr;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox salaTipo;

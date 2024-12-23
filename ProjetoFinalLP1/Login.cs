@@ -109,5 +109,14 @@ namespace ProjetoFinalLP1
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PainelAdministrador PainelAdm = new PainelAdministrador();
+            
+            this.Hide();
+            PainelAdm.ShowDialog();
+            this.Close();
+        }
     }
 }
