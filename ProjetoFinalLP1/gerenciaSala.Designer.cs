@@ -121,6 +121,9 @@
             // buscaExibir
             // 
             this.buscaExibir.AllowUserToAddRows = false;
+            this.buscaExibir.AllowUserToDeleteRows = false;
+            this.buscaExibir.AllowUserToResizeColumns = false;
+            this.buscaExibir.AllowUserToResizeRows = false;
             this.buscaExibir.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.buscaExibir.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.buscaExibir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -129,6 +132,7 @@
             this.tipo,
             this.assentos});
             this.buscaExibir.Location = new System.Drawing.Point(12, 124);
+            this.buscaExibir.MultiSelect = false;
             this.buscaExibir.Name = "buscaExibir";
             this.buscaExibir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.buscaExibir.Size = new System.Drawing.Size(793, 502);

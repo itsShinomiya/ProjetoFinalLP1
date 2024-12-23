@@ -64,6 +64,7 @@ namespace ProjetoFinalLP1
             controle = 0;
             editSala adicionaSala = new editSala(controle);
             adicionaSala.ShowDialog();
+            refresh();
         }
 
         private void alteraSala_Click(object sender, EventArgs e)
