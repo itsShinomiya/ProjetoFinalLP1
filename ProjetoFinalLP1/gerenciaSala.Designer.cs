@@ -42,6 +42,9 @@
             this.removeSala = new System.Windows.Forms.Button();
             this.atualizaBtn = new System.Windows.Forms.Button();
             this.alteraSala = new System.Windows.Forms.Button();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.SuspendLayout();
@@ -117,10 +120,17 @@
             // 
             // buscaExibir
             // 
+            this.buscaExibir.AllowUserToAddRows = false;
+            this.buscaExibir.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.buscaExibir.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.buscaExibir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.buscaExibir.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numero,
+            this.tipo,
+            this.assentos});
             this.buscaExibir.Location = new System.Drawing.Point(12, 124);
             this.buscaExibir.Name = "buscaExibir";
+            this.buscaExibir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.buscaExibir.Size = new System.Drawing.Size(793, 502);
             this.buscaExibir.TabIndex = 1;
             // 
@@ -151,6 +161,7 @@
             this.atualizaBtn.TabIndex = 4;
             this.atualizaBtn.Text = "Atualizar";
             this.atualizaBtn.UseVisualStyleBackColor = true;
+            this.atualizaBtn.Click += new System.EventHandler(this.atualizaBtn_Click);
             // 
             // alteraSala
             // 
@@ -161,6 +172,21 @@
             this.alteraSala.Text = "Alterar";
             this.alteraSala.UseVisualStyleBackColor = true;
             this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "Número da Sala";
+            this.numero.Name = "numero";
+            // 
+            // tipo
+            // 
+            this.tipo.HeaderText = "Tipo";
+            this.tipo.Name = "tipo";
+            // 
+            // assentos
+            // 
+            this.assentos.HeaderText = "Número de Assentos";
+            this.assentos.Name = "assentos";
             // 
             // gerenciaSala
             // 
@@ -178,6 +204,7 @@
             this.Name = "gerenciaSala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciador de Salas";
+            this.Load += new System.EventHandler(this.gerenciaSala_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).EndInit();
@@ -201,5 +228,8 @@
         private System.Windows.Forms.Button removeSala;
         private System.Windows.Forms.Button atualizaBtn;
         private System.Windows.Forms.Button alteraSala;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assentos;
     }
 }

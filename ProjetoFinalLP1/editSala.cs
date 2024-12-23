@@ -22,11 +22,7 @@ namespace ProjetoFinalLP1
         {
             controle = controleF1;
             InitializeComponent();
-            
-            if (controle == 1)
-            {
 
-            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -87,6 +83,30 @@ namespace ProjetoFinalLP1
             {
                 MessageBox.Show("Erro: " + Erro.Message, "Erro de Conexão",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            if (controle == 0)
+            {
+                Obj_CmdSQL.CommandText = "SELECT MAX(numero) FROM sala";
+                Dados = Obj_CmdSQL.ExecuteReader();
+
+                if (Dados.HasRows)
+                {
+                    try
+                    {
+                        Dados.Read();
+                        salaNmr.Value = Convert.ToDecimal(Dados[0]) + 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        salaNmr.Value = 1;
+                    }
+                    finally
+                    {
+                        Dados.Close();
+                    }
+                }
             }
         }
     }
