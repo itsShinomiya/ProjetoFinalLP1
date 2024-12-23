@@ -38,9 +38,10 @@
             this.arquivoStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.ferramentasStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.buscaExibir = new System.Windows.Forms.DataGridView();
-            this.adicionarBtn = new System.Windows.Forms.Button();
-            this.removerBtn = new System.Windows.Forms.Button();
-            this.atualizarBtn = new System.Windows.Forms.Button();
+            this.adicionaSala = new System.Windows.Forms.Button();
+            this.removeSala = new System.Windows.Forms.Button();
+            this.atualizaBtn = new System.Windows.Forms.Button();
+            this.alteraSala = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.SuspendLayout();
@@ -117,46 +118,56 @@
             // 
             this.buscaExibir.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.buscaExibir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.buscaExibir.Location = new System.Drawing.Point(0, 124);
+            this.buscaExibir.Location = new System.Drawing.Point(12, 124);
             this.buscaExibir.Name = "buscaExibir";
-            this.buscaExibir.Size = new System.Drawing.Size(805, 514);
+            this.buscaExibir.Size = new System.Drawing.Size(793, 502);
             this.buscaExibir.TabIndex = 1;
             // 
-            // adicionarBtn
+            // adicionaSala
             // 
-            this.adicionarBtn.Location = new System.Drawing.Point(0, 54);
-            this.adicionarBtn.Name = "adicionarBtn";
-            this.adicionarBtn.Size = new System.Drawing.Size(75, 64);
-            this.adicionarBtn.TabIndex = 2;
-            this.adicionarBtn.Text = "Adicionar";
-            this.adicionarBtn.UseVisualStyleBackColor = true;
+            this.adicionaSala.Location = new System.Drawing.Point(12, 54);
+            this.adicionaSala.Name = "adicionaSala";
+            this.adicionaSala.Size = new System.Drawing.Size(75, 64);
+            this.adicionaSala.TabIndex = 2;
+            this.adicionaSala.Text = "Adicionar";
+            this.adicionaSala.UseVisualStyleBackColor = true;
             // 
-            // removerBtn
+            // removeSala
             // 
-            this.removerBtn.Location = new System.Drawing.Point(81, 54);
-            this.removerBtn.Name = "removerBtn";
-            this.removerBtn.Size = new System.Drawing.Size(75, 64);
-            this.removerBtn.TabIndex = 3;
-            this.removerBtn.Text = "Remover";
-            this.removerBtn.UseVisualStyleBackColor = true;
+            this.removeSala.Location = new System.Drawing.Point(93, 54);
+            this.removeSala.Name = "removeSala";
+            this.removeSala.Size = new System.Drawing.Size(75, 64);
+            this.removeSala.TabIndex = 3;
+            this.removeSala.Text = "Remover";
+            this.removeSala.UseVisualStyleBackColor = true;
             // 
-            // atualizarBtn
+            // atualizaBtn
             // 
-            this.atualizarBtn.Location = new System.Drawing.Point(162, 54);
-            this.atualizarBtn.Name = "atualizarBtn";
-            this.atualizarBtn.Size = new System.Drawing.Size(75, 64);
-            this.atualizarBtn.TabIndex = 4;
-            this.atualizarBtn.Text = "Atualizar";
-            this.atualizarBtn.UseVisualStyleBackColor = true;
+            this.atualizaBtn.Location = new System.Drawing.Point(255, 54);
+            this.atualizaBtn.Name = "atualizaBtn";
+            this.atualizaBtn.Size = new System.Drawing.Size(75, 64);
+            this.atualizaBtn.TabIndex = 4;
+            this.atualizaBtn.Text = "Atualizar";
+            this.atualizaBtn.UseVisualStyleBackColor = true;
+            // 
+            // alteraSala
+            // 
+            this.alteraSala.Location = new System.Drawing.Point(174, 54);
+            this.alteraSala.Name = "alteraSala";
+            this.alteraSala.Size = new System.Drawing.Size(75, 64);
+            this.alteraSala.TabIndex = 5;
+            this.alteraSala.Text = "Alterar";
+            this.alteraSala.UseVisualStyleBackColor = true;
             // 
             // gerenciaSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 638);
-            this.Controls.Add(this.atualizarBtn);
-            this.Controls.Add(this.removerBtn);
-            this.Controls.Add(this.adicionarBtn);
+            this.Controls.Add(this.alteraSala);
+            this.Controls.Add(this.atualizaBtn);
+            this.Controls.Add(this.removeSala);
+            this.Controls.Add(this.adicionaSala);
             this.Controls.Add(this.buscaExibir);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -182,8 +193,9 @@
         private System.Windows.Forms.ToolStripDropDownButton arquivoStrip;
         private System.Windows.Forms.ToolStripDropDownButton ferramentasStrip;
         private System.Windows.Forms.DataGridView buscaExibir;
-        private System.Windows.Forms.Button adicionarBtn;
-        private System.Windows.Forms.Button removerBtn;
-        private System.Windows.Forms.Button atualizarBtn;
+        private System.Windows.Forms.Button adicionaSala;
+        private System.Windows.Forms.Button removeSala;
+        private System.Windows.Forms.Button atualizaBtn;
+        private System.Windows.Forms.Button alteraSala;
     }
 }
