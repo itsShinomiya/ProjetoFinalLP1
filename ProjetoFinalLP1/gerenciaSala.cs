@@ -62,7 +62,7 @@ namespace ProjetoFinalLP1
         private void adicionaSala_Click(object sender, EventArgs e)
         {
             controle = 0;
-            editSala adicionaSala = new editSala(controle);
+            editSala adicionaSala = new editSala(controle, -1);
             adicionaSala.ShowDialog();
             refresh();
         }
@@ -70,8 +70,13 @@ namespace ProjetoFinalLP1
         private void alteraSala_Click(object sender, EventArgs e)
         {
             controle = 1;
-            editSala alteraSala = new editSala(controle);
+
+            DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+            int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
+
+            editSala alteraSala = new editSala(controle, valor);
             alteraSala.ShowDialog();
+            refresh();
         }
 
         private void gerenciaSala_Load(object sender, EventArgs e)

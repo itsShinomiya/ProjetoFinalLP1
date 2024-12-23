@@ -18,11 +18,12 @@ namespace ProjetoFinalLP1
         private MySqlDataReader Dados;
 
         int controle;
-        public editSala(int controleF1)
+        int valor;
+        public editSala(int controleF1, int indice)
         {
             controle = controleF1;
+            valor = indice;
             InitializeComponent();
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -101,6 +102,32 @@ namespace ProjetoFinalLP1
                     catch (Exception ex)
                     {
                         salaNmr.Value = 1;
+                    }
+                    finally
+                    {
+                        Dados.Close();
+                    }
+                }
+            }
+
+            if(controle == 1)
+            {
+                Obj_CmdSQL.CommandText = $"SELECT {valor}, tipo, assentos FROM sala WHERE {valor} = numero";
+                Obj_CmdSQL.Parameters.Clear();
+                Dados = Obj_CmdSQL.ExecuteReader();
+
+                if (Dados.HasRows)
+                {
+                    try
+                    {
+                        Dados.Read();
+                        salaNmr.Value = Convert.ToDecimal(Dados[0]);
+                        salaTipo.SelectedItem = Convert.ToString(Dados[1]);
+                        numeroAssentos.Value = Convert.ToInt32(Dados[2]);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Ocorreu um erro ao obter informações da sala!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
