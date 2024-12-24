@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.salaNmr = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.nmrSalaTxt = new System.Windows.Forms.Label();
+            this.tipoSalaTxt = new System.Windows.Forms.Label();
             this.salaTipo = new System.Windows.Forms.ComboBox();
             this.numeroAssentos = new System.Windows.Forms.NumericUpDown();
             this.assentosTxt = new System.Windows.Forms.Label();
@@ -49,23 +49,23 @@
             this.salaNmr.TabIndex = 0;
             this.salaNmr.ValueChanged += new System.EventHandler(this.salaNmr_ValueChanged);
             // 
-            // label1
+            // nmrSalaTxt
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Número da Sala";
+            this.nmrSalaTxt.AutoSize = true;
+            this.nmrSalaTxt.Location = new System.Drawing.Point(9, 13);
+            this.nmrSalaTxt.Name = "nmrSalaTxt";
+            this.nmrSalaTxt.Size = new System.Drawing.Size(83, 13);
+            this.nmrSalaTxt.TabIndex = 1;
+            this.nmrSalaTxt.Text = "Número da Sala";
             // 
-            // label2
+            // tipoSalaTxt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tipo";
+            this.tipoSalaTxt.AutoSize = true;
+            this.tipoSalaTxt.Location = new System.Drawing.Point(9, 52);
+            this.tipoSalaTxt.Name = "tipoSalaTxt";
+            this.tipoSalaTxt.Size = new System.Drawing.Size(28, 13);
+            this.tipoSalaTxt.TabIndex = 2;
+            this.tipoSalaTxt.Text = "Tipo";
             // 
             // salaTipo
             // 
@@ -141,8 +141,8 @@
             this.Controls.Add(this.assentosTxt);
             this.Controls.Add(this.numeroAssentos);
             this.Controls.Add(this.salaTipo);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tipoSalaTxt);
+            this.Controls.Add(this.nmrSalaTxt);
             this.Controls.Add(this.salaNmr);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -160,8 +160,8 @@
         #endregion
 
         private System.Windows.Forms.NumericUpDown salaNmr;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label nmrSalaTxt;
+        private System.Windows.Forms.Label tipoSalaTxt;
         private System.Windows.Forms.ComboBox salaTipo;
         private System.Windows.Forms.NumericUpDown numeroAssentos;
         private System.Windows.Forms.Label assentosTxt;

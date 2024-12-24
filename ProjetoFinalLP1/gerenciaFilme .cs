@@ -27,7 +27,7 @@ namespace ProjetoFinalLP1
         {
             try
             {
-                string comando = "SELECT numero, assentos, tipo FROM sala WHERE 1=1";
+                string comando = "SELECT codigo, nome, sala, horario, valor, ingressos FROM filmes WHERE 1=1";
 
                 Obj_CmdSQL.Parameters.Clear();
                 Obj_CmdSQL.CommandText = comando;
@@ -61,20 +61,14 @@ namespace ProjetoFinalLP1
 
         private void adicionaSala_Click(object sender, EventArgs e)
         {
-            controle = 0;
-            editFilme adicionaFilme = new editFilme(controle, -1);
+            editFilme adicionaFilme = new editFilme();
             adicionaFilme.ShowDialog();
             refresh();
         }
 
         private void alteraSala_Click(object sender, EventArgs e)
         {
-            controle = 1;
-
-            DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-            int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
-
-            editFilme adicionaFilme = new editFilme(controle, -1);
+            editFilme adicionaFilme = new editFilme();
             adicionaFilme.ShowDialog();
             refresh();
         }
@@ -141,7 +135,7 @@ namespace ProjetoFinalLP1
             //DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
             //int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
 
-            editFilme adicionaFilme = new editFilme(controle, -1);
+            editFilme adicionaFilme = new editFilme();
             adicionaFilme.ShowDialog();
             refresh();
         }

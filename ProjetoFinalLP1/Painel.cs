@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoFinalLP1
 {
-    public partial class PainelAdministrador : Form
+    public partial class Painel : Form
     {
-        public PainelAdministrador()
+        public Painel()
         {
             InitializeComponent();
         }

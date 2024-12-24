@@ -1,6 +1,6 @@
 ﻿namespace ProjetoFinalLP1
 {
-    partial class PainelAdministrador
+    partial class Painel
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PainelAdministrador));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Painel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.arquivoStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.sairToolStrip = new System.Windows.Forms.ToolStripMenuItem();

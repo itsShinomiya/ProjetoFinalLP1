@@ -71,7 +71,7 @@ namespace ProjetoFinalLP1
 
                             case "administrador":
                                 MessageBox.Show("Seja bem-vindo, administrador!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                PainelAdministrador PainelAdm = new PainelAdministrador();  
+                                Painel PainelAdm = new Painel();  
                                 this.Hide();
                                 PainelAdm.ShowDialog();
                                 this.Close();
@@ -112,7 +112,7 @@ namespace ProjetoFinalLP1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PainelAdministrador PainelAdm = new PainelAdministrador();
+            Painel PainelAdm = new Painel();
             
             this.Hide();
             PainelAdm.ShowDialog();
