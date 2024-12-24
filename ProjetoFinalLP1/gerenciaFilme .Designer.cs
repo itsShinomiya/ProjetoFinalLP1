@@ -41,13 +41,13 @@
             this.buscaBotao = new System.Windows.Forms.ToolStripButton();
             this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.buscaExibir = new System.Windows.Forms.DataGridView();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adicionaSala = new System.Windows.Forms.Button();
             this.removeSala = new System.Windows.Forms.Button();
             this.atualizaBtn = new System.Windows.Forms.Button();
             this.alteraSala = new System.Windows.Forms.Button();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.SuspendLayout();
@@ -157,9 +157,9 @@
             this.buscaExibir.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.buscaExibir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.buscaExibir.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numero,
-            this.tipo,
-            this.assentos});
+            this.codigo,
+            this.nome,
+            this.valor});
             this.buscaExibir.Location = new System.Drawing.Point(12, 124);
             this.buscaExibir.MultiSelect = false;
             this.buscaExibir.Name = "buscaExibir";
@@ -167,24 +167,6 @@
             this.buscaExibir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.buscaExibir.Size = new System.Drawing.Size(793, 502);
             this.buscaExibir.TabIndex = 1;
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "Número da Sala";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
-            // 
-            // tipo
-            // 
-            this.tipo.HeaderText = "Tipo";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            // 
-            // assentos
-            // 
-            this.assentos.HeaderText = "Número de Assentos";
-            this.assentos.Name = "assentos";
-            this.assentos.ReadOnly = true;
             // 
             // adicionaSala
             // 
@@ -226,6 +208,24 @@
             this.alteraSala.UseVisualStyleBackColor = true;
             this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
             // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Código do Filme";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            // 
+            // nome
+            // 
+            this.nome.HeaderText = "Nome do Filme";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor";
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            // 
             // gerenciaFilme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,11 +266,11 @@
         private System.Windows.Forms.Button removeSala;
         private System.Windows.Forms.Button atualizaBtn;
         private System.Windows.Forms.Button alteraSala;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assentos;
         private System.Windows.Forms.ToolStripMenuItem sairStrip;
         private System.Windows.Forms.ToolStripMenuItem adicionarStrip;
         private System.Windows.Forms.ToolStripMenuItem alterarStrip;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
     }
 }
