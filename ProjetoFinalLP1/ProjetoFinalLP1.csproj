@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="editFilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editFilme.Designer.cs">
+      <DependentUpon>editFilme.cs</DependentUpon>
+    </Compile>
     <Compile Include="editSala.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="editFilme.resx">
+      <DependentUpon>editFilme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="editSala.resx">
       <DependentUpon>editSala.cs</DependentUpon>
     </EmbeddedResource>

@@ -33,5 +33,11 @@ namespace ProjetoFinalLP1
             gerenciaFuncionario gerenciarFuncionario = new gerenciaFuncionario();
             gerenciarFuncionario.ShowDialog();
         }
+
+        private void gerenciaFilme_Click(object sender, EventArgs e)
+        {
+            gerenciaFilme gerencialFilme = new gerenciaFilme();
+            gerencialFilme.ShowDialog();
+        }
     }
 }

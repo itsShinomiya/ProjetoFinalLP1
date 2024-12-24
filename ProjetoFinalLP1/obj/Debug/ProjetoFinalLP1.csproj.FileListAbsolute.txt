@@ -38,3 +38,4 @@ C:\Users\dud11\OneDrive\Documentos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\Pro
 C:\Users\dud11\OneDrive\Documentos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoF.94BA473D.Up2Date
 C:\Users\dud11\OneDrive\Documentos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.exe
 C:\Users\dud11\OneDrive\Documentos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.pdb
+C:\Users\dud11\OneDrive\Documentos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.editFilme.resources

@@ -126,6 +126,7 @@
             this.gerenciaFilme.TabIndex = 5;
             this.gerenciaFilme.Text = "Gerenciar Filmes";
             this.gerenciaFilme.UseVisualStyleBackColor = true;
+            this.gerenciaFilme.Click += new System.EventHandler(this.gerenciaFilme_Click);
             // 
             // obterAjuda
             // 
