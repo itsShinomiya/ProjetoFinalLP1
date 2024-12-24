@@ -47,7 +47,10 @@
             this.alteraSala = new System.Windows.Forms.Button();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sala = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ingressos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.SuspendLayout();
@@ -159,7 +162,10 @@
             this.buscaExibir.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.nome,
-            this.valor});
+            this.sala,
+            this.horario,
+            this.valor,
+            this.ingressos});
             this.buscaExibir.Location = new System.Drawing.Point(12, 124);
             this.buscaExibir.MultiSelect = false;
             this.buscaExibir.Name = "buscaExibir";
@@ -220,11 +226,29 @@
             this.nome.Name = "nome";
             this.nome.ReadOnly = true;
             // 
+            // sala
+            // 
+            this.sala.HeaderText = "Sala";
+            this.sala.Name = "sala";
+            this.sala.ReadOnly = true;
+            // 
+            // horario
+            // 
+            this.horario.HeaderText = "Horário do Filme";
+            this.horario.Name = "horario";
+            this.horario.ReadOnly = true;
+            // 
             // valor
             // 
             this.valor.HeaderText = "Valor";
             this.valor.Name = "valor";
             this.valor.ReadOnly = true;
+            // 
+            // ingressos
+            // 
+            this.ingressos.HeaderText = "Ingressos Restantes";
+            this.ingressos.Name = "ingressos";
+            this.ingressos.ReadOnly = true;
             // 
             // gerenciaFilme
             // 
@@ -271,6 +295,9 @@
         private System.Windows.Forms.ToolStripMenuItem alterarStrip;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sala;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horario;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ingressos;
     }
 }
