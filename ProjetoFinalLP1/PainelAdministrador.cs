@@ -27,5 +27,11 @@ namespace ProjetoFinalLP1
             gerenciaSala gerenciarSala = new gerenciaSala();
             gerenciarSala.ShowDialog();
         }
+
+        private void gerenciaFuncionario_Click(object sender, EventArgs e)
+        {
+            gerenciaFuncionario gerenciarFuncionario = new gerenciaFuncionario();
+            gerenciarFuncionario.ShowDialog();
+        }
     }
 }

@@ -56,6 +56,18 @@
     <Compile Include="editSala.Designer.cs">
       <DependentUpon>editSala.cs</DependentUpon>
     </Compile>
+    <Compile Include="gerenciaFuncionario .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gerenciaFuncionario .Designer.cs">
+      <DependentUpon>gerenciaFuncionario .cs</DependentUpon>
+    </Compile>
+    <Compile Include="gerenciaFilme .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gerenciaFilme .Designer.cs">
+      <DependentUpon>gerenciaFilme .cs</DependentUpon>
+    </Compile>
     <Compile Include="gerenciaSala.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="editSala.resx">
       <DependentUpon>editSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gerenciaFuncionario .resx">
+      <DependentUpon>gerenciaFuncionario .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gerenciaFilme .resx">
+      <DependentUpon>gerenciaFilme .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gerenciaSala.resx">
       <DependentUpon>gerenciaSala.cs</DependentUpon>

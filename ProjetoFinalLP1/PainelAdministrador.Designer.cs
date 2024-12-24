@@ -32,13 +32,13 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.arquivoStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.sairToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.ferramentasStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.gerenciaSalas = new System.Windows.Forms.Button();
             this.gerenciaFuncionario = new System.Windows.Forms.Button();
             this.gerenciaVenda = new System.Windows.Forms.Button();
             this.gerenciaCliente = new System.Windows.Forms.Button();
             this.gerenciaFilme = new System.Windows.Forms.Button();
             this.obterAjuda = new System.Windows.Forms.Button();
-            this.ferramentasStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,9 +67,18 @@
             // sairToolStrip
             // 
             this.sairToolStrip.Name = "sairToolStrip";
-            this.sairToolStrip.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStrip.Size = new System.Drawing.Size(93, 22);
             this.sairToolStrip.Text = "&Sair";
             this.sairToolStrip.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // ferramentasStrip
+            // 
+            this.ferramentasStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ferramentasStrip.Image = ((System.Drawing.Image)(resources.GetObject("ferramentasStrip.Image")));
+            this.ferramentasStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ferramentasStrip.Name = "ferramentasStrip";
+            this.ferramentasStrip.Size = new System.Drawing.Size(85, 22);
+            this.ferramentasStrip.Text = "&Ferramentas";
             // 
             // gerenciaSalas
             // 
@@ -89,6 +98,7 @@
             this.gerenciaFuncionario.TabIndex = 2;
             this.gerenciaFuncionario.Text = "Gerenciar Funcionários";
             this.gerenciaFuncionario.UseVisualStyleBackColor = true;
+            this.gerenciaFuncionario.Click += new System.EventHandler(this.gerenciaFuncionario_Click);
             // 
             // gerenciaVenda
             // 
@@ -125,15 +135,6 @@
             this.obterAjuda.TabIndex = 6;
             this.obterAjuda.Text = "Ajuda";
             this.obterAjuda.UseVisualStyleBackColor = true;
-            // 
-            // ferramentasStrip
-            // 
-            this.ferramentasStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.ferramentasStrip.Image = ((System.Drawing.Image)(resources.GetObject("ferramentasStrip.Image")));
-            this.ferramentasStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ferramentasStrip.Name = "ferramentasStrip";
-            this.ferramentasStrip.Size = new System.Drawing.Size(85, 22);
-            this.ferramentasStrip.Text = "&Ferramentas";
             // 
             // PainelAdministrador
             // 
