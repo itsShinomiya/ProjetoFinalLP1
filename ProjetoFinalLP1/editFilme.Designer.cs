@@ -42,7 +42,7 @@
             this.descricaoTexto = new System.Windows.Forms.RichTextBox();
             this.valorTxt = new System.Windows.Forms.Label();
             this.descricaoTxt = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.bannerTxt = new System.Windows.Forms.Label();
             this.bannerImagem = new System.Windows.Forms.PictureBox();
             this.carregaImagem = new System.Windows.Forms.OpenFileDialog();
             this.carregarImagem = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             this.ingressosQtd = new System.Windows.Forms.NumericUpDown();
             this.ingressosTxt = new System.Windows.Forms.Label();
             this.horarioTxt = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.horarioValor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.filmeNmr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeroSala)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.valorNumero)).BeginInit();
@@ -207,14 +207,14 @@
             this.descricaoTxt.TabIndex = 13;
             this.descricaoTxt.Text = "Descrição";
             // 
-            // label1
+            // bannerTxt
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(314, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Banner:";
+            this.bannerTxt.AutoSize = true;
+            this.bannerTxt.Location = new System.Drawing.Point(314, 12);
+            this.bannerTxt.Name = "bannerTxt";
+            this.bannerTxt.Size = new System.Drawing.Size(44, 13);
+            this.bannerTxt.TabIndex = 14;
+            this.bannerTxt.Text = "Banner:";
             // 
             // bannerImagem
             // 
@@ -291,27 +291,27 @@
             this.horarioTxt.TabIndex = 20;
             this.horarioTxt.Text = "Horário";
             // 
-            // comboBox1
+            // horarioValor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 147);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(120, 21);
-            this.comboBox1.TabIndex = 21;
+            this.horarioValor.FormattingEnabled = true;
+            this.horarioValor.Location = new System.Drawing.Point(13, 147);
+            this.horarioValor.Name = "horarioValor";
+            this.horarioValor.Size = new System.Drawing.Size(120, 21);
+            this.horarioValor.TabIndex = 21;
             // 
             // editFilme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 331);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.horarioValor);
             this.Controls.Add(this.horarioTxt);
             this.Controls.Add(this.ingressosTxt);
             this.Controls.Add(this.ingressosQtd);
             this.Controls.Add(this.removeImagem);
             this.Controls.Add(this.carregarImagem);
             this.Controls.Add(this.bannerImagem);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.bannerTxt);
             this.Controls.Add(this.descricaoTxt);
             this.Controls.Add(this.valorTxt);
             this.Controls.Add(this.descricaoTexto);
@@ -358,7 +358,7 @@
         private System.Windows.Forms.RichTextBox descricaoTexto;
         private System.Windows.Forms.Label valorTxt;
         private System.Windows.Forms.Label descricaoTxt;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label bannerTxt;
         private System.Windows.Forms.PictureBox bannerImagem;
         private System.Windows.Forms.OpenFileDialog carregaImagem;
         private System.Windows.Forms.Button carregarImagem;
@@ -366,6 +366,6 @@
         private System.Windows.Forms.NumericUpDown ingressosQtd;
         private System.Windows.Forms.Label ingressosTxt;
         private System.Windows.Forms.Label horarioTxt;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox horarioValor;
     }
 }
