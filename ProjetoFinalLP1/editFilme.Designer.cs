@@ -219,6 +219,7 @@
             // bannerImagem
             // 
             this.bannerImagem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bannerImagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bannerImagem.Location = new System.Drawing.Point(317, 28);
             this.bannerImagem.Name = "bannerImagem";
             this.bannerImagem.Size = new System.Drawing.Size(165, 237);
