@@ -31,11 +31,6 @@ namespace ProjetoFinalLP1
             this.Close();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void editSala_Load(object sender, EventArgs e)
         {
             try
@@ -58,7 +53,7 @@ namespace ProjetoFinalLP1
                 try
                 {
                     Dados.Read();
-                    filmeNmr.Value = Convert.ToDecimal(Dados[0]) + 1;
+                    filmeNmr.Value = Convert.ToInt32(Dados[0]) + 1;
                 }
                 catch (Exception ex)
                 {
@@ -69,6 +64,23 @@ namespace ProjetoFinalLP1
                     Dados.Close();
                     atualizaTipoIngresso();
                 }
+            }
+
+            Obj_CmdSQL.Parameters.Clear();
+            Obj_CmdSQL.CommandText = "SELECT MAX(numero) FROM sala";
+            Dados = Obj_CmdSQL.ExecuteReader();
+            try
+            {
+                Dados.Read();
+                numeroSala.Maximum = Convert.ToInt32(Dados[0]);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível obter as salas! Verifique a parte de salas! \n Erro:" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Dados.Close();
             }
 
         }
@@ -116,8 +128,9 @@ namespace ProjetoFinalLP1
                 Dados = Obj_CmdSQL.ExecuteReader();
                 Dados.Read();
                 salaTipo.Text = Dados["tipo"].ToString();
+                ingressosQtd.Maximum = Convert.ToInt32(Dados["assentos"]);
                 ingressosQtd.Value = Convert.ToInt32(Dados["assentos"]);
-
+                ingressosQtd.Enabled = true;
             }
             catch (Exception ex)
             {
