@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\projetofinallp1\\editfilme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|c:\\users\\dud11\\onedrive\\documentos\\projetofinallp1\\projetofinallp1\\editfilme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|solutionrelative:projetofinallp1\\editfilme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|c:\\users\\dud11\\onedrive\\documentos\\projetofinallp1\\projetofinallp1\\editfilme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\projetofinallp1\\editfilme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|solutionrelative:projetofinallp1\\editfilme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -90,8 +90,7 @@
               "RelativeToolTip": "ProjetoFinalLP1\\gerenciaFilme .cs",
               "ViewState": "AgIAAHcAAAAAAAAAAAAuwB0AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T19:35:26.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T19:35:26.363Z"
             },
             {
               "$type": "Document",
@@ -115,8 +114,7 @@
               "RelativeToolTip": "ProjetoFinalLP1\\editFilme.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAA4wCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T20:05:49.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T20:05:49.874Z"
             },
             {
               "$type": "Document",
@@ -127,8 +125,7 @@
               "ToolTip": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\Login.cs [Design]",
               "RelativeToolTip": "ProjetoFinalLP1\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T16:27:03.049Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-22T16:27:03.049Z"
             },
             {
               "$type": "Document",
@@ -139,8 +136,7 @@
               "ToolTip": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\gerenciaSala.cs [Design]",
               "RelativeToolTip": "ProjetoFinalLP1\\gerenciaSala.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T15:09:43.004Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-23T15:09:43.004Z"
             },
             {
               "$type": "Document",
@@ -152,8 +148,7 @@
               "RelativeToolTip": "ProjetoFinalLP1\\gerenciaSala.cs",
               "ViewState": "AgIAAIgAAAAAAAAAAAAYwB0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T15:26:58.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T15:26:58.469Z"
             },
             {
               "$type": "Document",
@@ -164,8 +159,7 @@
               "ToolTip": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\editSala.cs [Design]",
               "RelativeToolTip": "ProjetoFinalLP1\\editSala.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T18:11:02.321Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-23T18:11:02.321Z"
             },
             {
               "$type": "Document",
@@ -177,8 +171,7 @@
               "RelativeToolTip": "ProjetoFinalLP1\\editSala.cs",
               "ViewState": "AgIAAIUAAAAAAAAAAAAAAJgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T19:08:25.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T19:08:25.023Z"
             },
             {
               "$type": "Document",
@@ -189,8 +182,7 @@
               "ToolTip": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\gerenciaFilme .cs [Design]",
               "RelativeToolTip": "ProjetoFinalLP1\\gerenciaFilme .cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T19:35:45.824Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-24T19:35:45.824Z"
             },
             {
               "$type": "Document",
@@ -202,8 +194,7 @@
               "RelativeToolTip": "ProjetoFinalLP1\\Login.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAwwFEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T17:48:11.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T17:48:11.365Z"
             },
             {
               "$type": "Document",
@@ -285,8 +276,7 @@
               "RelativeToolTip": "ProjetoFinalLP1\\Login.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T17:50:33.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T17:50:33.957Z"
             }
           ]
         }

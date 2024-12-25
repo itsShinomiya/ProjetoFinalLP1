@@ -305,18 +305,19 @@
             // 
             // diaFilme
             // 
+            this.diaFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.diaFilme.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.diaFilme.Location = new System.Drawing.Point(13, 144);
+            this.diaFilme.Location = new System.Drawing.Point(13, 147);
             this.diaFilme.Name = "diaFilme";
             this.diaFilme.ShowUpDown = true;
-            this.diaFilme.Size = new System.Drawing.Size(120, 20);
+            this.diaFilme.Size = new System.Drawing.Size(120, 21);
             this.diaFilme.TabIndex = 22;
             this.diaFilme.Value = new System.DateTime(2024, 12, 25, 0, 0, 0, 0);
             // 
             // diaTxt
             // 
             this.diaTxt.AutoSize = true;
-            this.diaTxt.Location = new System.Drawing.Point(10, 130);
+            this.diaTxt.Location = new System.Drawing.Point(9, 130);
             this.diaTxt.Name = "diaTxt";
             this.diaTxt.Size = new System.Drawing.Size(81, 13);
             this.diaTxt.TabIndex = 23;
