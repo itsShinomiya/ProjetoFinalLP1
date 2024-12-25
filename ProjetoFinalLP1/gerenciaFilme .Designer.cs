@@ -48,7 +48,8 @@
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sala = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tiposala = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ingressos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -164,7 +165,8 @@
             this.codigo,
             this.nome,
             this.sala,
-            this.tiposala,
+            this.tipo,
+            this.dia,
             this.horario,
             this.valor,
             this.ingressos});
@@ -234,11 +236,17 @@
             this.sala.Name = "sala";
             this.sala.ReadOnly = true;
             // 
-            // tiposala
+            // tipo
             // 
-            this.tiposala.HeaderText = "Tipo da Sala";
-            this.tiposala.Name = "tiposala";
-            this.tiposala.ReadOnly = true;
+            this.tipo.HeaderText = "Tipo da Sala";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            // 
+            // dia
+            // 
+            this.dia.HeaderText = "Dia";
+            this.dia.Name = "dia";
+            this.dia.ReadOnly = true;
             // 
             // horario
             // 
@@ -304,7 +312,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn sala;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tiposala;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dia;
         private System.Windows.Forms.DataGridViewTextBoxColumn horario;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ingressos;

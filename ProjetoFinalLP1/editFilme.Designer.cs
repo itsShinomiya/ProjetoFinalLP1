@@ -51,6 +51,8 @@
             this.ingressosTxt = new System.Windows.Forms.Label();
             this.horarioTxt = new System.Windows.Forms.Label();
             this.horarioValor = new System.Windows.Forms.ComboBox();
+            this.diaFilme = new System.Windows.Forms.DateTimePicker();
+            this.diaTxt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.filmeNmr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeroSala)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.valorNumero)).BeginInit();
@@ -286,7 +288,7 @@
             // horarioTxt
             // 
             this.horarioTxt.AutoSize = true;
-            this.horarioTxt.Location = new System.Drawing.Point(10, 130);
+            this.horarioTxt.Location = new System.Drawing.Point(161, 130);
             this.horarioTxt.Name = "horarioTxt";
             this.horarioTxt.Size = new System.Drawing.Size(41, 13);
             this.horarioTxt.TabIndex = 20;
@@ -295,16 +297,37 @@
             // horarioValor
             // 
             this.horarioValor.FormattingEnabled = true;
-            this.horarioValor.Location = new System.Drawing.Point(13, 147);
+            this.horarioValor.Location = new System.Drawing.Point(164, 147);
             this.horarioValor.Name = "horarioValor";
             this.horarioValor.Size = new System.Drawing.Size(120, 21);
             this.horarioValor.TabIndex = 21;
+            // 
+            // diaFilme
+            // 
+            this.diaFilme.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.diaFilme.Location = new System.Drawing.Point(13, 144);
+            this.diaFilme.Name = "diaFilme";
+            this.diaFilme.ShowUpDown = true;
+            this.diaFilme.Size = new System.Drawing.Size(120, 20);
+            this.diaFilme.TabIndex = 22;
+            this.diaFilme.Value = new System.DateTime(2024, 12, 25, 0, 0, 0, 0);
+            // 
+            // diaTxt
+            // 
+            this.diaTxt.AutoSize = true;
+            this.diaTxt.Location = new System.Drawing.Point(10, 130);
+            this.diaTxt.Name = "diaTxt";
+            this.diaTxt.Size = new System.Drawing.Size(81, 13);
+            this.diaTxt.TabIndex = 23;
+            this.diaTxt.Text = "Dia de Exibição";
             // 
             // editFilme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 331);
+            this.Controls.Add(this.diaTxt);
+            this.Controls.Add(this.diaFilme);
             this.Controls.Add(this.horarioValor);
             this.Controls.Add(this.horarioTxt);
             this.Controls.Add(this.ingressosTxt);
@@ -368,5 +391,7 @@
         private System.Windows.Forms.Label ingressosTxt;
         private System.Windows.Forms.Label horarioTxt;
         private System.Windows.Forms.ComboBox horarioValor;
+        private System.Windows.Forms.DateTimePicker diaFilme;
+        private System.Windows.Forms.Label diaTxt;
     }
 }
