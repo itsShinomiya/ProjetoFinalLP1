@@ -99,6 +99,7 @@
             0,
             0,
             0});
+            this.numeroSala.ValueChanged += new System.EventHandler(this.numeroSala_ValueChanged);
             // 
             // btnSalvar
             // 
@@ -142,6 +143,7 @@
             this.salaTipo.Name = "salaTipo";
             this.salaTipo.Size = new System.Drawing.Size(120, 21);
             this.salaTipo.TabIndex = 3;
+            this.salaTipo.SelectedIndexChanged += new System.EventHandler(this.salaTipo_SelectedIndexChanged);
             // 
             // assentosTxt
             // 

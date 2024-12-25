@@ -17,8 +17,12 @@ namespace ProjetoFinalLP1
         private MySqlConnection Obj_Conn = new MySqlConnection();
         private MySqlCommand Obj_CmdSQL = new MySqlCommand();
         private MySqlDataReader Dados;
-        public editFilme()
+
+        int controle = 0;
+
+        public editFilme(int indice)
         {
+            controle = indice;
             InitializeComponent();
         }
 
@@ -45,11 +49,33 @@ namespace ProjetoFinalLP1
                 MessageBox.Show("Erro: " + Erro.Message, "Erro de Conexão",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            Obj_CmdSQL.CommandText = "SELECT MAX(codigo) FROM filmes";
+            Dados = Obj_CmdSQL.ExecuteReader();
+
+            if (Dados.HasRows)
+            {
+                try
+                {
+                    Dados.Read();
+                    filmeNmr.Value = Convert.ToDecimal(Dados[0]) + 1;
+                }
+                catch (Exception ex)
+                {
+                    filmeNmr.Value = 1;
+                }
+                finally
+                {
+                    Dados.Close();
+                    atualizaTipoIngresso();
+                }
+            }
+
         }
 
         private void salaNmr_ValueChanged(object sender, EventArgs e)
         {
-            
+            atualizaTipoIngresso();
         }
 
         private void descricaoTexto_Click(object sender, EventArgs e)
@@ -72,6 +98,40 @@ namespace ProjetoFinalLP1
         private void removeImagem_Click(object sender, EventArgs e)
         {
             bannerImagem.Image = null;
+        }
+
+        private void salaTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        void atualizaTipoIngresso()
+        {
+            Dados.Close();
+            Obj_CmdSQL.Parameters.Clear();
+            string strSQL = $"SELECT tipo, assentos FROM sala WHERE numero = {numeroSala.Value}";
+            Obj_CmdSQL.CommandText = strSQL;
+            try
+            {
+                Dados = Obj_CmdSQL.ExecuteReader();
+                Dados.Read();
+                salaTipo.Text = Dados["tipo"].ToString();
+                ingressosQtd.Value = Convert.ToInt32(Dados["assentos"]);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:" + ex);
+            }
+            finally
+            {
+                Dados.Close();
+            }
+        }
+
+        private void numeroSala_ValueChanged(object sender, EventArgs e)
+        {
+            atualizaTipoIngresso();
         }
     }
 }

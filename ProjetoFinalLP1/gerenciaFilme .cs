@@ -27,7 +27,7 @@ namespace ProjetoFinalLP1
         {
             try
             {
-                string comando = "SELECT codigo, nome, sala, horario, valor, ingressos FROM filmes WHERE 1=1";
+                string comando = "SELECT codigo, nome, sala, horario, valor, ingressos, dia FROM filmes WHERE 1=1";
 
                 Obj_CmdSQL.Parameters.Clear();
                 Obj_CmdSQL.CommandText = comando;
@@ -42,9 +42,13 @@ namespace ProjetoFinalLP1
                     foreach (DataRow row in dt.Rows)
                     {
                         buscaExibir.Rows.Add(
-                            row["numero"],
-                            row["tipo"],
-                            row["assentos"]
+                            row["codigo"],
+                            row["nome"],
+                            row["sala"],
+                            row["horario"],
+                            row["valor"],
+                            row["ingressos"],
+                            row["dia"]
                         );
                     }
                 }
@@ -61,14 +65,14 @@ namespace ProjetoFinalLP1
 
         private void adicionaSala_Click(object sender, EventArgs e)
         {
-            editFilme adicionaFilme = new editFilme();
+            editFilme adicionaFilme = new editFilme(1);
             adicionaFilme.ShowDialog();
             refresh();
         }
 
         private void alteraSala_Click(object sender, EventArgs e)
         {
-            editFilme adicionaFilme = new editFilme();
+            editFilme adicionaFilme = new editFilme(0);
             adicionaFilme.ShowDialog();
             refresh();
         }
@@ -127,17 +131,19 @@ namespace ProjetoFinalLP1
         {
             adicionaSala.PerformClick();
         }
-
         private void alterarStrip_Click(object sender, EventArgs e)
         {
-            controle = 2;
+            /*   controle = 2;
 
-            //DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-            //int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
+               //DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+               //int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
 
-            editFilme adicionaFilme = new editFilme();
-            adicionaFilme.ShowDialog();
-            refresh();
+               editFilme adicionaFilme = new editFilme();
+               adicionaFilme.ShowDialog();
+               refresh();]
+            */
         }
+
+
     }
 }
