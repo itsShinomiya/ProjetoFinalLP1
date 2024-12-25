@@ -39,3 +39,4 @@ C:\Users\dud11\OneDrive\Documentos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\Pro
 C:\Users\dud11\OneDrive\Documentos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.pdb
 C:\Users\dud11\OneDrive\Documentos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.editFilme.resources
 C:\Users\dud11\OneDrive\Documentos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.Painel.resources
+C:\Users\dud11\OneDrive\Documentos\ProjetoFinalLP1\ProjetoFinalLP1\obj\Debug\ProjetoFinalLP1.editFuncionario.resources

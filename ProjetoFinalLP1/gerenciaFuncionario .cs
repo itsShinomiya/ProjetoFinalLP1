@@ -62,8 +62,8 @@ namespace ProjetoFinalLP1
         private void adicionaSala_Click(object sender, EventArgs e)
         {
             controle = 0;
-            editSala adicionaSala = new editSala(controle, -1);
-            adicionaSala.ShowDialog();
+            editFuncionario adicionaFuncionario = new editFuncionario(-1);
+            adicionaFuncionario.ShowDialog();
             refresh();
         }
 
