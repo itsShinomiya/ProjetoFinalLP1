@@ -31,7 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gerenciaSala));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.arquivoStrip = new System.Windows.Forms.ToolStripDropDownButton();
+            this.sairStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ferramentasStrip = new System.Windows.Forms.ToolStripDropDownButton();
+            this.adicionarStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.buscaSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.buscaTexto = new System.Windows.Forms.ToolStripTextBox();
@@ -45,9 +48,6 @@
             this.removeSala = new System.Windows.Forms.Button();
             this.atualizaBtn = new System.Windows.Forms.Button();
             this.alteraSala = new System.Windows.Forms.Button();
-            this.sairStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +79,13 @@
             this.arquivoStrip.Size = new System.Drawing.Size(62, 22);
             this.arquivoStrip.Text = "&Arquivo";
             // 
+            // sairStrip
+            // 
+            this.sairStrip.Name = "sairStrip";
+            this.sairStrip.Size = new System.Drawing.Size(93, 22);
+            this.sairStrip.Text = "&Sair";
+            this.sairStrip.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
             // ferramentasStrip
             // 
             this.ferramentasStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -90,6 +97,20 @@
             this.ferramentasStrip.Name = "ferramentasStrip";
             this.ferramentasStrip.Size = new System.Drawing.Size(85, 22);
             this.ferramentasStrip.Text = "&Ferramentas";
+            // 
+            // adicionarStrip
+            // 
+            this.adicionarStrip.Name = "adicionarStrip";
+            this.adicionarStrip.Size = new System.Drawing.Size(125, 22);
+            this.adicionarStrip.Text = "&Adicionar";
+            this.adicionarStrip.Click += new System.EventHandler(this.adicionarStrip_Click);
+            // 
+            // alterarStrip
+            // 
+            this.alterarStrip.Name = "alterarStrip";
+            this.alterarStrip.Size = new System.Drawing.Size(125, 22);
+            this.alterarStrip.Text = "&Alterar";
+            this.alterarStrip.Click += new System.EventHandler(this.alterarStrip_Click);
             // 
             // ajudaStrip
             // 
@@ -204,27 +225,6 @@
             this.alteraSala.Text = "Alterar";
             this.alteraSala.UseVisualStyleBackColor = true;
             this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
-            // 
-            // sairStrip
-            // 
-            this.sairStrip.Name = "sairStrip";
-            this.sairStrip.Size = new System.Drawing.Size(180, 22);
-            this.sairStrip.Text = "&Sair";
-            this.sairStrip.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
-            // adicionarStrip
-            // 
-            this.adicionarStrip.Name = "adicionarStrip";
-            this.adicionarStrip.Size = new System.Drawing.Size(180, 22);
-            this.adicionarStrip.Text = "&Adicionar";
-            this.adicionarStrip.Click += new System.EventHandler(this.adicionarStrip_Click);
-            // 
-            // alterarStrip
-            // 
-            this.alterarStrip.Name = "alterarStrip";
-            this.alterarStrip.Size = new System.Drawing.Size(180, 22);
-            this.alterarStrip.Text = "&Alterar";
-            this.alterarStrip.Click += new System.EventHandler(this.alterarStrip_Click);
             // 
             // gerenciaSala
             // 

@@ -103,19 +103,19 @@ namespace ProjetoFinalLP1
         private void removeSala_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-            int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
-            DialogResult exc = MessageBox.Show("Deseja realmente deletar essa sala?", "Excluir?", MessageBoxButtons.YesNo);
+            string valor = Convert.ToString(selectedRow.Cells["cpf"].Value);
+            DialogResult exc = MessageBox.Show("Deseja realmente deletar esse funcionário?", "Excluir?", MessageBoxButtons.YesNo);
             if (exc == DialogResult.Yes)
             {
                 try
                 {
-                    Obj_CmdSQL.CommandText = "DELETE FROM sala WHERE numero = " + valor.ToString();
+                    Obj_CmdSQL.CommandText = "DELETE FROM usuarios WHERE cpf = " + valor.ToString();
                     int deletar = Obj_CmdSQL.ExecuteNonQuery();
                     refresh();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Houve um erro a deletar a sala!", "Erro", MessageBoxButtons.OK);
+                    MessageBox.Show("Houve um erro ao deletar o funcionário!", "Erro", MessageBoxButtons.OK);
                 }
             }
             else if (exc == DialogResult.No)
@@ -131,16 +131,7 @@ namespace ProjetoFinalLP1
 
         private void adicionarStrip_Click(object sender, EventArgs e)
         {
-            adicionaSala.PerformClick();
-        }
-
-        private void alterarStrip_Click(object sender, EventArgs e)
-        {
-            controle = 2;
-
-            editSala alteraSala = new editSala(controle, -1);
-            alteraSala.ShowDialog();
-            refresh();
+            adicionaFuncionario.PerformClick();
         }
     }
 }

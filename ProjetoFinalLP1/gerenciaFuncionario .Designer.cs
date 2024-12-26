@@ -34,17 +34,16 @@
             this.sairStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ferramentasStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.adicionarStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.buscaSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.buscaTexto = new System.Windows.Forms.ToolStripTextBox();
             this.buscaBotao = new System.Windows.Forms.ToolStripButton();
             this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.buscaExibir = new System.Windows.Forms.DataGridView();
-            this.adicionaSala = new System.Windows.Forms.Button();
-            this.removeSala = new System.Windows.Forms.Button();
+            this.adicionaFuncionario = new System.Windows.Forms.Button();
+            this.removeFuncionario = new System.Windows.Forms.Button();
             this.atualizaBtn = new System.Windows.Forms.Button();
-            this.alteraSala = new System.Windows.Forms.Button();
+            this.alteraFuncionario = new System.Windows.Forms.Button();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,8 +90,7 @@
             // 
             this.ferramentasStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.ferramentasStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarStrip,
-            this.alterarStrip});
+            this.adicionarStrip});
             this.ferramentasStrip.Image = ((System.Drawing.Image)(resources.GetObject("ferramentasStrip.Image")));
             this.ferramentasStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ferramentasStrip.Name = "ferramentasStrip";
@@ -102,16 +100,9 @@
             // adicionarStrip
             // 
             this.adicionarStrip.Name = "adicionarStrip";
-            this.adicionarStrip.Size = new System.Drawing.Size(125, 22);
+            this.adicionarStrip.Size = new System.Drawing.Size(180, 22);
             this.adicionarStrip.Text = "&Adicionar";
             this.adicionarStrip.Click += new System.EventHandler(this.adicionarStrip_Click);
-            // 
-            // alterarStrip
-            // 
-            this.alterarStrip.Name = "alterarStrip";
-            this.alterarStrip.Size = new System.Drawing.Size(125, 22);
-            this.alterarStrip.Text = "&Alterar";
-            this.alterarStrip.Click += new System.EventHandler(this.alterarStrip_Click);
             // 
             // ajudaStrip
             // 
@@ -170,25 +161,25 @@
             this.buscaExibir.Size = new System.Drawing.Size(793, 502);
             this.buscaExibir.TabIndex = 1;
             // 
-            // adicionaSala
+            // adicionaFuncionario
             // 
-            this.adicionaSala.Location = new System.Drawing.Point(12, 54);
-            this.adicionaSala.Name = "adicionaSala";
-            this.adicionaSala.Size = new System.Drawing.Size(75, 64);
-            this.adicionaSala.TabIndex = 2;
-            this.adicionaSala.Text = "Adicionar";
-            this.adicionaSala.UseVisualStyleBackColor = true;
-            this.adicionaSala.Click += new System.EventHandler(this.adicionaSala_Click);
+            this.adicionaFuncionario.Location = new System.Drawing.Point(12, 54);
+            this.adicionaFuncionario.Name = "adicionaFuncionario";
+            this.adicionaFuncionario.Size = new System.Drawing.Size(75, 64);
+            this.adicionaFuncionario.TabIndex = 2;
+            this.adicionaFuncionario.Text = "Adicionar";
+            this.adicionaFuncionario.UseVisualStyleBackColor = true;
+            this.adicionaFuncionario.Click += new System.EventHandler(this.adicionaSala_Click);
             // 
-            // removeSala
+            // removeFuncionario
             // 
-            this.removeSala.Location = new System.Drawing.Point(255, 54);
-            this.removeSala.Name = "removeSala";
-            this.removeSala.Size = new System.Drawing.Size(75, 64);
-            this.removeSala.TabIndex = 3;
-            this.removeSala.Text = "Remover";
-            this.removeSala.UseVisualStyleBackColor = true;
-            this.removeSala.Click += new System.EventHandler(this.removeSala_Click);
+            this.removeFuncionario.Location = new System.Drawing.Point(255, 54);
+            this.removeFuncionario.Name = "removeFuncionario";
+            this.removeFuncionario.Size = new System.Drawing.Size(75, 64);
+            this.removeFuncionario.TabIndex = 3;
+            this.removeFuncionario.Text = "Remover";
+            this.removeFuncionario.UseVisualStyleBackColor = true;
+            this.removeFuncionario.Click += new System.EventHandler(this.removeSala_Click);
             // 
             // atualizaBtn
             // 
@@ -200,15 +191,15 @@
             this.atualizaBtn.UseVisualStyleBackColor = true;
             this.atualizaBtn.Click += new System.EventHandler(this.atualizaBtn_Click);
             // 
-            // alteraSala
+            // alteraFuncionario
             // 
-            this.alteraSala.Location = new System.Drawing.Point(93, 54);
-            this.alteraSala.Name = "alteraSala";
-            this.alteraSala.Size = new System.Drawing.Size(75, 64);
-            this.alteraSala.TabIndex = 5;
-            this.alteraSala.Text = "Alterar";
-            this.alteraSala.UseVisualStyleBackColor = true;
-            this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
+            this.alteraFuncionario.Location = new System.Drawing.Point(93, 54);
+            this.alteraFuncionario.Name = "alteraFuncionario";
+            this.alteraFuncionario.Size = new System.Drawing.Size(75, 64);
+            this.alteraFuncionario.TabIndex = 5;
+            this.alteraFuncionario.Text = "Alterar";
+            this.alteraFuncionario.UseVisualStyleBackColor = true;
+            this.alteraFuncionario.Click += new System.EventHandler(this.alteraSala_Click);
             // 
             // nome
             // 
@@ -239,10 +230,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 638);
-            this.Controls.Add(this.alteraSala);
+            this.Controls.Add(this.alteraFuncionario);
             this.Controls.Add(this.atualizaBtn);
-            this.Controls.Add(this.removeSala);
-            this.Controls.Add(this.adicionaSala);
+            this.Controls.Add(this.removeFuncionario);
+            this.Controls.Add(this.adicionaFuncionario);
             this.Controls.Add(this.buscaExibir);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -270,13 +261,12 @@
         private System.Windows.Forms.ToolStripDropDownButton arquivoStrip;
         private System.Windows.Forms.ToolStripDropDownButton ferramentasStrip;
         private System.Windows.Forms.DataGridView buscaExibir;
-        private System.Windows.Forms.Button adicionaSala;
-        private System.Windows.Forms.Button removeSala;
+        private System.Windows.Forms.Button adicionaFuncionario;
+        private System.Windows.Forms.Button removeFuncionario;
         private System.Windows.Forms.Button atualizaBtn;
-        private System.Windows.Forms.Button alteraSala;
+        private System.Windows.Forms.Button alteraFuncionario;
         private System.Windows.Forms.ToolStripMenuItem sairStrip;
         private System.Windows.Forms.ToolStripMenuItem adicionarStrip;
-        private System.Windows.Forms.ToolStripMenuItem alterarStrip;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn nivel;
