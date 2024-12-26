@@ -61,14 +61,15 @@ namespace ProjetoFinalLP1
 
         private void adicionaSala_Click(object sender, EventArgs e)
         {
-            editFilme adicionaFilme = new editFilme(0);
+            editFilme adicionaFilme = new editFilme(0, 0);
             adicionaFilme.ShowDialog();
             refresh();
         }
 
         private void alteraSala_Click(object sender, EventArgs e)
         {
-            editFilme adicionaFilme = new editFilme(1);
+            DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+            editFilme adicionaFilme = new editFilme(1, Convert.ToInt32(selectedRow.Cells["codigo"].Value));
             adicionaFilme.ShowDialog();
             refresh();
         }
@@ -134,7 +135,7 @@ namespace ProjetoFinalLP1
                //DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
                //int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
 
-               editFilme adicionaFilme = new editFilme(2);
+               editFilme adicionaFilme = new editFilme(2, 0);
                adicionaFilme.ShowDialog();
                refresh();          
         }

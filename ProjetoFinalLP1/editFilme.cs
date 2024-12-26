@@ -20,10 +20,12 @@ namespace ProjetoFinalLP1
         private MySqlDataReader Dados;
 
         int controle = 0;
+        int value = 0;
 
-        public editFilme(int indice)
+        public editFilme(int indice, int valor)
         {
             controle = indice;
+            value = valor;
             InitializeComponent();
         }
 
@@ -46,7 +48,15 @@ namespace ProjetoFinalLP1
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            Obj_CmdSQL.CommandText = "SELECT MAX(codigo) FROM filmes";
+            if (controle == 0 || controle == 2) 
+            {
+                Obj_CmdSQL.CommandText = "SELECT MAX(codigo) FROM filmes";
+            }
+            else
+            {
+                Obj_CmdSQL.CommandText = $"SELECT codigo, nome, descricao, banner FROM filmes WHERE @Codigo = codigo";
+                Obj_CmdSQL.Parameters.AddWithValue("@Codigo", Convert.ToInt32(value));
+            }
             Dados = Obj_CmdSQL.ExecuteReader();
 
             if (Dados.HasRows)
@@ -61,6 +71,35 @@ namespace ProjetoFinalLP1
                     catch (Exception ex)
                     {
                         filmeNmr.Value = 1;
+                    }
+                    finally
+                    {
+                        Dados.Close();
+                    }
+                }
+                if (controle == 1)
+                {
+                    byte[] rawData;
+                    try
+                    {
+                        Dados.Read();
+                        filmeNmr.Value = Convert.ToDecimal(Dados[0]);
+                        filmeNomeValor.Text = Convert.ToString(Dados[1]);
+                        descricaoTexto.Text = Convert.ToString(Dados[2]);
+                        if (!Dados.IsDBNull(Dados.GetOrdinal("banner")))
+                        {
+                            rawData = (byte[])Dados["banner"];
+                            MemoryStream Imagem = new MemoryStream(rawData);
+                            bannerImagem.Image = Image.FromStream(Imagem);
+                        }
+                        else
+                        {
+                            bannerImagem.Image = null;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Ocorreu um erro:" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
