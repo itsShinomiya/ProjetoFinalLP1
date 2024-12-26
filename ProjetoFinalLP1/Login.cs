@@ -45,7 +45,7 @@ namespace ProjetoFinalLP1
                     return;
                 }
 
-                string comando = "SELECT senha, usuario, nivel FROM usuarios WHERE usuario = @user AND senha = @pass";
+                string comando = "SELECT senha, usuario, nivel, status FROM usuarios WHERE usuario = @user AND senha = @pass";
 
                 Obj_CmdSQL.Parameters.Clear();
                 Obj_CmdSQL.Parameters.AddWithValue("@user", userTxt.Text);
@@ -58,28 +58,34 @@ namespace ProjetoFinalLP1
                     {
                         Dados.Read();
                         string nivel = Dados["nivel"].ToString();
+                        string status = Dados["status"].ToString();
 
-                        switch (nivel)
+
+                        if (status == "Admitido")
                         {
-                            case "usuario":
-                                MessageBox.Show($"Seja bem-vindo, {userTxt.Text}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                break;
-
-                            case "gerente":
-                                MessageBox.Show($"Seja bem-vindo, {userTxt.Text}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                break;
-
-                            case "administrador":
-                                MessageBox.Show("Seja bem-vindo, administrador!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                Painel PainelAdm = new Painel();  
-                                this.Hide();
-                                PainelAdm.ShowDialog();
-                                this.Close();
-                                break;
-
-                            default:
-                                MessageBox.Show("Nível de acesso inválido!", "Erro de login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                break;
+                            switch (nivel)
+                            {
+                                case "Usuário":
+                                    MessageBox.Show($"Seja bem-vindo, {userTxt.Text}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    break;
+                                case "Gerente":
+                                    MessageBox.Show($"Seja bem-vindo, {userTxt.Text}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    break;
+                                case "Administrador":
+                                    MessageBox.Show("Seja bem-vindo, Administrador!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    Painel PainelAdm = new Painel();
+                                    this.Hide();
+                                    PainelAdm.ShowDialog();
+                                    this.Close();
+                                    break;
+                                default:
+                                    MessageBox.Show("Nível de acesso inválido!", "Erro de login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("O usuário foi demitido e não tem mais acesso ao sistema!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else

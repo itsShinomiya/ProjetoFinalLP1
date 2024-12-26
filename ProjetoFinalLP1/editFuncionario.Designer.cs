@@ -38,9 +38,9 @@
             this.nomeValor = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cpfTxt = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.cpfValor = new System.Windows.Forms.MaskedTextBox();
             this.usuarioTxt = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usuarioValor = new System.Windows.Forms.TextBox();
             this.senhaValor = new System.Windows.Forms.MaskedTextBox();
             this.senhaTxt = new System.Windows.Forms.Label();
             this.tipoValor = new System.Windows.Forms.ComboBox();
@@ -58,6 +58,7 @@
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -138,14 +139,14 @@
             this.cpfTxt.TabIndex = 21;
             this.cpfTxt.Text = "CPF";
             // 
-            // maskedTextBox1
+            // cpfValor
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(13, 68);
-            this.maskedTextBox1.Mask = "000,000,000-99";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(120, 21);
-            this.maskedTextBox1.TabIndex = 22;
+            this.cpfValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
+            this.cpfValor.Location = new System.Drawing.Point(13, 68);
+            this.cpfValor.Mask = "000,000,000-99";
+            this.cpfValor.Name = "cpfValor";
+            this.cpfValor.Size = new System.Drawing.Size(120, 21);
+            this.cpfValor.TabIndex = 22;
             // 
             // usuarioTxt
             // 
@@ -156,12 +157,12 @@
             this.usuarioTxt.TabIndex = 23;
             this.usuarioTxt.Text = "Usuário";
             // 
-            // textBox2
+            // usuarioValor
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 20);
-            this.textBox2.TabIndex = 24;
+            this.usuarioValor.Location = new System.Drawing.Point(13, 109);
+            this.usuarioValor.Name = "usuarioValor";
+            this.usuarioValor.Size = new System.Drawing.Size(120, 20);
+            this.usuarioValor.TabIndex = 24;
             // 
             // senhaValor
             // 
@@ -192,7 +193,7 @@
             this.tipoValor.Items.AddRange(new object[] {
             "Administrador",
             "Gerente",
-            "Usuario"});
+            "Usuário"});
             this.tipoValor.Location = new System.Drawing.Point(164, 68);
             this.tipoValor.Name = "tipoValor";
             this.tipoValor.Size = new System.Drawing.Size(119, 21);
@@ -241,9 +242,9 @@
             this.Controls.Add(this.tipoValor);
             this.Controls.Add(this.senhaTxt);
             this.Controls.Add(this.senhaValor);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.usuarioValor);
             this.Controls.Add(this.usuarioTxt);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.cpfValor);
             this.Controls.Add(this.cpfTxt);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.nomeValor);
@@ -276,9 +277,9 @@
         private System.Windows.Forms.Label nomeValor;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label cpfTxt;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox cpfValor;
         private System.Windows.Forms.Label usuarioTxt;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox usuarioValor;
         private System.Windows.Forms.MaskedTextBox senhaValor;
         private System.Windows.Forms.Label senhaTxt;
         private System.Windows.Forms.ComboBox tipoValor;
