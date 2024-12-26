@@ -45,25 +45,6 @@ namespace ProjetoFinalLP1
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            Obj_CmdSQL.CommandText = "SELECT MAX(codigo) FROM funcionarios";
-            Dados = Obj_CmdSQL.ExecuteReader();
-
-            if (Dados.HasRows)
-            {
-                try
-                {
-                    Dados.Read();
-                    funcionarioNmr.Value = Convert.ToInt32(Dados[0]) + 1;
-                }
-                catch (Exception ex)
-                {
-                    funcionarioNmr.Value = 1;
-                }
-                finally
-                {
-                    Dados.Close();
-                }
-            }
         }
 
         private void salaNmr_ValueChanged(object sender, EventArgs e)

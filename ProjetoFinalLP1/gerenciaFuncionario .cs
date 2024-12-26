@@ -27,7 +27,7 @@ namespace ProjetoFinalLP1
         {
             try
             {
-                string comando = "SELECT numero, assentos, tipo FROM sala WHERE 1=1";
+                string comando = "SELECT nome, cpf, nivel, status FROM usuarios WHERE 1=1";
 
                 Obj_CmdSQL.Parameters.Clear();
                 Obj_CmdSQL.CommandText = comando;
@@ -42,9 +42,10 @@ namespace ProjetoFinalLP1
                     foreach (DataRow row in dt.Rows)
                     {
                         buscaExibir.Rows.Add(
-                            row["numero"],
-                            row["tipo"],
-                            row["assentos"]
+                            row["nome"],
+                            row["cpf"],
+                            row["nivel"],
+                            row["status"]
                         );
                     }
                 }

@@ -65,7 +65,7 @@ namespace ProjetoFinalLP1
                                 MessageBox.Show($"Seja bem-vindo, {userTxt.Text}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 break;
 
-                            case "vendedor":
+                            case "gerente":
                                 MessageBox.Show($"Seja bem-vindo, {userTxt.Text}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 break;
 
