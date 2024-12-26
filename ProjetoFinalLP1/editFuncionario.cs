@@ -80,7 +80,7 @@ namespace ProjetoFinalLP1
 
                 try
                 {
-                    if (funcionarioFoto != null)
+                    if (funcionarioFoto.Image != null)
                     {
                         funcionarioFoto.Image.Save(streamFoto, funcionarioFoto.Image.RawFormat);
                         rawData = streamFoto.ToArray();
@@ -100,6 +100,8 @@ namespace ProjetoFinalLP1
                     Obj_CmdSQL.Parameters.AddWithValue("@Cpf", cpfValor.Text);
                     Obj_CmdSQL.Parameters.AddWithValue("@Foto", rawData);
                     Obj_CmdSQL.Parameters.AddWithValue("@Status", statusValor.Text);
+
+                    Obj_CmdSQL.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -107,7 +109,7 @@ namespace ProjetoFinalLP1
                 }
                 finally
                 {
-                    Dados.Close();
+                    Obj_CmdSQL.Parameters.Clear();
                 }
                 this.Close();
             }

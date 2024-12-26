@@ -35,8 +35,8 @@
             this.carregaImagem = new System.Windows.Forms.OpenFileDialog();
             this.carregarImagem = new System.Windows.Forms.Button();
             this.removeImagem = new System.Windows.Forms.Button();
-            this.nomeValor = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nomeTxt = new System.Windows.Forms.Label();
+            this.nomeValor = new System.Windows.Forms.TextBox();
             this.cpfTxt = new System.Windows.Forms.Label();
             this.cpfValor = new System.Windows.Forms.MaskedTextBox();
             this.usuarioTxt = new System.Windows.Forms.Label();
@@ -114,21 +114,21 @@
             this.removeImagem.UseVisualStyleBackColor = true;
             this.removeImagem.Click += new System.EventHandler(this.removeImagem_Click);
             // 
+            // nomeTxt
+            // 
+            this.nomeTxt.AutoSize = true;
+            this.nomeTxt.Location = new System.Drawing.Point(10, 12);
+            this.nomeTxt.Name = "nomeTxt";
+            this.nomeTxt.Size = new System.Drawing.Size(82, 13);
+            this.nomeTxt.TabIndex = 19;
+            this.nomeTxt.Text = "Nome Completo";
+            // 
             // nomeValor
             // 
-            this.nomeValor.AutoSize = true;
-            this.nomeValor.Location = new System.Drawing.Point(10, 12);
+            this.nomeValor.Location = new System.Drawing.Point(13, 28);
             this.nomeValor.Name = "nomeValor";
-            this.nomeValor.Size = new System.Drawing.Size(82, 13);
-            this.nomeValor.TabIndex = 19;
-            this.nomeValor.Text = "Nome Completo";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(13, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(271, 20);
-            this.textBox1.TabIndex = 20;
+            this.nomeValor.Size = new System.Drawing.Size(271, 20);
+            this.nomeValor.TabIndex = 20;
             // 
             // cpfTxt
             // 
@@ -246,8 +246,8 @@
             this.Controls.Add(this.usuarioTxt);
             this.Controls.Add(this.cpfValor);
             this.Controls.Add(this.cpfTxt);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.nomeValor);
+            this.Controls.Add(this.nomeTxt);
             this.Controls.Add(this.removeImagem);
             this.Controls.Add(this.carregarImagem);
             this.Controls.Add(this.funcionarioFoto);
@@ -274,8 +274,8 @@
         private System.Windows.Forms.OpenFileDialog carregaImagem;
         private System.Windows.Forms.Button carregarImagem;
         private System.Windows.Forms.Button removeImagem;
-        private System.Windows.Forms.Label nomeValor;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label nomeTxt;
+        private System.Windows.Forms.TextBox nomeValor;
         private System.Windows.Forms.Label cpfTxt;
         private System.Windows.Forms.MaskedTextBox cpfValor;
         private System.Windows.Forms.Label usuarioTxt;

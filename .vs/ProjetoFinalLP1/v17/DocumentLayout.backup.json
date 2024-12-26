@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\projetofinallp1\\gerenciafuncionario .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|solutionrelative:projetofinallp1\\gerenciafuncionario .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|c:\\users\\dud11\\onedrive\\documentos\\projetofinallp1\\projetofinallp1\\editfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|solutionrelative:projetofinallp1\\editfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\projetofinallp1\\editfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|solutionrelative:projetofinallp1\\editfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|c:\\users\\dud11\\onedrive\\documentos\\projetofinallp1\\projetofinallp1\\editfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|solutionrelative:projetofinallp1\\editfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\projetofinallp1\\gerenciafuncionario .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|solutionrelative:projetofinallp1\\gerenciafuncionario .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\projetofinallp1\\gerenciafuncionario .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|solutionrelative:projetofinallp1\\gerenciafuncionario .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\projetofinallp1\\editsala.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\projetofinallp1\\editfilme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|solutionrelative:projetofinallp1\\editfilme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\projetofinallp1\\gerenciafuncionario .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|solutionrelative:projetofinallp1\\gerenciafuncionario .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}|ProjetoFinalLP1\\ProjetoFinalLP1.csproj|C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\projetofinallp1\\painel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -82,30 +82,17 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "editSala.cs",
-              "DocumentMoniker": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\editSala.cs",
-              "RelativeDocumentMoniker": "ProjetoFinalLP1\\editSala.cs",
-              "ToolTip": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\editSala.cs",
-              "RelativeToolTip": "ProjetoFinalLP1\\editSala.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAQwDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T19:08:25.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "editFuncionario.cs",
               "DocumentMoniker": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\editFuncionario.cs",
               "RelativeDocumentMoniker": "ProjetoFinalLP1\\editFuncionario.cs",
               "ToolTip": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\editFuncionario.cs",
               "RelativeToolTip": "ProjetoFinalLP1\\editFuncionario.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAApwG8AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAADwv2IAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-25T15:33:30.16Z",
               "EditorCaption": ""
@@ -124,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "editSala.cs [Design]",
               "DocumentMoniker": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\editSala.cs",
               "RelativeDocumentMoniker": "ProjetoFinalLP1\\editSala.cs",
@@ -136,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\Login.cs",
               "RelativeDocumentMoniker": "ProjetoFinalLP1\\Login.cs",
@@ -148,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\Login.cs",
               "RelativeDocumentMoniker": "ProjetoFinalLP1\\Login.cs",
@@ -161,20 +148,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "gerenciaFuncionario .cs",
               "DocumentMoniker": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\gerenciaFuncionario .cs",
               "RelativeDocumentMoniker": "ProjetoFinalLP1\\gerenciaFuncionario .cs",
               "ToolTip": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\gerenciaFuncionario .cs",
               "RelativeToolTip": "ProjetoFinalLP1\\gerenciaFuncionario .cs",
-              "ViewState": "AgIAADcAAAAAAAAAAADwv0EAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAADwv04AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T19:46:45.212Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
+              "Title": "gerenciaFuncionario .cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\gerenciaFuncionario .cs",
+              "RelativeDocumentMoniker": "ProjetoFinalLP1\\gerenciaFuncionario .cs",
+              "ToolTip": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\gerenciaFuncionario .cs [Design]",
+              "RelativeToolTip": "ProjetoFinalLP1\\gerenciaFuncionario .cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T19:47:10.765Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "editSala.cs",
+              "DocumentMoniker": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\editSala.cs",
+              "RelativeDocumentMoniker": "ProjetoFinalLP1\\editSala.cs",
+              "ToolTip": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\editSala.cs",
+              "RelativeToolTip": "ProjetoFinalLP1\\editSala.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAQwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T19:08:25.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "gerenciaSala.cs [Design]",
               "DocumentMoniker": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\gerenciaSala.cs",
               "RelativeDocumentMoniker": "ProjetoFinalLP1\\gerenciaSala.cs",
@@ -186,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "editFilme.cs [Design]",
               "DocumentMoniker": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\editFilme.cs",
               "RelativeDocumentMoniker": "ProjetoFinalLP1\\editFilme.cs",
@@ -194,18 +206,6 @@
               "RelativeToolTip": "ProjetoFinalLP1\\editFilme.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T20:06:10.653Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "gerenciaFuncionario .cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\gerenciaFuncionario .cs",
-              "RelativeDocumentMoniker": "ProjetoFinalLP1\\gerenciaFuncionario .cs",
-              "ToolTip": "C:\\Users\\dud11\\OneDrive\\Documentos\\ProjetoFinalLP1\\ProjetoFinalLP1\\gerenciaFuncionario .cs [Design]",
-              "RelativeToolTip": "ProjetoFinalLP1\\gerenciaFuncionario .cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T19:47:10.765Z",
               "EditorCaption": " [Design]"
             },
             {
