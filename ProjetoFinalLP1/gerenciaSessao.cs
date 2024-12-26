@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace ProjetoFinalLP1
 {
-    public partial class gerenciaFilme : Form
+    public partial class gerenciaSessao : Form
     {
         int controle = 0;
 
         private MySqlConnection Obj_Conn = new MySqlConnection();
         private MySqlCommand Obj_CmdSQL = new MySqlCommand();
         private MySqlDataReader Dados;
-        public gerenciaFilme()
+        public gerenciaSessao()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace ProjetoFinalLP1
         {
             try
             {
-                string comando = "SELECT codigo, nome, descricao FROM filmes WHERE 1=1";
+                string comando = "SELECT numero, assentos, tipo FROM sala WHERE 1=1";
 
                 Obj_CmdSQL.Parameters.Clear();
                 Obj_CmdSQL.CommandText = comando;
@@ -42,9 +42,9 @@ namespace ProjetoFinalLP1
                     foreach (DataRow row in dt.Rows)
                     {
                         buscaExibir.Rows.Add(
-                            row["codigo"],
-                            row["nome"],
-                            row["descricao"]
+                            row["numero"],
+                            row["tipo"],
+                            row["assentos"]
                         );
                     }
                 }
@@ -61,15 +61,18 @@ namespace ProjetoFinalLP1
 
         private void adicionaSala_Click(object sender, EventArgs e)
         {
-            editFilme adicionaFilme = new editFilme(0);
-            adicionaFilme.ShowDialog();
+            controle = 0;
+            editSessoes adicionaSessao = new editSessoes(0);
+            adicionaSessao.ShowDialog();
             refresh();
         }
 
         private void alteraSala_Click(object sender, EventArgs e)
         {
-            editFilme adicionaFilme = new editFilme(1);
-            adicionaFilme.ShowDialog();
+            controle = 1;
+
+            editSessoes adicionaSessao = new editSessoes(1);
+            adicionaSessao.ShowDialog();
             refresh();
         }
 
@@ -97,13 +100,13 @@ namespace ProjetoFinalLP1
         private void removeSala_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-            int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
-            DialogResult exc = MessageBox.Show("Deseja realmente deletar essa sala?", "Excluir?", MessageBoxButtons.YesNo);
+            string valor = Convert.ToString(selectedRow.Cells["cpf"].Value);
+            DialogResult exc = MessageBox.Show("Deseja realmente excluir esse funcionário?", "Excluir?", MessageBoxButtons.YesNo);
             if (exc == DialogResult.Yes)
             {
                 try
                 {
-                    Obj_CmdSQL.CommandText = "DELETE FROM sala WHERE numero = " + valor.ToString();
+                    Obj_CmdSQL.CommandText = "DELETE FROM usuarios WHERE cpf = " + valor;
                     int deletar = Obj_CmdSQL.ExecuteNonQuery();
                     refresh();
                 }
@@ -127,18 +130,17 @@ namespace ProjetoFinalLP1
         {
             adicionaSala.PerformClick();
         }
+
         private void alterarStrip_Click(object sender, EventArgs e)
         {
-               controle = 2;
+            controle = 2;
 
-               //DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-               //int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
+            //DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+            //int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
 
-               editFilme adicionaFilme = new editFilme(2);
-               adicionaFilme.ShowDialog();
-               refresh();          
+            editSessoes adicionaSessao = new editSessoes(2);
+            adicionaSessao.ShowDialog();
+            refresh();
         }
-
-
     }
 }

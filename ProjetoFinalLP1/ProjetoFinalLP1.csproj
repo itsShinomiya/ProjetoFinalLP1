@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="editSessoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editSessoes.Designer.cs">
+      <DependentUpon>editSessoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="editFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     <Compile Include="gerenciaFilme .Designer.cs">
       <DependentUpon>gerenciaFilme .cs</DependentUpon>
     </Compile>
+    <Compile Include="gerenciaSessao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gerenciaSessao.Designer.cs">
+      <DependentUpon>gerenciaSessao.cs</DependentUpon>
+    </Compile>
     <Compile Include="gerenciaSala.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="editSessoes.resx">
+      <DependentUpon>editSessoes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="editFuncionario.resx">
       <DependentUpon>editFuncionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="gerenciaFilme .resx">
       <DependentUpon>gerenciaFilme .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gerenciaSessao.resx">
+      <DependentUpon>gerenciaSessao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gerenciaSala.resx">
       <DependentUpon>gerenciaSala.cs</DependentUpon>

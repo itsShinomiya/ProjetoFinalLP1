@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,44 +51,40 @@ namespace ProjetoFinalLP1
 
             if (Dados.HasRows)
             {
-                try
+                if (controle == 0)
                 {
-                    Dados.Read();
-                    filmeNmr.Value = Convert.ToInt32(Dados[0]) + 1;
+                    try
+                    {
+                        Dados.Read();
+                        filmeNmr.Value = Convert.ToInt32(Dados[0]) + 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        filmeNmr.Value = 1;
+                    }
+                    finally
+                    {
+                        Dados.Close();
+                    }
                 }
-                catch (Exception ex)
-                {
-                    filmeNmr.Value = 1;
+                if (controle == 2)
+                {                 
+                    try
+                    {
+                        Dados.Read();
+                        filmeNmr.Maximum = Convert.ToInt32(Dados[0]);
+                        filmeNmr.Enabled = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Ocorreu um erro:" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        Dados.Close();
+                    }
                 }
-                finally
-                {
-                    Dados.Close();
-                    atualizaTipoIngresso();
-                }
-            }
-
-            Obj_CmdSQL.Parameters.Clear();
-            Obj_CmdSQL.CommandText = "SELECT MAX(numero) FROM sala";
-            Dados = Obj_CmdSQL.ExecuteReader();
-            try
-            {
-                Dados.Read();
-                numeroSala.Maximum = Convert.ToInt32(Dados[0]);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Não foi possível obter as salas! Verifique a parte de salas! \n Erro:" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                Dados.Close();
-            }
-
-        }
-
-        private void salaNmr_ValueChanged(object sender, EventArgs e)
-        {
-            atualizaTipoIngresso();
+            }   
         }
 
         private void descricaoTexto_Click(object sender, EventArgs e)
@@ -112,39 +109,53 @@ namespace ProjetoFinalLP1
             bannerImagem.Image = null;
         }
 
-        private void salaTipo_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
+            string strSQL;
+            if (controle == 0)
+            {
+                strSQL = "INSERT INTO filmes(codigo, nome, descricao, banner)  VALUES(@Codigo, @Nome, @Descricao, @Banner)";
+            }
+            else
+            {
+                strSQL = "UPDATE filmes SET codigo = @Codigo, descricao = @Descricao, banner = @Banner WHERE codigo = @Codigo";
+            }
+            MemoryStream streamBanner = new MemoryStream();
+            byte[] rawData;
 
-        }
-
-        void atualizaTipoIngresso()
-        {
-            Dados.Close();
             Obj_CmdSQL.Parameters.Clear();
-            string strSQL = $"SELECT tipo, assentos FROM sala WHERE numero = {numeroSala.Value}";
-            Obj_CmdSQL.CommandText = strSQL;
+
             try
             {
-                Dados = Obj_CmdSQL.ExecuteReader();
-                Dados.Read();
-                salaTipo.Text = Dados["tipo"].ToString();
-                ingressosQtd.Maximum = Convert.ToInt32(Dados["assentos"]);
-                ingressosQtd.Value = Convert.ToInt32(Dados["assentos"]);
-                ingressosQtd.Enabled = true;
+                if (bannerImagem.Image != null)
+                {
+                    bannerImagem.Image.Save(streamBanner, bannerImagem.Image.RawFormat);
+                    rawData = streamBanner.ToArray();
+                }
+                else
+                {
+                    rawData = null;
+                }
+
+                Obj_CmdSQL.CommandText = strSQL;
+
+                Obj_CmdSQL.Parameters.AddWithValue("@Codigo", Convert.ToInt32(filmeNmr.Value));
+                Obj_CmdSQL.Parameters.AddWithValue("@Nome", Convert.ToString(filmeNomeValor.Text));
+                Obj_CmdSQL.Parameters.AddWithValue("@Descricao", Convert.ToString(descricaoTexto.Text));
+                Obj_CmdSQL.Parameters.AddWithValue("@Banner", rawData);
+
+                Obj_CmdSQL.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception erro)
             {
-                MessageBox.Show("Erro:" + ex);
+                MessageBox.Show("Erro: " + erro.Message, "Erro na inclusão de valores!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             finally
             {
-                Dados.Close();
+                Obj_CmdSQL.Parameters.Clear();
             }
-        }
 
-        private void numeroSala_ValueChanged(object sender, EventArgs e)
-        {
-            atualizaTipoIngresso();
+            this.Close();
         }
     }
 }
