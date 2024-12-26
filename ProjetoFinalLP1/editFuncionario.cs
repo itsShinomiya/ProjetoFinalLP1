@@ -20,9 +20,11 @@ namespace ProjetoFinalLP1
         private MySqlDataReader Dados;
 
         int controle = 0;
+        string value = "";
 
-        public editFuncionario(int indice)
+        public editFuncionario(int indice, string valor)
         {
+            value = valor;
             controle = indice;
             InitializeComponent();
         }
@@ -44,6 +46,36 @@ namespace ProjetoFinalLP1
             {
                 MessageBox.Show("Erro: " + Erro.Message, "Erro de Conexão",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (controle == 1)
+            {
+                Obj_CmdSQL.CommandText = $"SELECT nome, cpf, nivel, status, usuario, senha FROM usuarios WHERE cpf = {value}";
+                cpfValor.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+                Dados = Obj_CmdSQL.ExecuteReader();
+
+                if (Dados.HasRows)
+                {
+                    try
+                    {
+                        Dados.Read();
+                        nomeValor.Text = Convert.ToString(Dados[0]);
+                        cpfValor.Text = Convert.ToString(Dados[1]);
+                        tipoValor.Text = Convert.ToString(Dados[2]);
+                        statusValor.Text = Convert.ToString(Dados[3]);
+                        usuarioValor.Text = Convert.ToString(Dados[4]);
+                        senhaValor.Text = Convert.ToString(Dados[5]);
+                        cpfValor.ReadOnly = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Ocorreu um erro ao obter informações da sala!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        Dados.Close();
+                    }
+                }
             }
 
         }
@@ -75,10 +107,15 @@ namespace ProjetoFinalLP1
             {
                 strSQL = "INSERT INTO usuarios(senha, usuario, nivel, nome, cpf, foto, status) VALUES(@Senha, @Usuario, @Nivel, @Nome, @Cpf, @Foto, @Status)";
                 Obj_CmdSQL.Parameters.Clear();
+            }
+            else
+            {
+                strSQL = $"UPDATE usuarios SET senha = @Senha, usuario = @Usuario, nivel = @Nivel, nome = @Nome, cpf = @Cpf, foto = @Foto, status = @Status WHERE cpf = {cpfValor.Text}";
+                Obj_CmdSQL.Parameters.Clear();
+            }
 
 
-
-                try
+            try
                 {
                     if (funcionarioFoto.Image != null)
                     {
@@ -97,7 +134,9 @@ namespace ProjetoFinalLP1
                     Obj_CmdSQL.Parameters.AddWithValue("@Usuario", usuarioValor.Text);
                     Obj_CmdSQL.Parameters.AddWithValue("@Nivel", tipoValor.Text);
                     Obj_CmdSQL.Parameters.AddWithValue("@Nome", nomeValor.Text);
+                    cpfValor.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
                     Obj_CmdSQL.Parameters.AddWithValue("@Cpf", cpfValor.Text);
+                    cpfValor.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
                     Obj_CmdSQL.Parameters.AddWithValue("@Foto", rawData);
                     Obj_CmdSQL.Parameters.AddWithValue("@Status", statusValor.Text);
 
@@ -112,7 +151,6 @@ namespace ProjetoFinalLP1
                     Obj_CmdSQL.Parameters.Clear();
                 }
                 this.Close();
-            }
         }
     }
 }

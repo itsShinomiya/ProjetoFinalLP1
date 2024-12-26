@@ -63,7 +63,7 @@ namespace ProjetoFinalLP1
         private void adicionaSala_Click(object sender, EventArgs e)
         {
             controle = 0;
-            editFuncionario adicionaFuncionario = new editFuncionario(0);
+            editFuncionario adicionaFuncionario = new editFuncionario(0, "");
             adicionaFuncionario.ShowDialog();
             refresh();
         }
@@ -73,10 +73,9 @@ namespace ProjetoFinalLP1
             controle = 1;
 
             DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-            int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
-
-            editSala alteraSala = new editSala(controle, valor);
-            alteraSala.ShowDialog();
+            string valor = Convert.ToString(selectedRow.Cells["cpf"].Value);
+            editFuncionario editaFuncionario = new editFuncionario(controle, valor);
+            editaFuncionario.ShowDialog();
             refresh();
         }
 
@@ -138,9 +137,6 @@ namespace ProjetoFinalLP1
         private void alterarStrip_Click(object sender, EventArgs e)
         {
             controle = 2;
-
-            //DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-            //int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
 
             editSala alteraSala = new editSala(controle, -1);
             alteraSala.ShowDialog();
