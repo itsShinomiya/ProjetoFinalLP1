@@ -58,9 +58,7 @@
             this.cpfValor = new System.Windows.Forms.TextBox();
             this.cpfTxt = new System.Windows.Forms.Label();
             this.nomeValor = new System.Windows.Forms.TextBox();
-            this.codeValor = new System.Windows.Forms.TextBox();
             this.nomeTxt = new System.Windows.Forms.Label();
-            this.codeTxt = new System.Windows.Forms.Label();
             this.foto = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
@@ -273,17 +271,15 @@
             this.painelFuncionario.Controls.Add(this.cpfValor);
             this.painelFuncionario.Controls.Add(this.cpfTxt);
             this.painelFuncionario.Controls.Add(this.nomeValor);
-            this.painelFuncionario.Controls.Add(this.codeValor);
             this.painelFuncionario.Controls.Add(this.nomeTxt);
-            this.painelFuncionario.Controls.Add(this.codeTxt);
-            this.painelFuncionario.Location = new System.Drawing.Point(25, 216);
+            this.painelFuncionario.Location = new System.Drawing.Point(20, 265);
             this.painelFuncionario.Name = "painelFuncionario";
-            this.painelFuncionario.Size = new System.Drawing.Size(200, 253);
+            this.painelFuncionario.Size = new System.Drawing.Size(200, 204);
             this.painelFuncionario.TabIndex = 1;
             // 
             // statusValor
             // 
-            this.statusValor.Location = new System.Drawing.Point(20, 189);
+            this.statusValor.Location = new System.Drawing.Point(20, 154);
             this.statusValor.Name = "statusValor";
             this.statusValor.ReadOnly = true;
             this.statusValor.Size = new System.Drawing.Size(160, 20);
@@ -292,7 +288,7 @@
             // statusTxt
             // 
             this.statusTxt.AutoSize = true;
-            this.statusTxt.Location = new System.Drawing.Point(17, 173);
+            this.statusTxt.Location = new System.Drawing.Point(20, 138);
             this.statusTxt.Name = "statusTxt";
             this.statusTxt.Size = new System.Drawing.Size(40, 13);
             this.statusTxt.TabIndex = 9;
@@ -300,7 +296,7 @@
             // 
             // nivelValor
             // 
-            this.nivelValor.Location = new System.Drawing.Point(19, 150);
+            this.nivelValor.Location = new System.Drawing.Point(20, 115);
             this.nivelValor.Name = "nivelValor";
             this.nivelValor.ReadOnly = true;
             this.nivelValor.Size = new System.Drawing.Size(160, 20);
@@ -309,7 +305,7 @@
             // nivelTxt
             // 
             this.nivelTxt.AutoSize = true;
-            this.nivelTxt.Location = new System.Drawing.Point(16, 134);
+            this.nivelTxt.Location = new System.Drawing.Point(20, 99);
             this.nivelTxt.Name = "nivelTxt";
             this.nivelTxt.Size = new System.Drawing.Size(36, 13);
             this.nivelTxt.TabIndex = 7;
@@ -317,7 +313,7 @@
             // 
             // cpfValor
             // 
-            this.cpfValor.Location = new System.Drawing.Point(20, 111);
+            this.cpfValor.Location = new System.Drawing.Point(20, 76);
             this.cpfValor.Name = "cpfValor";
             this.cpfValor.ReadOnly = true;
             this.cpfValor.Size = new System.Drawing.Size(160, 20);
@@ -326,7 +322,7 @@
             // cpfTxt
             // 
             this.cpfTxt.AutoSize = true;
-            this.cpfTxt.Location = new System.Drawing.Point(16, 95);
+            this.cpfTxt.Location = new System.Drawing.Point(20, 60);
             this.cpfTxt.Name = "cpfTxt";
             this.cpfTxt.Size = new System.Drawing.Size(30, 13);
             this.cpfTxt.TabIndex = 5;
@@ -334,44 +330,27 @@
             // 
             // nomeValor
             // 
-            this.nomeValor.Location = new System.Drawing.Point(19, 72);
+            this.nomeValor.Location = new System.Drawing.Point(20, 37);
             this.nomeValor.Name = "nomeValor";
             this.nomeValor.ReadOnly = true;
             this.nomeValor.Size = new System.Drawing.Size(160, 20);
             this.nomeValor.TabIndex = 4;
             // 
-            // codeValor
-            // 
-            this.codeValor.Location = new System.Drawing.Point(19, 33);
-            this.codeValor.Name = "codeValor";
-            this.codeValor.ReadOnly = true;
-            this.codeValor.Size = new System.Drawing.Size(52, 20);
-            this.codeValor.TabIndex = 3;
-            // 
             // nomeTxt
             // 
             this.nomeTxt.AutoSize = true;
-            this.nomeTxt.Location = new System.Drawing.Point(16, 56);
+            this.nomeTxt.Location = new System.Drawing.Point(20, 21);
             this.nomeTxt.Name = "nomeTxt";
             this.nomeTxt.Size = new System.Drawing.Size(38, 13);
             this.nomeTxt.TabIndex = 1;
             this.nomeTxt.Text = "Nome:";
-            // 
-            // codeTxt
-            // 
-            this.codeTxt.AutoSize = true;
-            this.codeTxt.Location = new System.Drawing.Point(16, 17);
-            this.codeTxt.Name = "codeTxt";
-            this.codeTxt.Size = new System.Drawing.Size(43, 13);
-            this.codeTxt.TabIndex = 0;
-            this.codeTxt.Text = "Código:";
             // 
             // foto
             // 
             this.foto.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.foto.Image = global::ProjetoFinalLP1.Properties.Resources.no_photo_or_blank_image_icon_loading_images_or_missing_image_mark_image_not_available_or_image_coming_soon_sign_simple_nature_silhouette_in_frame_isolated_illustration_vector;
-            this.foto.Location = new System.Drawing.Point(45, 21);
+            this.foto.Location = new System.Drawing.Point(40, 21);
             this.foto.Name = "foto";
             this.foto.Size = new System.Drawing.Size(160, 160);
             this.foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -434,9 +413,7 @@
         private System.Windows.Forms.Panel painelFilme;
         private System.Windows.Forms.Panel painelFuncionario;
         private System.Windows.Forms.TextBox nomeValor;
-        private System.Windows.Forms.TextBox codeValor;
         private System.Windows.Forms.Label nomeTxt;
-        private System.Windows.Forms.Label codeTxt;
         private System.Windows.Forms.PictureBox foto;
         private System.Windows.Forms.TextBox nivelValor;
         private System.Windows.Forms.Label nivelTxt;
