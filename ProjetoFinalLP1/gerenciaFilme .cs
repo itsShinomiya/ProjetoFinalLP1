@@ -162,5 +162,57 @@ namespace ProjetoFinalLP1
                adicionaFilme.ShowDialog();
                refresh();          
         }
+
+        private void buscaExibir_CurrentCellChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buscaExibir_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string comando = "SELECT codigo, nome, descricao, banner FROM filmes WHERE 1=1";
+
+                Obj_CmdSQL.Parameters.Clear();
+                Obj_CmdSQL.CommandText = comando;
+                Dados = Obj_CmdSQL.ExecuteReader();
+                byte[] rawData;
+
+                DataTable dt = new DataTable();
+                dt.Load(Dados);
+
+
+                DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+                int selectedIndex = buscaExibir.SelectedRows[0].Index;
+                codeValor.Text = Convert.ToString(selectedRow.Cells["codigo"].Value);
+                nomeValor.Text = Convert.ToString(selectedRow.Cells["nome"].Value);
+                descricaoValor.Text = Convert.ToString(selectedRow.Cells["descricao"].Value);
+
+                DataRow selectedDataRow = dt.Rows[selectedIndex];
+
+                if (!DBNull.Value.Equals(selectedDataRow["banner"]))
+                {
+                    rawData = (byte[])selectedDataRow["banner"];
+                    MemoryStream Imagem = new MemoryStream(rawData);
+                    banner.Image = Image.FromStream(Imagem);
+                }
+                else
+                {
+                    banner.Image = null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro de Conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Dados.Close();
+            }
+        }
     }
+
+   
 }

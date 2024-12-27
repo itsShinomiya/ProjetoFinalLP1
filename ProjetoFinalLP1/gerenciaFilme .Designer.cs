@@ -180,6 +180,7 @@
             this.buscaExibir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.buscaExibir.Size = new System.Drawing.Size(793, 502);
             this.buscaExibir.TabIndex = 1;
+            this.buscaExibir.SelectionChanged += new System.EventHandler(this.buscaExibir_SelectionChanged);
             // 
             // codigo
             // 
