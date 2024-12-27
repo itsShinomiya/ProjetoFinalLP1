@@ -41,15 +41,28 @@
             this.buscaBotao = new System.Windows.Forms.ToolStripButton();
             this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.buscaExibir = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adicionaSala = new System.Windows.Forms.Button();
             this.removeSala = new System.Windows.Forms.Button();
             this.atualizaBtn = new System.Windows.Forms.Button();
             this.alteraSala = new System.Windows.Forms.Button();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.painelFilme = new System.Windows.Forms.Panel();
+            this.banner = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.codeTxt = new System.Windows.Forms.Label();
+            this.nomeTxt = new System.Windows.Forms.Label();
+            this.descricaoTxt = new System.Windows.Forms.Label();
+            this.nomeValor = new System.Windows.Forms.TextBox();
+            this.descricaoValor = new System.Windows.Forms.RichTextBox();
+            this.dadoFilme = new System.Windows.Forms.Label();
+            this.codeValor = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
+            this.painelFilme.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.banner)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -168,6 +181,24 @@
             this.buscaExibir.Size = new System.Drawing.Size(793, 502);
             this.buscaExibir.TabIndex = 1;
             // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Código do Filme";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            // 
+            // nome
+            // 
+            this.nome.HeaderText = "Nome do Filme";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            // 
+            // descricao
+            // 
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            // 
             // adicionaSala
             // 
             this.adicionaSala.Location = new System.Drawing.Point(12, 54);
@@ -208,29 +239,111 @@
             this.alteraSala.UseVisualStyleBackColor = true;
             this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
             // 
-            // codigo
+            // painelFilme
             // 
-            this.codigo.HeaderText = "Código do Filme";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
+            this.painelFilme.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.painelFilme.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.painelFilme.Controls.Add(this.panel1);
+            this.painelFilme.Controls.Add(this.banner);
+            this.painelFilme.Location = new System.Drawing.Point(840, 124);
+            this.painelFilme.Name = "painelFilme";
+            this.painelFilme.Size = new System.Drawing.Size(253, 502);
+            this.painelFilme.TabIndex = 6;
             // 
-            // nome
+            // banner
             // 
-            this.nome.HeaderText = "Nome do Filme";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
+            this.banner.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.banner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.banner.Image = global::ProjetoFinalLP1.Properties.Resources.no_photo_or_blank_image_icon_loading_images_or_missing_image_mark_image_not_available_or_image_coming_soon_sign_simple_nature_silhouette_in_frame_isolated_illustration_vector;
+            this.banner.Location = new System.Drawing.Point(44, 10);
+            this.banner.Name = "banner";
+            this.banner.Size = new System.Drawing.Size(160, 201);
+            this.banner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.banner.TabIndex = 0;
+            this.banner.TabStop = false;
             // 
-            // descricao
+            // panel1
             // 
-            this.descricao.HeaderText = "Descrição";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.descricaoValor);
+            this.panel1.Controls.Add(this.nomeValor);
+            this.panel1.Controls.Add(this.codeValor);
+            this.panel1.Controls.Add(this.descricaoTxt);
+            this.panel1.Controls.Add(this.nomeTxt);
+            this.panel1.Controls.Add(this.codeTxt);
+            this.panel1.Location = new System.Drawing.Point(25, 230);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 253);
+            this.panel1.TabIndex = 1;
+            // 
+            // codeTxt
+            // 
+            this.codeTxt.AutoSize = true;
+            this.codeTxt.Location = new System.Drawing.Point(16, 17);
+            this.codeTxt.Name = "codeTxt";
+            this.codeTxt.Size = new System.Drawing.Size(43, 13);
+            this.codeTxt.TabIndex = 0;
+            this.codeTxt.Text = "Código:";
+            // 
+            // nomeTxt
+            // 
+            this.nomeTxt.AutoSize = true;
+            this.nomeTxt.Location = new System.Drawing.Point(16, 60);
+            this.nomeTxt.Name = "nomeTxt";
+            this.nomeTxt.Size = new System.Drawing.Size(38, 13);
+            this.nomeTxt.TabIndex = 1;
+            this.nomeTxt.Text = "Nome:";
+            // 
+            // descricaoTxt
+            // 
+            this.descricaoTxt.AutoSize = true;
+            this.descricaoTxt.Location = new System.Drawing.Point(16, 103);
+            this.descricaoTxt.Name = "descricaoTxt";
+            this.descricaoTxt.Size = new System.Drawing.Size(55, 13);
+            this.descricaoTxt.TabIndex = 2;
+            this.descricaoTxt.Text = "Descrição";
+            // 
+            // nomeValor
+            // 
+            this.nomeValor.Location = new System.Drawing.Point(19, 76);
+            this.nomeValor.Name = "nomeValor";
+            this.nomeValor.ReadOnly = true;
+            this.nomeValor.Size = new System.Drawing.Size(160, 20);
+            this.nomeValor.TabIndex = 4;
+            // 
+            // descricaoValor
+            // 
+            this.descricaoValor.Location = new System.Drawing.Point(19, 119);
+            this.descricaoValor.Name = "descricaoValor";
+            this.descricaoValor.ReadOnly = true;
+            this.descricaoValor.Size = new System.Drawing.Size(160, 120);
+            this.descricaoValor.TabIndex = 5;
+            this.descricaoValor.Text = "";
+            // 
+            // dadoFilme
+            // 
+            this.dadoFilme.AutoSize = true;
+            this.dadoFilme.Location = new System.Drawing.Point(840, 105);
+            this.dadoFilme.Name = "dadoFilme";
+            this.dadoFilme.Size = new System.Drawing.Size(80, 13);
+            this.dadoFilme.TabIndex = 7;
+            this.dadoFilme.Text = "Dados do filme:";
+            // 
+            // codeValor
+            // 
+            this.codeValor.Location = new System.Drawing.Point(19, 33);
+            this.codeValor.Name = "codeValor";
+            this.codeValor.ReadOnly = true;
+            this.codeValor.Size = new System.Drawing.Size(52, 20);
+            this.codeValor.TabIndex = 3;
             // 
             // gerenciaFilme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 638);
+            this.Controls.Add(this.dadoFilme);
+            this.Controls.Add(this.painelFilme);
             this.Controls.Add(this.alteraSala);
             this.Controls.Add(this.atualizaBtn);
             this.Controls.Add(this.removeSala);
@@ -246,6 +359,10 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).EndInit();
+            this.painelFilme.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.banner)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,5 +389,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
+        private System.Windows.Forms.Panel painelFilme;
+        private System.Windows.Forms.PictureBox banner;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label nomeTxt;
+        private System.Windows.Forms.Label codeTxt;
+        private System.Windows.Forms.Label descricaoTxt;
+        private System.Windows.Forms.RichTextBox descricaoValor;
+        private System.Windows.Forms.TextBox nomeValor;
+        private System.Windows.Forms.Label dadoFilme;
+        private System.Windows.Forms.TextBox codeValor;
     }
 }

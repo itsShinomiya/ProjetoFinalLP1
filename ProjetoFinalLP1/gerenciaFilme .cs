@@ -47,6 +47,11 @@ namespace ProjetoFinalLP1
                             row["descricao"]
                         );
                     }
+
+                    DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+                    codeValor.Text = Convert.ToString(selectedRow.Cells["codigo"].Value);
+                    nomeValor.Text = Convert.ToString(selectedRow.Cells["nome"].Value);
+                    descricaoValor.Text = Convert.ToString(selectedRow.Cells["descricao"].Value);
                 }
             }
             catch (Exception ex)
@@ -88,6 +93,8 @@ namespace ProjetoFinalLP1
             }
 
             refresh();
+
+
         }
 
         private void atualizaBtn_Click(object sender, EventArgs e)
@@ -139,7 +146,5 @@ namespace ProjetoFinalLP1
                adicionaFilme.ShowDialog();
                refresh();          
         }
-
-
     }
 }
