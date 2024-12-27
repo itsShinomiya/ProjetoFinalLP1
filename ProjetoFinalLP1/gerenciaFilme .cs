@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,11 +28,12 @@ namespace ProjetoFinalLP1
         {
             try
             {
-                string comando = "SELECT codigo, nome, descricao FROM filmes WHERE 1=1";
+                string comando = "SELECT codigo, nome, descricao, banner FROM filmes WHERE 1=1";
 
                 Obj_CmdSQL.Parameters.Clear();
                 Obj_CmdSQL.CommandText = comando;
                 Dados = Obj_CmdSQL.ExecuteReader();
+                byte[] rawData;
 
                 if (Dados.HasRows)
                 {
@@ -49,9 +51,23 @@ namespace ProjetoFinalLP1
                     }
 
                     DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+                    int selectedIndex = buscaExibir.SelectedRows[0].Index;
                     codeValor.Text = Convert.ToString(selectedRow.Cells["codigo"].Value);
                     nomeValor.Text = Convert.ToString(selectedRow.Cells["nome"].Value);
                     descricaoValor.Text = Convert.ToString(selectedRow.Cells["descricao"].Value);
+
+                    DataRow selectedDataRow = dt.Rows[selectedIndex];
+
+                    if (!DBNull.Value.Equals(selectedDataRow["banner"]))
+                    {
+                        rawData = (byte[])selectedDataRow["banner"];
+                        MemoryStream Imagem = new MemoryStream(rawData);
+                        banner.Image = Image.FromStream(Imagem);
+                    }
+                    else
+                    {
+                        banner.Image = null;
+                    }
                 }
             }
             catch (Exception ex)

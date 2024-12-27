@@ -264,7 +264,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel1.Controls.Add(this.descricaoValor);
             this.panel1.Controls.Add(this.nomeValor);
             this.panel1.Controls.Add(this.codeValor);
