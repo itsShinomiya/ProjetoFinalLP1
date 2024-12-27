@@ -44,10 +44,10 @@
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adicionaSala = new System.Windows.Forms.Button();
-            this.removeSala = new System.Windows.Forms.Button();
+            this.adicionaFilme = new System.Windows.Forms.Button();
+            this.removeFilme = new System.Windows.Forms.Button();
             this.atualizaBtn = new System.Windows.Forms.Button();
-            this.alteraSala = new System.Windows.Forms.Button();
+            this.alteraFilme = new System.Windows.Forms.Button();
             this.painelFilme = new System.Windows.Forms.Panel();
             this.banner = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -200,25 +200,25 @@
             this.descricao.Name = "descricao";
             this.descricao.ReadOnly = true;
             // 
-            // adicionaSala
+            // adicionaFilme
             // 
-            this.adicionaSala.Location = new System.Drawing.Point(12, 54);
-            this.adicionaSala.Name = "adicionaSala";
-            this.adicionaSala.Size = new System.Drawing.Size(75, 64);
-            this.adicionaSala.TabIndex = 2;
-            this.adicionaSala.Text = "Adicionar";
-            this.adicionaSala.UseVisualStyleBackColor = true;
-            this.adicionaSala.Click += new System.EventHandler(this.adicionaSala_Click);
+            this.adicionaFilme.Location = new System.Drawing.Point(12, 54);
+            this.adicionaFilme.Name = "adicionaFilme";
+            this.adicionaFilme.Size = new System.Drawing.Size(75, 64);
+            this.adicionaFilme.TabIndex = 2;
+            this.adicionaFilme.Text = "Adicionar";
+            this.adicionaFilme.UseVisualStyleBackColor = true;
+            this.adicionaFilme.Click += new System.EventHandler(this.adicionaSala_Click);
             // 
-            // removeSala
+            // removeFilme
             // 
-            this.removeSala.Location = new System.Drawing.Point(255, 54);
-            this.removeSala.Name = "removeSala";
-            this.removeSala.Size = new System.Drawing.Size(75, 64);
-            this.removeSala.TabIndex = 3;
-            this.removeSala.Text = "Remover";
-            this.removeSala.UseVisualStyleBackColor = true;
-            this.removeSala.Click += new System.EventHandler(this.removeSala_Click);
+            this.removeFilme.Location = new System.Drawing.Point(255, 54);
+            this.removeFilme.Name = "removeFilme";
+            this.removeFilme.Size = new System.Drawing.Size(75, 64);
+            this.removeFilme.TabIndex = 3;
+            this.removeFilme.Text = "Remover";
+            this.removeFilme.UseVisualStyleBackColor = true;
+            this.removeFilme.Click += new System.EventHandler(this.removeSala_Click);
             // 
             // atualizaBtn
             // 
@@ -230,15 +230,15 @@
             this.atualizaBtn.UseVisualStyleBackColor = true;
             this.atualizaBtn.Click += new System.EventHandler(this.atualizaBtn_Click);
             // 
-            // alteraSala
+            // alteraFilme
             // 
-            this.alteraSala.Location = new System.Drawing.Point(93, 54);
-            this.alteraSala.Name = "alteraSala";
-            this.alteraSala.Size = new System.Drawing.Size(75, 64);
-            this.alteraSala.TabIndex = 5;
-            this.alteraSala.Text = "Alterar";
-            this.alteraSala.UseVisualStyleBackColor = true;
-            this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
+            this.alteraFilme.Location = new System.Drawing.Point(93, 54);
+            this.alteraFilme.Name = "alteraFilme";
+            this.alteraFilme.Size = new System.Drawing.Size(75, 64);
+            this.alteraFilme.TabIndex = 5;
+            this.alteraFilme.Text = "Alterar";
+            this.alteraFilme.UseVisualStyleBackColor = true;
+            this.alteraFilme.Click += new System.EventHandler(this.alteraSala_Click);
             // 
             // painelFilme
             // 
@@ -345,10 +345,10 @@
             this.ClientSize = new System.Drawing.Size(1105, 638);
             this.Controls.Add(this.dadoFilme);
             this.Controls.Add(this.painelFilme);
-            this.Controls.Add(this.alteraSala);
+            this.Controls.Add(this.alteraFilme);
             this.Controls.Add(this.atualizaBtn);
-            this.Controls.Add(this.removeSala);
-            this.Controls.Add(this.adicionaSala);
+            this.Controls.Add(this.removeFilme);
+            this.Controls.Add(this.adicionaFilme);
             this.Controls.Add(this.buscaExibir);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -380,10 +380,10 @@
         private System.Windows.Forms.ToolStripDropDownButton arquivoStrip;
         private System.Windows.Forms.ToolStripDropDownButton ferramentasStrip;
         private System.Windows.Forms.DataGridView buscaExibir;
-        private System.Windows.Forms.Button adicionaSala;
-        private System.Windows.Forms.Button removeSala;
+        private System.Windows.Forms.Button adicionaFilme;
+        private System.Windows.Forms.Button removeFilme;
         private System.Windows.Forms.Button atualizaBtn;
-        private System.Windows.Forms.Button alteraSala;
+        private System.Windows.Forms.Button alteraFilme;
         private System.Windows.Forms.ToolStripMenuItem sairStrip;
         private System.Windows.Forms.ToolStripMenuItem adicionarStrip;
         private System.Windows.Forms.ToolStripMenuItem alterarStrip;

@@ -49,24 +49,26 @@ namespace ProjetoFinalLP1
                             row["descricao"]
                         );
                     }
-
-                    DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-                    int selectedIndex = buscaExibir.SelectedRows[0].Index;
-                    codeValor.Text = Convert.ToString(selectedRow.Cells["codigo"].Value);
-                    nomeValor.Text = Convert.ToString(selectedRow.Cells["nome"].Value);
-                    descricaoValor.Text = Convert.ToString(selectedRow.Cells["descricao"].Value);
-
-                    DataRow selectedDataRow = dt.Rows[selectedIndex];
-
-                    if (!DBNull.Value.Equals(selectedDataRow["banner"]))
+                    if (buscaExibir.SelectedRows.Count > 0 && buscaExibir.RowCount > 0)
                     {
-                        rawData = (byte[])selectedDataRow["banner"];
-                        MemoryStream Imagem = new MemoryStream(rawData);
-                        banner.Image = Image.FromStream(Imagem);
-                    }
-                    else
-                    {
-                        banner.Image = null;
+                        DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+                        int selectedIndex = buscaExibir.SelectedRows[0].Index;
+                        codeValor.Text = Convert.ToString(selectedRow.Cells["codigo"].Value);
+                        nomeValor.Text = Convert.ToString(selectedRow.Cells["nome"].Value);
+                        descricaoValor.Text = Convert.ToString(selectedRow.Cells["descricao"].Value);
+
+                        DataRow selectedDataRow = dt.Rows[selectedIndex];
+
+                        if (!DBNull.Value.Equals(selectedDataRow["banner"]))
+                        {
+                            rawData = (byte[])selectedDataRow["banner"];
+                            MemoryStream Imagem = new MemoryStream(rawData);
+                            banner.Image = Image.FromStream(Imagem);
+                        }
+                        else
+                        {
+                            banner.Image = null;
+                        }
                     }
                 }
             }
@@ -109,8 +111,6 @@ namespace ProjetoFinalLP1
             }
 
             refresh();
-
-
         }
 
         private void atualizaBtn_Click(object sender, EventArgs e)
@@ -121,19 +121,19 @@ namespace ProjetoFinalLP1
         private void removeSala_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-            int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
-            DialogResult exc = MessageBox.Show("Deseja realmente deletar essa sala?", "Excluir?", MessageBoxButtons.YesNo);
+            int valor = Convert.ToInt32(selectedRow.Cells["codigo"].Value);
+            DialogResult exc = MessageBox.Show("Deseja realmente deletar esse filme?", "Excluir?", MessageBoxButtons.YesNo);
             if (exc == DialogResult.Yes)
             {
                 try
                 {
-                    Obj_CmdSQL.CommandText = "DELETE FROM sala WHERE numero = " + valor.ToString();
+                    Obj_CmdSQL.CommandText = "DELETE FROM filmes WHERE codigo = " + valor.ToString();
                     int deletar = Obj_CmdSQL.ExecuteNonQuery();
                     refresh();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Houve um erro a deletar a sala!", "Erro", MessageBoxButtons.OK);
+                    MessageBox.Show("Houve um erro ao deletar o filme!", "Erro", MessageBoxButtons.OK);
                 }
             }
             else if (exc == DialogResult.No)
@@ -149,7 +149,7 @@ namespace ProjetoFinalLP1
 
         private void adicionarStrip_Click(object sender, EventArgs e)
         {
-            adicionaSala.PerformClick();
+            adicionaFilme.PerformClick();
         }
         private void alterarStrip_Click(object sender, EventArgs e)
         {
@@ -170,46 +170,49 @@ namespace ProjetoFinalLP1
 
         private void buscaExibir_SelectionChanged(object sender, EventArgs e)
         {
-            try
+            if (buscaExibir.SelectedRows.Count > 0 && buscaExibir.RowCount > 0)
             {
-                string comando = "SELECT codigo, nome, descricao, banner FROM filmes WHERE 1=1";
-
-                Obj_CmdSQL.Parameters.Clear();
-                Obj_CmdSQL.CommandText = comando;
-                Dados = Obj_CmdSQL.ExecuteReader();
-                byte[] rawData;
-
-                DataTable dt = new DataTable();
-                dt.Load(Dados);
-
-
-                DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-                int selectedIndex = buscaExibir.SelectedRows[0].Index;
-                codeValor.Text = Convert.ToString(selectedRow.Cells["codigo"].Value);
-                nomeValor.Text = Convert.ToString(selectedRow.Cells["nome"].Value);
-                descricaoValor.Text = Convert.ToString(selectedRow.Cells["descricao"].Value);
-
-                DataRow selectedDataRow = dt.Rows[selectedIndex];
-
-                if (!DBNull.Value.Equals(selectedDataRow["banner"]))
+                try
                 {
-                    rawData = (byte[])selectedDataRow["banner"];
-                    MemoryStream Imagem = new MemoryStream(rawData);
-                    banner.Image = Image.FromStream(Imagem);
-                }
-                else
-                {
-                    banner.Image = null;
-                }
+                    string comando = "SELECT codigo, nome, descricao, banner FROM filmes WHERE 1=1";
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex.Message, "Erro de Conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                Dados.Close();
+                    Obj_CmdSQL.Parameters.Clear();
+                    Obj_CmdSQL.CommandText = comando;
+                    Dados = Obj_CmdSQL.ExecuteReader();
+                    byte[] rawData;
+
+                    DataTable dt = new DataTable();
+                    dt.Load(Dados);
+
+
+                    DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+                    int selectedIndex = buscaExibir.SelectedRows[0].Index;
+                    codeValor.Text = Convert.ToString(selectedRow.Cells["codigo"].Value);
+                    nomeValor.Text = Convert.ToString(selectedRow.Cells["nome"].Value);
+                    descricaoValor.Text = Convert.ToString(selectedRow.Cells["descricao"].Value);
+
+                    DataRow selectedDataRow = dt.Rows[selectedIndex];
+
+                    if (!DBNull.Value.Equals(selectedDataRow["banner"]))
+                    {
+                        rawData = (byte[])selectedDataRow["banner"];
+                        MemoryStream Imagem = new MemoryStream(rawData);
+                        banner.Image = Image.FromStream(Imagem);
+                    }
+                    else
+                    {
+                        banner.Image = null;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: " + ex.Message, "Erro de Conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    Dados.Close();
+                }
             }
         }
     }
