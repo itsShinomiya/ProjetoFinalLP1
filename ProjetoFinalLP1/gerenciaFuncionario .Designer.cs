@@ -40,16 +40,33 @@
             this.buscaBotao = new System.Windows.Forms.ToolStripButton();
             this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.buscaExibir = new System.Windows.Forms.DataGridView();
-            this.adicionaFuncionario = new System.Windows.Forms.Button();
-            this.removeFuncionario = new System.Windows.Forms.Button();
-            this.atualizaBtn = new System.Windows.Forms.Button();
-            this.alteraFuncionario = new System.Windows.Forms.Button();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adicionaFuncionario = new System.Windows.Forms.Button();
+            this.removeFuncionario = new System.Windows.Forms.Button();
+            this.atualizaBtn = new System.Windows.Forms.Button();
+            this.alteraFuncionario = new System.Windows.Forms.Button();
+            this.dadoFuncionario = new System.Windows.Forms.Label();
+            this.painelFilme = new System.Windows.Forms.Panel();
+            this.painelFuncionario = new System.Windows.Forms.Panel();
+            this.statusValor = new System.Windows.Forms.TextBox();
+            this.statusTxt = new System.Windows.Forms.Label();
+            this.nivelValor = new System.Windows.Forms.TextBox();
+            this.nivelTxt = new System.Windows.Forms.Label();
+            this.cpfValor = new System.Windows.Forms.TextBox();
+            this.cpfTxt = new System.Windows.Forms.Label();
+            this.nomeValor = new System.Windows.Forms.TextBox();
+            this.codeValor = new System.Windows.Forms.TextBox();
+            this.nomeTxt = new System.Windows.Forms.Label();
+            this.codeTxt = new System.Windows.Forms.Label();
+            this.foto = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
+            this.painelFilme.SuspendLayout();
+            this.painelFuncionario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.foto)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -100,7 +117,7 @@
             // adicionarStrip
             // 
             this.adicionarStrip.Name = "adicionarStrip";
-            this.adicionarStrip.Size = new System.Drawing.Size(180, 22);
+            this.adicionarStrip.Size = new System.Drawing.Size(125, 22);
             this.adicionarStrip.Text = "&Adicionar";
             this.adicionarStrip.Click += new System.EventHandler(this.adicionarStrip_Click);
             // 
@@ -160,6 +177,31 @@
             this.buscaExibir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.buscaExibir.Size = new System.Drawing.Size(793, 502);
             this.buscaExibir.TabIndex = 1;
+            this.buscaExibir.SelectionChanged += new System.EventHandler(this.buscaExibir_SelectionChanged);
+            // 
+            // nome
+            // 
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            // 
+            // cpf
+            // 
+            this.cpf.HeaderText = "CPF";
+            this.cpf.Name = "cpf";
+            this.cpf.ReadOnly = true;
+            // 
+            // nivel
+            // 
+            this.nivel.HeaderText = "Nível";
+            this.nivel.Name = "nivel";
+            this.nivel.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
             // 
             // adicionaFuncionario
             // 
@@ -201,35 +243,148 @@
             this.alteraFuncionario.UseVisualStyleBackColor = true;
             this.alteraFuncionario.Click += new System.EventHandler(this.alteraSala_Click);
             // 
-            // nome
+            // dadoFuncionario
             // 
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
+            this.dadoFuncionario.AutoSize = true;
+            this.dadoFuncionario.Location = new System.Drawing.Point(837, 108);
+            this.dadoFuncionario.Name = "dadoFuncionario";
+            this.dadoFuncionario.Size = new System.Drawing.Size(111, 13);
+            this.dadoFuncionario.TabIndex = 9;
+            this.dadoFuncionario.Text = "Dados do funcionário:";
             // 
-            // cpf
+            // painelFilme
             // 
-            this.cpf.HeaderText = "CPF";
-            this.cpf.Name = "cpf";
-            this.cpf.ReadOnly = true;
+            this.painelFilme.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.painelFilme.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.painelFilme.Controls.Add(this.painelFuncionario);
+            this.painelFilme.Controls.Add(this.foto);
+            this.painelFilme.Location = new System.Drawing.Point(840, 124);
+            this.painelFilme.Name = "painelFilme";
+            this.painelFilme.Size = new System.Drawing.Size(253, 502);
+            this.painelFilme.TabIndex = 8;
             // 
-            // nivel
+            // painelFuncionario
             // 
-            this.nivel.HeaderText = "Nível";
-            this.nivel.Name = "nivel";
-            this.nivel.ReadOnly = true;
+            this.painelFuncionario.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.painelFuncionario.Controls.Add(this.statusValor);
+            this.painelFuncionario.Controls.Add(this.statusTxt);
+            this.painelFuncionario.Controls.Add(this.nivelValor);
+            this.painelFuncionario.Controls.Add(this.nivelTxt);
+            this.painelFuncionario.Controls.Add(this.cpfValor);
+            this.painelFuncionario.Controls.Add(this.cpfTxt);
+            this.painelFuncionario.Controls.Add(this.nomeValor);
+            this.painelFuncionario.Controls.Add(this.codeValor);
+            this.painelFuncionario.Controls.Add(this.nomeTxt);
+            this.painelFuncionario.Controls.Add(this.codeTxt);
+            this.painelFuncionario.Location = new System.Drawing.Point(25, 216);
+            this.painelFuncionario.Name = "painelFuncionario";
+            this.painelFuncionario.Size = new System.Drawing.Size(200, 253);
+            this.painelFuncionario.TabIndex = 1;
             // 
-            // status
+            // statusValor
             // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
+            this.statusValor.Location = new System.Drawing.Point(20, 189);
+            this.statusValor.Name = "statusValor";
+            this.statusValor.ReadOnly = true;
+            this.statusValor.Size = new System.Drawing.Size(160, 20);
+            this.statusValor.TabIndex = 10;
+            // 
+            // statusTxt
+            // 
+            this.statusTxt.AutoSize = true;
+            this.statusTxt.Location = new System.Drawing.Point(17, 173);
+            this.statusTxt.Name = "statusTxt";
+            this.statusTxt.Size = new System.Drawing.Size(40, 13);
+            this.statusTxt.TabIndex = 9;
+            this.statusTxt.Text = "Status:";
+            // 
+            // nivelValor
+            // 
+            this.nivelValor.Location = new System.Drawing.Point(19, 150);
+            this.nivelValor.Name = "nivelValor";
+            this.nivelValor.ReadOnly = true;
+            this.nivelValor.Size = new System.Drawing.Size(160, 20);
+            this.nivelValor.TabIndex = 8;
+            // 
+            // nivelTxt
+            // 
+            this.nivelTxt.AutoSize = true;
+            this.nivelTxt.Location = new System.Drawing.Point(16, 134);
+            this.nivelTxt.Name = "nivelTxt";
+            this.nivelTxt.Size = new System.Drawing.Size(36, 13);
+            this.nivelTxt.TabIndex = 7;
+            this.nivelTxt.Text = "Nível:";
+            // 
+            // cpfValor
+            // 
+            this.cpfValor.Location = new System.Drawing.Point(20, 111);
+            this.cpfValor.Name = "cpfValor";
+            this.cpfValor.ReadOnly = true;
+            this.cpfValor.Size = new System.Drawing.Size(160, 20);
+            this.cpfValor.TabIndex = 6;
+            // 
+            // cpfTxt
+            // 
+            this.cpfTxt.AutoSize = true;
+            this.cpfTxt.Location = new System.Drawing.Point(16, 95);
+            this.cpfTxt.Name = "cpfTxt";
+            this.cpfTxt.Size = new System.Drawing.Size(30, 13);
+            this.cpfTxt.TabIndex = 5;
+            this.cpfTxt.Text = "CPF:";
+            // 
+            // nomeValor
+            // 
+            this.nomeValor.Location = new System.Drawing.Point(19, 72);
+            this.nomeValor.Name = "nomeValor";
+            this.nomeValor.ReadOnly = true;
+            this.nomeValor.Size = new System.Drawing.Size(160, 20);
+            this.nomeValor.TabIndex = 4;
+            // 
+            // codeValor
+            // 
+            this.codeValor.Location = new System.Drawing.Point(19, 33);
+            this.codeValor.Name = "codeValor";
+            this.codeValor.ReadOnly = true;
+            this.codeValor.Size = new System.Drawing.Size(52, 20);
+            this.codeValor.TabIndex = 3;
+            // 
+            // nomeTxt
+            // 
+            this.nomeTxt.AutoSize = true;
+            this.nomeTxt.Location = new System.Drawing.Point(16, 56);
+            this.nomeTxt.Name = "nomeTxt";
+            this.nomeTxt.Size = new System.Drawing.Size(38, 13);
+            this.nomeTxt.TabIndex = 1;
+            this.nomeTxt.Text = "Nome:";
+            // 
+            // codeTxt
+            // 
+            this.codeTxt.AutoSize = true;
+            this.codeTxt.Location = new System.Drawing.Point(16, 17);
+            this.codeTxt.Name = "codeTxt";
+            this.codeTxt.Size = new System.Drawing.Size(43, 13);
+            this.codeTxt.TabIndex = 0;
+            this.codeTxt.Text = "Código:";
+            // 
+            // foto
+            // 
+            this.foto.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.foto.Image = global::ProjetoFinalLP1.Properties.Resources.no_photo_or_blank_image_icon_loading_images_or_missing_image_mark_image_not_available_or_image_coming_soon_sign_simple_nature_silhouette_in_frame_isolated_illustration_vector;
+            this.foto.Location = new System.Drawing.Point(45, 21);
+            this.foto.Name = "foto";
+            this.foto.Size = new System.Drawing.Size(160, 160);
+            this.foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.foto.TabIndex = 0;
+            this.foto.TabStop = false;
             // 
             // gerenciaFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 638);
+            this.Controls.Add(this.dadoFuncionario);
+            this.Controls.Add(this.painelFilme);
             this.Controls.Add(this.alteraFuncionario);
             this.Controls.Add(this.atualizaBtn);
             this.Controls.Add(this.removeFuncionario);
@@ -245,6 +400,10 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).EndInit();
+            this.painelFilme.ResumeLayout(false);
+            this.painelFuncionario.ResumeLayout(false);
+            this.painelFuncionario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.foto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +430,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn nivel;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.Label dadoFuncionario;
+        private System.Windows.Forms.Panel painelFilme;
+        private System.Windows.Forms.Panel painelFuncionario;
+        private System.Windows.Forms.TextBox nomeValor;
+        private System.Windows.Forms.TextBox codeValor;
+        private System.Windows.Forms.Label nomeTxt;
+        private System.Windows.Forms.Label codeTxt;
+        private System.Windows.Forms.PictureBox foto;
+        private System.Windows.Forms.TextBox nivelValor;
+        private System.Windows.Forms.Label nivelTxt;
+        private System.Windows.Forms.TextBox cpfValor;
+        private System.Windows.Forms.Label cpfTxt;
+        private System.Windows.Forms.Label statusTxt;
+        private System.Windows.Forms.TextBox statusValor;
     }
 }

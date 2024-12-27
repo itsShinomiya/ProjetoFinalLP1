@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -132,6 +134,55 @@ namespace ProjetoFinalLP1
         private void adicionarStrip_Click(object sender, EventArgs e)
         {
             adicionaFuncionario.PerformClick();
+        }
+
+        private void buscaExibir_SelectionChanged(object sender, EventArgs e)
+        {
+            if (buscaExibir.SelectedRows.Count > 0 && buscaExibir.RowCount > 0)
+            {
+                try
+                {
+                    string comando = "SELECT nome, cpf, nivel, status, foto FROM usuarios WHERE 1=1";
+
+                    Obj_CmdSQL.Parameters.Clear();
+                    Obj_CmdSQL.CommandText = comando;
+                    Dados = Obj_CmdSQL.ExecuteReader();
+                    byte[] rawData;
+
+                    DataTable dt = new DataTable();
+                    dt.Load(Dados);
+
+
+                    DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+                    int selectedIndex = buscaExibir.SelectedRows[0].Index;
+                    nomeValor.Text = Convert.ToString(selectedRow.Cells["nome"].Value);
+                    cpfValor.Text = Convert.ToString(selectedRow.Cells["cpf"].Value);
+                    nivelValor.Text = Convert.ToString(selectedRow.Cells["nivel"].Value);
+                    statusValor.Text = Convert.ToString(selectedRow.Cells["status"].Value);
+
+                    DataRow selectedDataRow = dt.Rows[selectedIndex];
+
+                    if (!DBNull.Value.Equals(selectedDataRow["foto"]))
+                    {
+                        rawData = (byte[])selectedDataRow["foto"];
+                        MemoryStream Imagem = new MemoryStream(rawData);
+                        foto.Image = Image.FromStream(Imagem);
+                    }
+                    else
+                    {
+                        foto.Image = null;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: " + ex.Message, "Erro de Conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    Dados.Close();
+                }
+            }
         }
     }
 }
