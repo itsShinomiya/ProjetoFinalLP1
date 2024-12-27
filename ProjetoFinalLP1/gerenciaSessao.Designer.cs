@@ -30,24 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gerenciaSessao));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.buscaSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.buscaTexto = new System.Windows.Forms.ToolStripTextBox();
+            this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.buscaExibir = new System.Windows.Forms.DataGridView();
+            this.adicionaSala = new System.Windows.Forms.Button();
+            this.removeSala = new System.Windows.Forms.Button();
+            this.atualizaBtn = new System.Windows.Forms.Button();
+            this.alteraSala = new System.Windows.Forms.Button();
             this.arquivoStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.sairStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ferramentasStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.adicionarStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaStrip = new System.Windows.Forms.ToolStripDropDownButton();
-            this.buscaSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.buscaTexto = new System.Windows.Forms.ToolStripTextBox();
             this.buscaBotao = new System.Windows.Forms.ToolStripButton();
-            this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.buscaExibir = new System.Windows.Forms.DataGridView();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adicionaSala = new System.Windows.Forms.Button();
-            this.removeSala = new System.Windows.Forms.Button();
-            this.atualizaBtn = new System.Windows.Forms.Button();
-            this.alteraSala = new System.Windows.Forms.Button();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filme = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sala = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ingressos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +71,89 @@
             this.toolStrip1.Size = new System.Drawing.Size(1105, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // buscaSeparator1
+            // 
+            this.buscaSeparator1.Name = "buscaSeparator1";
+            this.buscaSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // buscaTexto
+            // 
+            this.buscaTexto.AutoSize = false;
+            this.buscaTexto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.buscaTexto.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buscaTexto.Name = "buscaTexto";
+            this.buscaTexto.Size = new System.Drawing.Size(100, 23);
+            // 
+            // buscaSeparator2
+            // 
+            this.buscaSeparator2.Name = "buscaSeparator2";
+            this.buscaSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // buscaExibir
+            // 
+            this.buscaExibir.AllowUserToAddRows = false;
+            this.buscaExibir.AllowUserToDeleteRows = false;
+            this.buscaExibir.AllowUserToResizeColumns = false;
+            this.buscaExibir.AllowUserToResizeRows = false;
+            this.buscaExibir.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.buscaExibir.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buscaExibir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.buscaExibir.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigo,
+            this.filme,
+            this.sala,
+            this.valor,
+            this.dia,
+            this.horario,
+            this.ingressos});
+            this.buscaExibir.Location = new System.Drawing.Point(12, 124);
+            this.buscaExibir.MultiSelect = false;
+            this.buscaExibir.Name = "buscaExibir";
+            this.buscaExibir.ReadOnly = true;
+            this.buscaExibir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.buscaExibir.Size = new System.Drawing.Size(793, 502);
+            this.buscaExibir.TabIndex = 1;
+            // 
+            // adicionaSala
+            // 
+            this.adicionaSala.Location = new System.Drawing.Point(12, 54);
+            this.adicionaSala.Name = "adicionaSala";
+            this.adicionaSala.Size = new System.Drawing.Size(75, 64);
+            this.adicionaSala.TabIndex = 2;
+            this.adicionaSala.Text = "Adicionar";
+            this.adicionaSala.UseVisualStyleBackColor = true;
+            this.adicionaSala.Click += new System.EventHandler(this.adicionaSala_Click);
+            // 
+            // removeSala
+            // 
+            this.removeSala.Location = new System.Drawing.Point(255, 54);
+            this.removeSala.Name = "removeSala";
+            this.removeSala.Size = new System.Drawing.Size(75, 64);
+            this.removeSala.TabIndex = 3;
+            this.removeSala.Text = "Remover";
+            this.removeSala.UseVisualStyleBackColor = true;
+            this.removeSala.Click += new System.EventHandler(this.removeSala_Click);
+            // 
+            // atualizaBtn
+            // 
+            this.atualizaBtn.Location = new System.Drawing.Point(174, 54);
+            this.atualizaBtn.Name = "atualizaBtn";
+            this.atualizaBtn.Size = new System.Drawing.Size(75, 64);
+            this.atualizaBtn.TabIndex = 4;
+            this.atualizaBtn.Text = "Atualizar";
+            this.atualizaBtn.UseVisualStyleBackColor = true;
+            this.atualizaBtn.Click += new System.EventHandler(this.atualizaBtn_Click);
+            // 
+            // alteraSala
+            // 
+            this.alteraSala.Location = new System.Drawing.Point(93, 54);
+            this.alteraSala.Name = "alteraSala";
+            this.alteraSala.Size = new System.Drawing.Size(75, 64);
+            this.alteraSala.TabIndex = 5;
+            this.alteraSala.Text = "Alterar";
+            this.alteraSala.UseVisualStyleBackColor = true;
+            this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
             // 
             // arquivoStrip
             // 
@@ -121,19 +208,6 @@
             this.ajudaStrip.Size = new System.Drawing.Size(51, 22);
             this.ajudaStrip.Text = "&Ajuda";
             // 
-            // buscaSeparator1
-            // 
-            this.buscaSeparator1.Name = "buscaSeparator1";
-            this.buscaSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // buscaTexto
-            // 
-            this.buscaTexto.AutoSize = false;
-            this.buscaTexto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.buscaTexto.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buscaTexto.Name = "buscaTexto";
-            this.buscaTexto.Size = new System.Drawing.Size(100, 23);
-            // 
             // buscaBotao
             // 
             this.buscaBotao.Image = ((System.Drawing.Image)(resources.GetObject("buscaBotao.Image")));
@@ -142,89 +216,47 @@
             this.buscaBotao.Size = new System.Drawing.Size(62, 22);
             this.buscaBotao.Text = "&Buscar";
             // 
-            // buscaSeparator2
+            // codigo
             // 
-            this.buscaSeparator2.Name = "buscaSeparator2";
-            this.buscaSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.codigo.HeaderText = "Código da Sessão";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
             // 
-            // buscaExibir
+            // filme
             // 
-            this.buscaExibir.AllowUserToAddRows = false;
-            this.buscaExibir.AllowUserToDeleteRows = false;
-            this.buscaExibir.AllowUserToResizeColumns = false;
-            this.buscaExibir.AllowUserToResizeRows = false;
-            this.buscaExibir.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.buscaExibir.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buscaExibir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.buscaExibir.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numero,
-            this.tipo,
-            this.assentos});
-            this.buscaExibir.Location = new System.Drawing.Point(12, 124);
-            this.buscaExibir.MultiSelect = false;
-            this.buscaExibir.Name = "buscaExibir";
-            this.buscaExibir.ReadOnly = true;
-            this.buscaExibir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.buscaExibir.Size = new System.Drawing.Size(793, 502);
-            this.buscaExibir.TabIndex = 1;
+            this.filme.HeaderText = "Nome do Filme";
+            this.filme.Name = "filme";
+            this.filme.ReadOnly = true;
             // 
-            // numero
+            // sala
             // 
-            this.numero.HeaderText = "Número da Sala";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
+            this.sala.HeaderText = "Sala";
+            this.sala.Name = "sala";
+            this.sala.ReadOnly = true;
             // 
-            // tipo
+            // valor
             // 
-            this.tipo.HeaderText = "Tipo";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
+            this.valor.HeaderText = "Valor";
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
             // 
-            // assentos
+            // dia
             // 
-            this.assentos.HeaderText = "Número de Assentos";
-            this.assentos.Name = "assentos";
-            this.assentos.ReadOnly = true;
+            this.dia.HeaderText = "Dia";
+            this.dia.Name = "dia";
+            this.dia.ReadOnly = true;
             // 
-            // adicionaSala
+            // horario
             // 
-            this.adicionaSala.Location = new System.Drawing.Point(12, 54);
-            this.adicionaSala.Name = "adicionaSala";
-            this.adicionaSala.Size = new System.Drawing.Size(75, 64);
-            this.adicionaSala.TabIndex = 2;
-            this.adicionaSala.Text = "Adicionar";
-            this.adicionaSala.UseVisualStyleBackColor = true;
-            this.adicionaSala.Click += new System.EventHandler(this.adicionaSala_Click);
+            this.horario.HeaderText = "Horário";
+            this.horario.Name = "horario";
+            this.horario.ReadOnly = true;
             // 
-            // removeSala
+            // ingressos
             // 
-            this.removeSala.Location = new System.Drawing.Point(255, 54);
-            this.removeSala.Name = "removeSala";
-            this.removeSala.Size = new System.Drawing.Size(75, 64);
-            this.removeSala.TabIndex = 3;
-            this.removeSala.Text = "Remover";
-            this.removeSala.UseVisualStyleBackColor = true;
-            this.removeSala.Click += new System.EventHandler(this.removeSala_Click);
-            // 
-            // atualizaBtn
-            // 
-            this.atualizaBtn.Location = new System.Drawing.Point(174, 54);
-            this.atualizaBtn.Name = "atualizaBtn";
-            this.atualizaBtn.Size = new System.Drawing.Size(75, 64);
-            this.atualizaBtn.TabIndex = 4;
-            this.atualizaBtn.Text = "Atualizar";
-            this.atualizaBtn.UseVisualStyleBackColor = true;
-            this.atualizaBtn.Click += new System.EventHandler(this.atualizaBtn_Click);
-            // 
-            // alteraSala
-            // 
-            this.alteraSala.Location = new System.Drawing.Point(93, 54);
-            this.alteraSala.Name = "alteraSala";
-            this.alteraSala.Size = new System.Drawing.Size(75, 64);
-            this.alteraSala.TabIndex = 5;
-            this.alteraSala.Text = "Alterar";
-            this.alteraSala.UseVisualStyleBackColor = true;
-            this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
+            this.ingressos.HeaderText = "Ingressos Disponíveis";
+            this.ingressos.Name = "ingressos";
+            this.ingressos.ReadOnly = true;
             // 
             // gerenciaSessao
             // 
@@ -266,11 +298,15 @@
         private System.Windows.Forms.Button removeSala;
         private System.Windows.Forms.Button atualizaBtn;
         private System.Windows.Forms.Button alteraSala;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assentos;
         private System.Windows.Forms.ToolStripMenuItem sairStrip;
         private System.Windows.Forms.ToolStripMenuItem adicionarStrip;
         private System.Windows.Forms.ToolStripMenuItem alterarStrip;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filme;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sala;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ingressos;
     }
 }

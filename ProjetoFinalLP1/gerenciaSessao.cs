@@ -27,7 +27,7 @@ namespace ProjetoFinalLP1
         {
             try
             {
-                string comando = "SELECT numero, assentos, tipo FROM sala WHERE 1=1";
+                string comando = "SELECT codigo, filme, sala, ingressos, preço, dia, horario FROM sessoes WHERE 1=1";
 
                 Obj_CmdSQL.Parameters.Clear();
                 Obj_CmdSQL.CommandText = comando;
