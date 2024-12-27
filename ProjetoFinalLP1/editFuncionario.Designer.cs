@@ -83,6 +83,7 @@
             // 
             this.funcionarioFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.funcionarioFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.funcionarioFoto.Image = global::ProjetoFinalLP1.Properties.Resources.no_photo_or_blank_image_icon_loading_images_or_missing_image_mark_image_not_available_or_image_coming_soon_sign_simple_nature_silhouette_in_frame_isolated_illustration_vector;
             this.funcionarioFoto.Location = new System.Drawing.Point(317, 28);
             this.funcionarioFoto.Name = "funcionarioFoto";
             this.funcionarioFoto.Size = new System.Drawing.Size(165, 165);

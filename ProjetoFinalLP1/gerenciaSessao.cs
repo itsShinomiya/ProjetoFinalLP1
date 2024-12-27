@@ -101,7 +101,7 @@ namespace ProjetoFinalLP1
         {
             DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
             string valor = Convert.ToString(selectedRow.Cells["cpf"].Value);
-            DialogResult exc = MessageBox.Show("Deseja realmente excluir esse funcionário?", "Excluir?", MessageBoxButtons.YesNo);
+            DialogResult exc = MessageBox.Show("Deseja realmente excluir essa sessão?", "Excluir?", MessageBoxButtons.YesNo);
             if (exc == DialogResult.Yes)
             {
                 try

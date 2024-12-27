@@ -48,7 +48,7 @@
             this.horarioValor = new System.Windows.Forms.ComboBox();
             this.diaFilme = new System.Windows.Forms.DateTimePicker();
             this.diaTxt = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.nomeFilmeValor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.sessaoNmr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeroSala)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.valorNumero)).BeginInit();
@@ -171,6 +171,11 @@
             this.valorNumero.Name = "valorNumero";
             this.valorNumero.Size = new System.Drawing.Size(120, 20);
             this.valorNumero.TabIndex = 10;
+            this.valorNumero.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
             // 
             // valorTxt
             // 
@@ -194,6 +199,7 @@
             // 
             this.bannerImagem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.bannerImagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bannerImagem.Image = global::ProjetoFinalLP1.Properties.Resources.no_photo_or_blank_image_icon_loading_images_or_missing_image_mark_image_not_available_or_image_coming_soon_sign_simple_nature_silhouette_in_frame_isolated_illustration_vector;
             this.bannerImagem.Location = new System.Drawing.Point(317, 28);
             this.bannerImagem.Name = "bannerImagem";
             this.bannerImagem.Size = new System.Drawing.Size(164, 231);
@@ -248,6 +254,7 @@
             // 
             // horarioValor
             // 
+            this.horarioValor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.horarioValor.FormattingEnabled = true;
             this.horarioValor.Items.AddRange(new object[] {
             "13:00",
@@ -293,20 +300,22 @@
             this.diaTxt.TabIndex = 23;
             this.diaTxt.Text = "Dia de Exibição";
             // 
-            // comboBox1
+            // nomeFilmeValor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 64);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(270, 21);
-            this.comboBox1.TabIndex = 24;
+            this.nomeFilmeValor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nomeFilmeValor.FormattingEnabled = true;
+            this.nomeFilmeValor.Location = new System.Drawing.Point(13, 64);
+            this.nomeFilmeValor.Name = "nomeFilmeValor";
+            this.nomeFilmeValor.Size = new System.Drawing.Size(270, 21);
+            this.nomeFilmeValor.TabIndex = 24;
+            this.nomeFilmeValor.SelectedIndexChanged += new System.EventHandler(this.nomeFilmeValor_SelectedIndexChanged);
             // 
             // editSessoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 269);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.nomeFilmeValor);
             this.Controls.Add(this.diaTxt);
             this.Controls.Add(this.diaFilme);
             this.Controls.Add(this.horarioValor);
@@ -364,6 +373,6 @@
         private System.Windows.Forms.ComboBox horarioValor;
         private System.Windows.Forms.DateTimePicker diaFilme;
         private System.Windows.Forms.Label diaTxt;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox nomeFilmeValor;
     }
 }

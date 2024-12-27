@@ -1,9 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,7 +47,7 @@ namespace ProjetoFinalLP1
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            Obj_CmdSQL.CommandText = "SELECT MAX(codigo) FROM filmes";
+            Obj_CmdSQL.CommandText = "SELECT MAX(codigo) FROM sessoes";
             Dados = Obj_CmdSQL.ExecuteReader();
 
             if (Dados.HasRows)
@@ -63,6 +65,24 @@ namespace ProjetoFinalLP1
                 {
                     Dados.Close();
                     atualizaTipoIngresso();
+                }
+            }
+
+            Obj_CmdSQL.CommandText = "SELECT nome, banner FROM filmes WHERE 1 = 1";
+            Dados = Obj_CmdSQL.ExecuteReader();
+
+            if (Dados.HasRows)
+            {
+                DataTable dt = new DataTable();
+                dt.Load(Dados);
+                // byte[] rawData;
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    nomeFilmeValor.Items.Add(row["nome"]);
+                    /* rawData = (byte[])row["banner"];
+                    MemoryStream Imagem = new MemoryStream(rawData);
+                    bannerImagem.Image = Image.FromStream(Imagem);*/
                 }
             }
 
@@ -141,6 +161,44 @@ namespace ProjetoFinalLP1
         private void btnSalvar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void nomeFilmeValor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (nomeFilmeValor.SelectedIndex == -1)
+                return;
+
+            Obj_CmdSQL.Parameters.Clear();
+            Obj_CmdSQL.CommandText = "SELECT banner FROM filmes WHERE nome = @Nome";
+            Obj_CmdSQL.Parameters.AddWithValue("@Nome", nomeFilmeValor.SelectedItem.ToString());
+            Dados = Obj_CmdSQL.ExecuteReader();
+            try
+            {
+                if (Dados.Read())
+                {
+                    if (!Dados.IsDBNull(Dados.GetOrdinal("banner")))
+                    {
+                        byte[] rawData = (byte[])Dados["banner"];
+                        using (MemoryStream imagemStream = new MemoryStream(rawData))
+                        {
+                            bannerImagem.Image = Image.FromStream(imagemStream);
+                        }
+                    }
+                    else
+                    {
+                        bannerImagem.Image = null; 
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Dados.Close();
+            }
         }
     }
 }

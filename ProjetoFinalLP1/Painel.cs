@@ -36,8 +36,14 @@ namespace ProjetoFinalLP1
 
         private void gerenciaFilme_Click(object sender, EventArgs e)
         {
-            gerenciaFilme gerencialFilme = new gerenciaFilme();
-            gerencialFilme.ShowDialog();
+            gerenciaFilme gerenciarFilme = new gerenciaFilme();
+            gerenciarFilme.ShowDialog();
+        }
+
+        private void gerenciaSessão_Click(object sender, EventArgs e)
+        {
+            gerenciaSessao gerenciarSessao = new gerenciaSessao();
+            gerenciarSessao.ShowDialog();
         }
     }
 }

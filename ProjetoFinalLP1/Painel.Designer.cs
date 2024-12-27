@@ -136,6 +136,7 @@
             this.gerenciaSessão.TabIndex = 6;
             this.gerenciaSessão.Text = "Gerenciar Sessões";
             this.gerenciaSessão.UseVisualStyleBackColor = true;
+            this.gerenciaSessão.Click += new System.EventHandler(this.gerenciaSessão_Click);
             // 
             // Painel
             // 
