@@ -1,9 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
 using Mysqlx;
+using Org.BouncyCastle.Asn1.Pkcs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -21,6 +23,8 @@ namespace ProjetoFinalLP1
         private MySqlDataReader Dados;
 
         int controle = 0;
+        int codeFilme = 0;
+        int codeSala = 0;
 
         public editSessoes(int indice)
         {
@@ -160,7 +164,34 @@ namespace ProjetoFinalLP1
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            string strSQL = "Insert INTO sessoes(codigo, filme, sala, ingressos, preço, dia, horario) VALUES(@Codigo, @Filme, @Sala, @Ingressos, @Preço, @Dia, @Horario)";
+            Obj_CmdSQL.Parameters.Clear();
 
+            try
+            {
+                getCodeFilme();
+                Obj_CmdSQL.CommandText = strSQL;
+
+                Obj_CmdSQL.Parameters.AddWithValue("@Codigo", Convert.ToInt32(sessaoNmr.Value));
+                Obj_CmdSQL.Parameters.AddWithValue("@Filme", Convert.ToInt32(codeFilme));
+                Obj_CmdSQL.Parameters.AddWithValue("@Sala", Convert.ToInt32(numeroSala.Value));
+                Obj_CmdSQL.Parameters.AddWithValue("@Ingressos", Convert.ToInt32(ingressosQtd.Value));
+                Obj_CmdSQL.Parameters.AddWithValue("@Preço", Convert.ToDecimal(valorNumero.Value));
+                string Dia = diaFilme.Value.ToString("yyyy-MM-dd");
+                Obj_CmdSQL.Parameters.AddWithValue("@Dia", Dia);
+                Obj_CmdSQL.Parameters.AddWithValue("@Horario", Convert.ToString(horarioValor.SelectedItem));
+
+                Obj_CmdSQL.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Obj_CmdSQL.Parameters.Clear();
+            }
+            this.Close();
         }
 
         private void nomeFilmeValor_SelectedIndexChanged(object sender, EventArgs e)
@@ -198,6 +229,32 @@ namespace ProjetoFinalLP1
             finally
             {
                 Dados.Close();
+            }
+        }
+        
+        void getCodeFilme()
+        {
+            try
+            {
+                Obj_CmdSQL.CommandText = "SELECT codigo FROM filmes WHERE nome = @Nome";
+                Obj_CmdSQL.Parameters.Clear();
+                Obj_CmdSQL.Parameters.AddWithValue("@Nome", Convert.ToString(nomeFilmeValor.SelectedItem));
+
+                using (Dados = Obj_CmdSQL.ExecuteReader())
+                {
+                    if (Dados.Read())
+                    {
+                        codeFilme = Convert.ToInt32(Dados["codigo"]);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Filme não encontrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
