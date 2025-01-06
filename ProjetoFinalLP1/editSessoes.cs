@@ -39,6 +39,40 @@ namespace ProjetoFinalLP1
             this.Close();
         }
 
+        void load()
+        {
+
+            Obj_CmdSQL.CommandText = "SELECT nome, banner FROM filmes WHERE 1 = 1";
+            Dados = Obj_CmdSQL.ExecuteReader();
+
+            if (Dados.HasRows)
+            {
+                DataTable dt = new DataTable();
+                dt.Load(Dados);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    nomeFilmeValor.Items.Add(row["nome"]);
+                }
+            }
+
+            Obj_CmdSQL.Parameters.Clear();
+            Obj_CmdSQL.CommandText = "SELECT MAX(numero) FROM sala";
+            Dados = Obj_CmdSQL.ExecuteReader();
+            try
+            {
+                Dados.Read();
+                numeroSala.Maximum = Convert.ToInt32(Dados[0]);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível obter as salas! Verifique a parte de salas! \n Erro:" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Dados.Close();
+            }
+        }
         private void editSala_Load(object sender, EventArgs e)
         {
             try
@@ -75,38 +109,7 @@ namespace ProjetoFinalLP1
                         atualizaTipoIngresso();
                     }
                 }
-
-
-                Obj_CmdSQL.CommandText = "SELECT nome, banner FROM filmes WHERE 1 = 1";
-                Dados = Obj_CmdSQL.ExecuteReader();
-
-                if (Dados.HasRows)
-                {
-                    DataTable dt = new DataTable();
-                    dt.Load(Dados);
-
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        nomeFilmeValor.Items.Add(row["nome"]);
-                    }
-                }
-
-                Obj_CmdSQL.Parameters.Clear();
-                Obj_CmdSQL.CommandText = "SELECT MAX(numero) FROM sala";
-                Dados = Obj_CmdSQL.ExecuteReader();
-                try
-                {
-                    Dados.Read();
-                    numeroSala.Maximum = Convert.ToInt32(Dados[0]);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Não foi possível obter as salas! Verifique a parte de salas! \n Erro:" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    Dados.Close();
-                }
+                load();
             }
 
             if (controle == 1)
@@ -129,6 +132,7 @@ namespace ProjetoFinalLP1
 
                     }
                 }
+                load();
             }
 
         }
