@@ -25,10 +25,12 @@ namespace ProjetoFinalLP1
         int controle = 0;
         int codeFilme = 0;
         int codeSala = 0;
+        int codigo;
 
-        public editSessoes(int indice)
+        public editSessoes(int indice, int indiceFilme)
         {
             controle = indice;
+            codigo = indiceFilme;
             InitializeComponent();
         }
 
@@ -82,14 +84,10 @@ namespace ProjetoFinalLP1
                 {
                     DataTable dt = new DataTable();
                     dt.Load(Dados);
-                    // byte[] rawData;
 
                     foreach (DataRow row in dt.Rows)
                     {
                         nomeFilmeValor.Items.Add(row["nome"]);
-                        /* rawData = (byte[])row["banner"];
-                        MemoryStream Imagem = new MemoryStream(rawData);
-                        bannerImagem.Image = Image.FromStream(Imagem);*/
                     }
                 }
 
@@ -108,6 +106,28 @@ namespace ProjetoFinalLP1
                 finally
                 {
                     Dados.Close();
+                }
+            }
+
+            if (controle == 1)
+            {
+                Obj_CmdSQL.CommandText = "SELECT codigo, filme, sala, ingressos, preco, dia, horario FROM sessoes WHERE codigo = @codigo";
+                Obj_CmdSQL.Parameters.AddWithValue("@Codigo", codigo);
+                Dados = Obj_CmdSQL.ExecuteReader();
+                if (Dados.HasRows) 
+                {
+                    try
+                    {
+
+                    }
+                    catch
+                    {
+
+                    }
+                    finally
+                    {
+
+                    }
                 }
             }
 
