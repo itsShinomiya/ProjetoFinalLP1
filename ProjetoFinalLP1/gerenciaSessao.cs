@@ -27,7 +27,7 @@ namespace ProjetoFinalLP1
         {
             try
             {
-                string comando = "SELECT codigo, filme, sala, ingressos, preço, dia, horario FROM sessoes WHERE 1=1";
+                string comando = "SELECT codigo, filme, sala, ingressos, preco, dia, horario FROM sessoes WHERE 1=1";
 
                 Obj_CmdSQL.Parameters.Clear();
                 Obj_CmdSQL.CommandText = comando;
@@ -42,9 +42,13 @@ namespace ProjetoFinalLP1
                     foreach (DataRow row in dt.Rows)
                     {
                         buscaExibir.Rows.Add(
-                            row["numero"],
-                            row["tipo"],
-                            row["assentos"]
+                            row["codigo"],
+                            row["filme"],
+                            row["sala"],
+                            row["dia"],
+                            row["horario"],
+                            row["ingressos"],
+                            row["preco"]
                         );
                     }
                 }

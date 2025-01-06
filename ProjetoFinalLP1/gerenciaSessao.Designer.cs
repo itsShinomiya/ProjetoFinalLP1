@@ -41,18 +41,18 @@
             this.buscaBotao = new System.Windows.Forms.ToolStripButton();
             this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.buscaExibir = new System.Windows.Forms.DataGridView();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filme = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sala = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ingressos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adicionaSala = new System.Windows.Forms.Button();
             this.removeSala = new System.Windows.Forms.Button();
             this.atualizaBtn = new System.Windows.Forms.Button();
             this.alteraSala = new System.Windows.Forms.Button();
             this.venderBtn = new System.Windows.Forms.Button();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filme = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sala = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ingressos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.SuspendLayout();
@@ -165,10 +165,10 @@
             this.codigo,
             this.filme,
             this.sala,
-            this.valor,
             this.dia,
             this.horario,
-            this.ingressos});
+            this.ingressos,
+            this.preço});
             this.buscaExibir.Location = new System.Drawing.Point(12, 124);
             this.buscaExibir.MultiSelect = false;
             this.buscaExibir.Name = "buscaExibir";
@@ -176,48 +176,6 @@
             this.buscaExibir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.buscaExibir.Size = new System.Drawing.Size(793, 502);
             this.buscaExibir.TabIndex = 1;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Código da Sessão";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            // 
-            // filme
-            // 
-            this.filme.HeaderText = "Nome do Filme";
-            this.filme.Name = "filme";
-            this.filme.ReadOnly = true;
-            // 
-            // sala
-            // 
-            this.sala.HeaderText = "Sala";
-            this.sala.Name = "sala";
-            this.sala.ReadOnly = true;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            // 
-            // dia
-            // 
-            this.dia.HeaderText = "Dia";
-            this.dia.Name = "dia";
-            this.dia.ReadOnly = true;
-            // 
-            // horario
-            // 
-            this.horario.HeaderText = "Horário";
-            this.horario.Name = "horario";
-            this.horario.ReadOnly = true;
-            // 
-            // ingressos
-            // 
-            this.ingressos.HeaderText = "Ingressos Disponíveis";
-            this.ingressos.Name = "ingressos";
-            this.ingressos.ReadOnly = true;
             // 
             // adicionaSala
             // 
@@ -268,6 +226,48 @@
             this.venderBtn.Text = "Vender Ingressos";
             this.venderBtn.UseVisualStyleBackColor = true;
             // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Código da Sessão";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            // 
+            // filme
+            // 
+            this.filme.HeaderText = "Nome do Filme";
+            this.filme.Name = "filme";
+            this.filme.ReadOnly = true;
+            // 
+            // sala
+            // 
+            this.sala.HeaderText = "Sala";
+            this.sala.Name = "sala";
+            this.sala.ReadOnly = true;
+            // 
+            // dia
+            // 
+            this.dia.HeaderText = "Dia";
+            this.dia.Name = "dia";
+            this.dia.ReadOnly = true;
+            // 
+            // horario
+            // 
+            this.horario.HeaderText = "Horário";
+            this.horario.Name = "horario";
+            this.horario.ReadOnly = true;
+            // 
+            // ingressos
+            // 
+            this.ingressos.HeaderText = "Ingressos Disponíveis";
+            this.ingressos.Name = "ingressos";
+            this.ingressos.ReadOnly = true;
+            // 
+            // preço
+            // 
+            this.preço.HeaderText = "Valor";
+            this.preço.Name = "preço";
+            this.preço.ReadOnly = true;
+            // 
             // gerenciaSessao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,13 +312,13 @@
         private System.Windows.Forms.ToolStripMenuItem sairStrip;
         private System.Windows.Forms.ToolStripMenuItem adicionarStrip;
         private System.Windows.Forms.ToolStripMenuItem alterarStrip;
+        private System.Windows.Forms.Button venderBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn filme;
         private System.Windows.Forms.DataGridViewTextBoxColumn sala;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dia;
         private System.Windows.Forms.DataGridViewTextBoxColumn horario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ingressos;
-        private System.Windows.Forms.Button venderBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preço;
     }
 }
