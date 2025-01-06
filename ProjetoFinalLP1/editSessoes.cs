@@ -51,60 +51,64 @@ namespace ProjetoFinalLP1
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            Obj_CmdSQL.CommandText = "SELECT MAX(codigo) FROM sessoes";
-            Dados = Obj_CmdSQL.ExecuteReader();
-
-            if (Dados.HasRows)
+            if (controle == 0)
             {
+                Obj_CmdSQL.CommandText = "SELECT MAX(codigo) FROM sessoes";
+                Dados = Obj_CmdSQL.ExecuteReader();
+
+                if (Dados.HasRows)
+                {
+                    try
+                    {
+                        Dados.Read();
+                        sessaoNmr.Value = Convert.ToInt32(Dados[0]) + 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        sessaoNmr.Value = 1;
+                    }
+                    finally
+                    {
+                        Dados.Close();
+                        atualizaTipoIngresso();
+                    }
+                }
+
+
+                Obj_CmdSQL.CommandText = "SELECT nome, banner FROM filmes WHERE 1 = 1";
+                Dados = Obj_CmdSQL.ExecuteReader();
+
+                if (Dados.HasRows)
+                {
+                    DataTable dt = new DataTable();
+                    dt.Load(Dados);
+                    // byte[] rawData;
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        nomeFilmeValor.Items.Add(row["nome"]);
+                        /* rawData = (byte[])row["banner"];
+                        MemoryStream Imagem = new MemoryStream(rawData);
+                        bannerImagem.Image = Image.FromStream(Imagem);*/
+                    }
+                }
+
+                Obj_CmdSQL.Parameters.Clear();
+                Obj_CmdSQL.CommandText = "SELECT MAX(numero) FROM sala";
+                Dados = Obj_CmdSQL.ExecuteReader();
                 try
                 {
                     Dados.Read();
-                    sessaoNmr.Value = Convert.ToInt32(Dados[0]) + 1;
+                    numeroSala.Maximum = Convert.ToInt32(Dados[0]);
                 }
                 catch (Exception ex)
                 {
-                    sessaoNmr.Value = 1;
+                    MessageBox.Show("Não foi possível obter as salas! Verifique a parte de salas! \n Erro:" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
                     Dados.Close();
-                    atualizaTipoIngresso();
                 }
-            }
-
-            Obj_CmdSQL.CommandText = "SELECT nome, banner FROM filmes WHERE 1 = 1";
-            Dados = Obj_CmdSQL.ExecuteReader();
-
-            if (Dados.HasRows)
-            {
-                DataTable dt = new DataTable();
-                dt.Load(Dados);
-                // byte[] rawData;
-
-                foreach (DataRow row in dt.Rows)
-                {
-                    nomeFilmeValor.Items.Add(row["nome"]);
-                    /* rawData = (byte[])row["banner"];
-                    MemoryStream Imagem = new MemoryStream(rawData);
-                    bannerImagem.Image = Image.FromStream(Imagem);*/
-                }
-            }
-
-            Obj_CmdSQL.Parameters.Clear();
-            Obj_CmdSQL.CommandText = "SELECT MAX(numero) FROM sala";
-            Dados = Obj_CmdSQL.ExecuteReader();
-            try
-            {
-                Dados.Read();
-                numeroSala.Maximum = Convert.ToInt32(Dados[0]);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Não foi possível obter as salas! Verifique a parte de salas! \n Erro:" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                Dados.Close();
             }
 
         }
