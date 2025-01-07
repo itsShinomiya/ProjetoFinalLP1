@@ -143,7 +143,7 @@ namespace ProjetoFinalLP1
             //DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
             //int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
 
-            editSessoes adicionaSessao = new editSessoes(2);
+            editSessoes adicionaSessao = new editSessoes(2, -1);
             adicionaSessao.ShowDialog();
             refresh();
         }

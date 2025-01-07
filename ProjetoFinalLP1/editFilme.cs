@@ -157,7 +157,7 @@ namespace ProjetoFinalLP1
             }
             else
             {
-                strSQL = "UPDATE filmes SET codigo = @Codigo, descricao = @Descricao, banner = @Banner WHERE codigo = @Codigo";
+                strSQL = "UPDATE filmes SET codigo = @Codigo, descricao = @Descricao, nome = @Nome, banner = @Banner WHERE codigo = @Codigo";
             }
             MemoryStream streamBanner = new MemoryStream();
             byte[] rawData;
