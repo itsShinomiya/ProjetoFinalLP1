@@ -12,8 +12,10 @@ namespace ProjetoFinalLP1
 {
     public partial class Painel : Form
     {
-        public Painel()
+        int lvl;
+        public Painel(int nivel)
         {
+            lvl = nivel;
             InitializeComponent();
         }
 
@@ -24,25 +26,25 @@ namespace ProjetoFinalLP1
 
         private void gerenciaSalas_Click(object sender, EventArgs e)
         {
-            gerenciaSala gerenciarSala = new gerenciaSala();
+            gerenciaSala gerenciarSala = new gerenciaSala(lvl);
             gerenciarSala.ShowDialog();
         }
 
         private void gerenciaFuncionario_Click(object sender, EventArgs e)
         {
-            gerenciaFuncionario gerenciarFuncionario = new gerenciaFuncionario();
+            gerenciaFuncionario gerenciarFuncionario = new gerenciaFuncionario(lvl);
             gerenciarFuncionario.ShowDialog();
         }
 
         private void gerenciaFilme_Click(object sender, EventArgs e)
         {
-            gerenciaFilme gerenciarFilme = new gerenciaFilme();
+            gerenciaFilme gerenciarFilme = new gerenciaFilme(lvl);
             gerenciarFilme.ShowDialog();
         }
 
         private void gerenciaSessão_Click(object sender, EventArgs e)
         {
-            gerenciaSessao gerenciarSessao = new gerenciaSessao();
+            gerenciaSessao gerenciarSessao = new gerenciaSessao(lvl);
             gerenciarSessao.ShowDialog();
         }
     }

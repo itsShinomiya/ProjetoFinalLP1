@@ -19,7 +19,7 @@ namespace ProjetoFinalLP1
         private MySqlConnection Obj_Conn = new MySqlConnection();
         private MySqlCommand Obj_CmdSQL = new MySqlCommand();
         private MySqlDataReader Dados;
-        public gerenciaFilme()
+        public gerenciaFilme(int nivel)
         {
             InitializeComponent();
         }

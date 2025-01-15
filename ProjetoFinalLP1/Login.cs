@@ -67,13 +67,19 @@ namespace ProjetoFinalLP1
                             {
                                 case "Usuário":
                                     MessageBox.Show($"Seja bem-vindo, {userTxt.Text}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    Painel PainelUser = new Painel(2);
+                                    this.Hide();
+                                    PainelUser.ShowDialog();
                                     break;
                                 case "Gerente":
                                     MessageBox.Show($"Seja bem-vindo, {userTxt.Text}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    Painel PainelGer = new Painel(1);
+                                    this.Hide();
+                                    PainelGer.ShowDialog();
                                     break;
                                 case "Administrador":
                                     MessageBox.Show("Seja bem-vindo, Administrador!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    Painel PainelAdm = new Painel();
+                                    Painel PainelAdm = new Painel(0);
                                     this.Hide();
                                     PainelAdm.ShowDialog();
                                     this.Close();
@@ -118,7 +124,7 @@ namespace ProjetoFinalLP1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Painel PainelAdm = new Painel();
+            Painel PainelAdm = new Painel(0);
             
             this.Hide();
             PainelAdm.ShowDialog();

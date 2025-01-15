@@ -35,8 +35,6 @@
             this.ferramentasStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.gerenciaSalas = new System.Windows.Forms.Button();
             this.gerenciaFuncionario = new System.Windows.Forms.Button();
-            this.gerenciaVenda = new System.Windows.Forms.Button();
-            this.obterAjuda = new System.Windows.Forms.Button();
             this.gerenciaFilme = new System.Windows.Forms.Button();
             this.gerenciaSessão = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
@@ -49,7 +47,7 @@
             this.ferramentasStrip});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(329, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -82,7 +80,7 @@
             // 
             // gerenciaSalas
             // 
-            this.gerenciaSalas.Location = new System.Drawing.Point(314, 168);
+            this.gerenciaSalas.Location = new System.Drawing.Point(29, 181);
             this.gerenciaSalas.Name = "gerenciaSalas";
             this.gerenciaSalas.Size = new System.Drawing.Size(127, 118);
             this.gerenciaSalas.TabIndex = 1;
@@ -92,7 +90,7 @@
             // 
             // gerenciaFuncionario
             // 
-            this.gerenciaFuncionario.Location = new System.Drawing.Point(172, 310);
+            this.gerenciaFuncionario.Location = new System.Drawing.Point(173, 181);
             this.gerenciaFuncionario.Name = "gerenciaFuncionario";
             this.gerenciaFuncionario.Size = new System.Drawing.Size(127, 118);
             this.gerenciaFuncionario.TabIndex = 2;
@@ -100,27 +98,9 @@
             this.gerenciaFuncionario.UseVisualStyleBackColor = true;
             this.gerenciaFuncionario.Click += new System.EventHandler(this.gerenciaFuncionario_Click);
             // 
-            // gerenciaVenda
-            // 
-            this.gerenciaVenda.Location = new System.Drawing.Point(28, 310);
-            this.gerenciaVenda.Name = "gerenciaVenda";
-            this.gerenciaVenda.Size = new System.Drawing.Size(127, 118);
-            this.gerenciaVenda.TabIndex = 3;
-            this.gerenciaVenda.Text = "Gerenciar Vendas";
-            this.gerenciaVenda.UseVisualStyleBackColor = true;
-            // 
-            // obterAjuda
-            // 
-            this.obterAjuda.Location = new System.Drawing.Point(314, 310);
-            this.obterAjuda.Name = "obterAjuda";
-            this.obterAjuda.Size = new System.Drawing.Size(127, 118);
-            this.obterAjuda.TabIndex = 4;
-            this.obterAjuda.Text = "Ajuda";
-            this.obterAjuda.UseVisualStyleBackColor = true;
-            // 
             // gerenciaFilme
             // 
-            this.gerenciaFilme.Location = new System.Drawing.Point(28, 168);
+            this.gerenciaFilme.Location = new System.Drawing.Point(29, 39);
             this.gerenciaFilme.Name = "gerenciaFilme";
             this.gerenciaFilme.Size = new System.Drawing.Size(127, 118);
             this.gerenciaFilme.TabIndex = 5;
@@ -130,7 +110,7 @@
             // 
             // gerenciaSessão
             // 
-            this.gerenciaSessão.Location = new System.Drawing.Point(172, 168);
+            this.gerenciaSessão.Location = new System.Drawing.Point(173, 39);
             this.gerenciaSessão.Name = "gerenciaSessão";
             this.gerenciaSessão.Size = new System.Drawing.Size(127, 118);
             this.gerenciaSessão.TabIndex = 6;
@@ -142,9 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.obterAjuda);
-            this.Controls.Add(this.gerenciaVenda);
+            this.ClientSize = new System.Drawing.Size(329, 338);
             this.Controls.Add(this.gerenciaFuncionario);
             this.Controls.Add(this.gerenciaSalas);
             this.Controls.Add(this.toolStrip1);
@@ -169,8 +147,6 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStrip;
         private System.Windows.Forms.Button gerenciaSalas;
         private System.Windows.Forms.Button gerenciaFuncionario;
-        private System.Windows.Forms.Button gerenciaVenda;
-        private System.Windows.Forms.Button obterAjuda;
         private System.Windows.Forms.Button gerenciaFilme;
         private System.Windows.Forms.Button gerenciaSessão;
         private System.Windows.Forms.ToolStripDropDownButton ferramentasStrip;
