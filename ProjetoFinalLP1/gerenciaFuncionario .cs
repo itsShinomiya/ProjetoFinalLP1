@@ -16,12 +16,14 @@ namespace ProjetoFinalLP1
     public partial class gerenciaFuncionario : Form
     {
         int controle = 0;
+        int lvl;
 
         private MySqlConnection Obj_Conn = new MySqlConnection();
         private MySqlCommand Obj_CmdSQL = new MySqlCommand();
         private MySqlDataReader Dados;
         public gerenciaFuncionario(int nivel)
         {
+            lvl = nivel;
             InitializeComponent();
         }
 
@@ -92,6 +94,18 @@ namespace ProjetoFinalLP1
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message, "Erro de Conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (lvl == 2)
+            {
+                alteraFuncionario.Enabled = false;
+                removeFuncionario.Enabled = false;
+                adicionarStrip.Enabled = false;
+                adicionaFuncionario.Enabled = false;
+            }
+            else if (lvl == 1)
+            {
+                removeFuncionario.Enabled = false;
             }
 
             refresh();

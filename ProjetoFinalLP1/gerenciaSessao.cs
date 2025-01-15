@@ -18,8 +18,11 @@ namespace ProjetoFinalLP1
         private MySqlConnection Obj_Conn = new MySqlConnection();
         private MySqlCommand Obj_CmdSQL = new MySqlCommand();
         private MySqlDataReader Dados;
+
+        int lvl;
         public gerenciaSessao(int nivel)
         {
+            lvl = nivel;
             InitializeComponent();
         }
 
@@ -92,6 +95,17 @@ namespace ProjetoFinalLP1
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message, "Erro de Conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if(lvl == 2)
+            {
+                alteraSala.Enabled = false;
+                removeSala.Enabled = false;
+                alterarStrip.Enabled = false;
+            }
+            else if(lvl == 1)
+            {
+                removeSala.Enabled = false;
             }
 
             refresh();

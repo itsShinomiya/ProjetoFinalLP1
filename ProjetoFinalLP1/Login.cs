@@ -70,12 +70,14 @@ namespace ProjetoFinalLP1
                                     Painel PainelUser = new Painel(2);
                                     this.Hide();
                                     PainelUser.ShowDialog();
+                                    this.Close();
                                     break;
                                 case "Gerente":
                                     MessageBox.Show($"Seja bem-vindo, {userTxt.Text}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     Painel PainelGer = new Painel(1);
                                     this.Hide();
                                     PainelGer.ShowDialog();
+                                    this.Close();
                                     break;
                                 case "Administrador":
                                     MessageBox.Show("Seja bem-vindo, Administrador!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);

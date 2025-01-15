@@ -41,11 +41,6 @@
             this.buscaBotao = new System.Windows.Forms.ToolStripButton();
             this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.buscaExibir = new System.Windows.Forms.DataGridView();
-            this.adicionaSala = new System.Windows.Forms.Button();
-            this.removeSala = new System.Windows.Forms.Button();
-            this.atualizaBtn = new System.Windows.Forms.Button();
-            this.alteraSala = new System.Windows.Forms.Button();
-            this.venderBtn = new System.Windows.Forms.Button();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filme = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sala = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +48,10 @@
             this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ingressos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adicionaSala = new System.Windows.Forms.Button();
+            this.removeSala = new System.Windows.Forms.Button();
+            this.atualizaBtn = new System.Windows.Forms.Button();
+            this.alteraSala = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.SuspendLayout();
@@ -177,55 +176,6 @@
             this.buscaExibir.Size = new System.Drawing.Size(793, 502);
             this.buscaExibir.TabIndex = 1;
             // 
-            // adicionaSala
-            // 
-            this.adicionaSala.Location = new System.Drawing.Point(12, 54);
-            this.adicionaSala.Name = "adicionaSala";
-            this.adicionaSala.Size = new System.Drawing.Size(75, 64);
-            this.adicionaSala.TabIndex = 2;
-            this.adicionaSala.Text = "Adicionar";
-            this.adicionaSala.UseVisualStyleBackColor = true;
-            this.adicionaSala.Click += new System.EventHandler(this.adicionaSala_Click);
-            // 
-            // removeSala
-            // 
-            this.removeSala.Location = new System.Drawing.Point(255, 54);
-            this.removeSala.Name = "removeSala";
-            this.removeSala.Size = new System.Drawing.Size(75, 64);
-            this.removeSala.TabIndex = 3;
-            this.removeSala.Text = "Remover";
-            this.removeSala.UseVisualStyleBackColor = true;
-            this.removeSala.Click += new System.EventHandler(this.removeSala_Click);
-            // 
-            // atualizaBtn
-            // 
-            this.atualizaBtn.Location = new System.Drawing.Point(174, 54);
-            this.atualizaBtn.Name = "atualizaBtn";
-            this.atualizaBtn.Size = new System.Drawing.Size(75, 64);
-            this.atualizaBtn.TabIndex = 4;
-            this.atualizaBtn.Text = "Atualizar";
-            this.atualizaBtn.UseVisualStyleBackColor = true;
-            this.atualizaBtn.Click += new System.EventHandler(this.atualizaBtn_Click);
-            // 
-            // alteraSala
-            // 
-            this.alteraSala.Location = new System.Drawing.Point(93, 54);
-            this.alteraSala.Name = "alteraSala";
-            this.alteraSala.Size = new System.Drawing.Size(75, 64);
-            this.alteraSala.TabIndex = 5;
-            this.alteraSala.Text = "Alterar";
-            this.alteraSala.UseVisualStyleBackColor = true;
-            this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
-            // 
-            // venderBtn
-            // 
-            this.venderBtn.Location = new System.Drawing.Point(730, 54);
-            this.venderBtn.Name = "venderBtn";
-            this.venderBtn.Size = new System.Drawing.Size(75, 64);
-            this.venderBtn.TabIndex = 6;
-            this.venderBtn.Text = "Vender Ingressos";
-            this.venderBtn.UseVisualStyleBackColor = true;
-            // 
             // codigo
             // 
             this.codigo.HeaderText = "Código da Sessão";
@@ -268,12 +218,51 @@
             this.preço.Name = "preço";
             this.preço.ReadOnly = true;
             // 
+            // adicionaSala
+            // 
+            this.adicionaSala.Location = new System.Drawing.Point(12, 54);
+            this.adicionaSala.Name = "adicionaSala";
+            this.adicionaSala.Size = new System.Drawing.Size(75, 64);
+            this.adicionaSala.TabIndex = 2;
+            this.adicionaSala.Text = "Adicionar";
+            this.adicionaSala.UseVisualStyleBackColor = true;
+            this.adicionaSala.Click += new System.EventHandler(this.adicionaSala_Click);
+            // 
+            // removeSala
+            // 
+            this.removeSala.Location = new System.Drawing.Point(255, 54);
+            this.removeSala.Name = "removeSala";
+            this.removeSala.Size = new System.Drawing.Size(75, 64);
+            this.removeSala.TabIndex = 3;
+            this.removeSala.Text = "Remover";
+            this.removeSala.UseVisualStyleBackColor = true;
+            this.removeSala.Click += new System.EventHandler(this.removeSala_Click);
+            // 
+            // atualizaBtn
+            // 
+            this.atualizaBtn.Location = new System.Drawing.Point(174, 54);
+            this.atualizaBtn.Name = "atualizaBtn";
+            this.atualizaBtn.Size = new System.Drawing.Size(75, 64);
+            this.atualizaBtn.TabIndex = 4;
+            this.atualizaBtn.Text = "Atualizar";
+            this.atualizaBtn.UseVisualStyleBackColor = true;
+            this.atualizaBtn.Click += new System.EventHandler(this.atualizaBtn_Click);
+            // 
+            // alteraSala
+            // 
+            this.alteraSala.Location = new System.Drawing.Point(93, 54);
+            this.alteraSala.Name = "alteraSala";
+            this.alteraSala.Size = new System.Drawing.Size(75, 64);
+            this.alteraSala.TabIndex = 5;
+            this.alteraSala.Text = "Alterar";
+            this.alteraSala.UseVisualStyleBackColor = true;
+            this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
+            // 
             // gerenciaSessao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 638);
-            this.Controls.Add(this.venderBtn);
             this.Controls.Add(this.alteraSala);
             this.Controls.Add(this.atualizaBtn);
             this.Controls.Add(this.removeSala);
@@ -312,7 +301,6 @@
         private System.Windows.Forms.ToolStripMenuItem sairStrip;
         private System.Windows.Forms.ToolStripMenuItem adicionarStrip;
         private System.Windows.Forms.ToolStripMenuItem alterarStrip;
-        private System.Windows.Forms.Button venderBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn filme;
         private System.Windows.Forms.DataGridViewTextBoxColumn sala;

@@ -15,12 +15,14 @@ namespace ProjetoFinalLP1
     public partial class gerenciaFilme : Form
     {
         int controle = 0;
+        int lvl;
 
         private MySqlConnection Obj_Conn = new MySqlConnection();
         private MySqlCommand Obj_CmdSQL = new MySqlCommand();
         private MySqlDataReader Dados;
         public gerenciaFilme(int nivel)
         {
+            lvl = nivel;
             InitializeComponent();
         }
 
@@ -108,6 +110,17 @@ namespace ProjetoFinalLP1
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message, "Erro de Conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (lvl == 2)
+            {
+                alteraFilme.Enabled = false;
+                removeFilme.Enabled = false;
+                alterarStrip.Enabled = false;
+            }
+            else if (lvl == 1)
+            {
+                removeFilme.Enabled = false;
             }
 
             refresh();
