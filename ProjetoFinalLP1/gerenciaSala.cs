@@ -151,8 +151,6 @@ namespace ProjetoFinalLP1
         {
             controle = 2;
 
-            //DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-            //int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
 
             editSala alteraSala = new editSala(controle, -1);
             alteraSala.ShowDialog();
