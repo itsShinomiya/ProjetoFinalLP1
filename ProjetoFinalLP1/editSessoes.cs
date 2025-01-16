@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Google.Protobuf.WellKnownTypes;
+using MySql.Data.MySqlClient;
 using Mysqlx;
 using Org.BouncyCastle.Asn1.Pkcs;
 using System;
@@ -22,15 +23,15 @@ namespace ProjetoFinalLP1
         private MySqlCommand Obj_CmdSQL = new MySqlCommand();
         private MySqlDataReader Dados;
 
-        int controle = 0;
+        int controle;
         int codeFilme = 0;
         int codeSala = 0;
         int codigo;
 
-        public editSessoes(int indice, int indiceFilme)
+        public editSessoes(int indice, int indiceSessao)
         {
             controle = indice;
-            codigo = indiceFilme;
+            codigo = indiceSessao;
             InitializeComponent();
         }
 
@@ -41,7 +42,6 @@ namespace ProjetoFinalLP1
 
         void load()
         {
-
             Obj_CmdSQL.CommandText = "SELECT nome, banner FROM filmes WHERE 1 = 1";
             Dados = Obj_CmdSQL.ExecuteReader();
 
@@ -109,32 +109,48 @@ namespace ProjetoFinalLP1
                         atualizaTipoIngresso();
                     }
                 }
-                load();
+
             }
+
+            load();
+            Dados.Close();
 
             if (controle == 1)
             {
-                Obj_CmdSQL.CommandText = "SELECT codigo, filme, sala, ingressos, preco, dia, horario FROM sessoes WHERE codigo = @codigo";
-                Obj_CmdSQL.Parameters.AddWithValue("@Codigo", codigo);
-                Dados = Obj_CmdSQL.ExecuteReader();
-                if (Dados.HasRows) 
+                string strSQL = "SELECT codigo, filme, sala, ingressos, dia, horario, preco FROM sessoes WHERE codigo = @codigo";
+                Obj_CmdSQL.Parameters.Clear();
+                Obj_CmdSQL.CommandText = strSQL;
+                Obj_CmdSQL.Parameters.AddWithValue("@codigo", codigo);
+
+
+                try
                 {
-                    try
+                    Dados = Obj_CmdSQL.ExecuteReader();
+                    if (Dados.HasRows)
                     {
-
-                    }
-                    catch
-                    {
-
-                    }
-                    finally
-                    {
-
+                        Dados.Read();
+                        sessaoNmr.Value = Convert.ToDecimal(Dados["codigo"]);
+                        nomeFilmeValor.SelectedIndex = Convert.ToInt32(Dados["filme"]) - 1;
+                        //numeroSala.Value = Convert.ToInt32(Dados[2]);
+                        //ingressosQtd.Value = Convert.ToInt32(Dados[3]);
+                        /*valorNumero.Value = Convert.ToDecimal(Dados[4]);
+                        DateTime Dia = DateTime.Parse(Convert.ToString(Dados[5]));
+                        diaFilme.Value = Dia;
+                        diaFilme.Format = DateTimePickerFormat.Custom;
+                        diaFilme.CustomFormat = "dd-MM-yyyy";
+                        horarioValor.SelectedItem = Convert.ToString(Dados[6]);*/
                     }
                 }
-                load();
-            }
-
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocorreu um erro ao obter informações da sessão! Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    Dados.Close();
+                }
+            
+            } 
         }
 
         private void salaNmr_ValueChanged(object sender, EventArgs e)
@@ -192,7 +208,7 @@ namespace ProjetoFinalLP1
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            string strSQL = "Insert INTO sessoes(codigo, filme, sala, ingressos, preço, dia, horario) VALUES(@Codigo, @Filme, @Sala, @Ingressos, @Preço, @Dia, @Horario)";
+            string strSQL = "Insert INTO sessoes(codigo, filme, sala, ingressos, preco, dia, horario) VALUES(@Codigo, @Filme, @Sala, @Ingressos, @Preço, @Dia, @Horario)";
             Obj_CmdSQL.Parameters.Clear();
 
             try
