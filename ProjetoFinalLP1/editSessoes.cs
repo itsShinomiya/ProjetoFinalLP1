@@ -77,7 +77,7 @@ namespace ProjetoFinalLP1
         {
             try
             {
-                Obj_Conn.ConnectionString = "Server=sql10.freesqldatabase.com;Database=sql10753597;User=sql10753597;Pwd=xaCHSSHFwZ";
+                Obj_Conn.ConnectionString = "Server=sql10.freesqldatabase.com;Database=sql10753597;User=sql10753597;Pwd=xaCHSSHFwZ;";
                 Obj_Conn.Open();
                 Obj_CmdSQL.Connection = Obj_Conn;
             }
@@ -125,20 +125,23 @@ namespace ProjetoFinalLP1
 
                 try
                 {
+
                     Dados = Obj_CmdSQL.ExecuteReader();
                     if (Dados.HasRows)
                     {
-                        Dados.Read();
-                        sessaoNmr.Value = Convert.ToDecimal(Dados["codigo"]);
-                        nomeFilmeValor.SelectedIndex = Convert.ToInt32(Dados["filme"]) - 1;
-                        //numeroSala.Value = Convert.ToInt32(Dados[2]);
-                        //ingressosQtd.Value = Convert.ToInt32(Dados[3]);
-                        /*valorNumero.Value = Convert.ToDecimal(Dados[4]);
-                        DateTime Dia = DateTime.Parse(Convert.ToString(Dados[5]));
-                        diaFilme.Value = Dia;
-                        diaFilme.Format = DateTimePickerFormat.Custom;
-                        diaFilme.CustomFormat = "dd-MM-yyyy";
-                        horarioValor.SelectedItem = Convert.ToString(Dados[6]);*/
+                        DataTable dt = new DataTable();
+                        dt.Load(Dados);
+
+                        foreach (DataRow row in dt.Rows)
+                        {
+                                sessaoNmr.Value = Convert.ToInt32(row["codigo"]);
+                                nomeFilmeValor.SelectedIndex = Convert.ToInt32(row["filme"]) - 1;
+
+                            // Você pode adicionar outras colunas conforme necessário
+                            // Exemplo para "sala":
+                            // if (!row.IsNull("sala"))
+                            //     txtSala.Text = row["sala"].ToString();
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -147,11 +150,15 @@ namespace ProjetoFinalLP1
                 }
                 finally
                 {
-                    Dados.Close();
+                    if (Dados != null && !Dados.IsClosed)
+                    {
+                        Dados.Close();
+                    }
                 }
             
             } 
         }
+
 
         private void salaNmr_ValueChanged(object sender, EventArgs e)
         {
