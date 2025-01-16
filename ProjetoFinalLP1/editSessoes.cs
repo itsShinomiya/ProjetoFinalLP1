@@ -217,13 +217,19 @@ namespace ProjetoFinalLP1
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            string strSQL = "Insert INTO sessoes(codigo, filme, sala, ingressos, preco, dia, horario) VALUES(@Codigo, @Filme, @Sala, @Ingressos, @Preço, @Dia, @Horario)";
+            if (controle == 0)
+            {
+                Obj_CmdSQL.CommandText = "Insert INTO sessoes(codigo, filme, sala, ingressos, preco, dia, horario) VALUES(@Codigo, @Filme, @Sala, @Ingressos, @Preço, @Dia, @Horario)";
+            }
+            else if (controle == 1)
+            {
+                Obj_CmdSQL.CommandText = $"UPDATE sessoes SET codigo = @Codigo, filme = @Filme, sala = @Sala, ingressos = @Ingressos, preco = @Preço, dia = @Dia, horario = @Horario WHERE codigo = {codigo})";
+            }
             Obj_CmdSQL.Parameters.Clear();
 
             try
             {
                 getCodeFilme();
-                Obj_CmdSQL.CommandText = strSQL;
 
                 Obj_CmdSQL.Parameters.AddWithValue("@Codigo", Convert.ToInt32(sessaoNmr.Value));
                 Obj_CmdSQL.Parameters.AddWithValue("@Filme", Convert.ToInt32(codeFilme));
