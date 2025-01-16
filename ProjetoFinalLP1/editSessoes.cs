@@ -134,13 +134,15 @@ namespace ProjetoFinalLP1
 
                         foreach (DataRow row in dt.Rows)
                         {
-                                sessaoNmr.Value = Convert.ToInt32(row["codigo"]);
-                                nomeFilmeValor.SelectedIndex = Convert.ToInt32(row["filme"]) - 1;
-
-                            // Você pode adicionar outras colunas conforme necessário
-                            // Exemplo para "sala":
-                            // if (!row.IsNull("sala"))
-                            //     txtSala.Text = row["sala"].ToString();
+                            sessaoNmr.Value = Convert.ToInt32(row["codigo"]);
+                            nomeFilmeValor.SelectedIndex = Convert.ToInt32(row["filme"]) - 1;
+                            numeroSala.Value = Convert.ToInt32(row["sala"]);
+                            ingressosQtd.Value = Convert.ToInt32(row["ingressos"]);
+                            diaFilme.Text = Convert.ToString(row["dia"]);
+                            MessageBox.Show(Convert.ToString(row["horario"]));
+                            TimeSpan horario = (TimeSpan)row["horario"];
+                            horarioValor.SelectedItem = horario.ToString(@"hh\:mm");
+                            valorNumero.Value = Convert.ToDecimal(row["preco"]);
                         }
                     }
                 }

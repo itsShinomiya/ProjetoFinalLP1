@@ -119,19 +119,19 @@ namespace ProjetoFinalLP1
         private void removeSala_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-            string valor = Convert.ToString(selectedRow.Cells["cpf"].Value);
+            string valor = Convert.ToString(selectedRow.Cells["codigo"].Value);
             DialogResult exc = MessageBox.Show("Deseja realmente excluir essa sessão?", "Excluir?", MessageBoxButtons.YesNo);
             if (exc == DialogResult.Yes)
             {
                 try
                 {
-                    Obj_CmdSQL.CommandText = "DELETE FROM usuarios WHERE cpf = " + valor;
+                    Obj_CmdSQL.CommandText = "DELETE FROM sessoes WHERE codigo = " + valor;
                     int deletar = Obj_CmdSQL.ExecuteNonQuery();
                     refresh();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Houve um erro a deletar a sala!", "Erro", MessageBoxButtons.OK);
+                    MessageBox.Show("Houve um erro a deletar a sessão!", "Erro", MessageBoxButtons.OK);
                 }
             }
             else if (exc == DialogResult.No)
