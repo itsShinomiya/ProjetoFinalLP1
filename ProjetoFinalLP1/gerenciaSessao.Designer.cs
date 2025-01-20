@@ -447,7 +447,6 @@
             // 
             this.banner.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.banner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.banner.Image = global::ProjetoFinalLP1.Properties.Resources.no_photo_or_blank_image_icon_loading_images_or_missing_image_mark_image_not_available_or_image_coming_soon_sign_simple_nature_silhouette_in_frame_isolated_illustration_vector;
             this.banner.Location = new System.Drawing.Point(44, 10);
             this.banner.Name = "banner";
             this.banner.Size = new System.Drawing.Size(160, 201);

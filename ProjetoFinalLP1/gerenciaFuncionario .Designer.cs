@@ -91,7 +91,7 @@
             // sairStrip
             // 
             this.sairStrip.Name = "sairStrip";
-            this.sairStrip.Size = new System.Drawing.Size(180, 22);
+            this.sairStrip.Size = new System.Drawing.Size(93, 22);
             this.sairStrip.Text = "&Sair";
             this.sairStrip.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -322,7 +322,6 @@
             // 
             this.foto.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.foto.Image = global::ProjetoFinalLP1.Properties.Resources.no_photo_or_blank_image_icon_loading_images_or_missing_image_mark_image_not_available_or_image_coming_soon_sign_simple_nature_silhouette_in_frame_isolated_illustration_vector;
             this.foto.Location = new System.Drawing.Point(40, 21);
             this.foto.Name = "foto";
             this.foto.Size = new System.Drawing.Size(160, 160);

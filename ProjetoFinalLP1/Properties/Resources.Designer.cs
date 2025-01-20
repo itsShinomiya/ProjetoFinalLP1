@@ -59,17 +59,5 @@ namespace ProjetoFinalLP1.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap no_photo_or_blank_image_icon_loading_images_or_missing_image_mark_image_not_available_or_image_coming_soon_sign_simple_nature_silhouette_in_frame_isolated_illustration_vector {
-            get {
-                object obj = ResourceManager.GetObject("no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-avail" +
-                        "able-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illust" +
-                        "ration-vector", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

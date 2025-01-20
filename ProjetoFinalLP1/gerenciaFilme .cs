@@ -168,9 +168,6 @@ namespace ProjetoFinalLP1
         {
                controle = 2;
 
-               //DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-               //int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
-
                editFilme adicionaFilme = new editFilme(2, 0);
                adicionaFilme.ShowDialog();
                refresh();          
