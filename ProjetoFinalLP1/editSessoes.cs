@@ -139,7 +139,6 @@ namespace ProjetoFinalLP1
                             numeroSala.Value = Convert.ToInt32(row["sala"]);
                             ingressosQtd.Value = Convert.ToInt32(row["ingressos"]);
                             diaFilme.Text = Convert.ToString(row["dia"]);
-                            MessageBox.Show(Convert.ToString(row["horario"]));
                             TimeSpan horario = (TimeSpan)row["horario"];
                             horarioValor.SelectedItem = horario.ToString(@"hh\:mm");
                             valorNumero.Value = Convert.ToDecimal(row["preco"]);
@@ -217,19 +216,20 @@ namespace ProjetoFinalLP1
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (controle == 0)
-            {
-                Obj_CmdSQL.CommandText = "Insert INTO sessoes(codigo, filme, sala, ingressos, preco, dia, horario) VALUES(@Codigo, @Filme, @Sala, @Ingressos, @Preço, @Dia, @Horario)";
-            }
-            else if (controle == 1)
-            {
-                Obj_CmdSQL.CommandText = $"UPDATE sessoes SET codigo = @Codigo, filme = @Filme, sala = @Sala, ingressos = @Ingressos, preco = @Preço, dia = @Dia, horario = @Horario WHERE codigo = {codigo})";
-            }
             Obj_CmdSQL.Parameters.Clear();
 
             try
             {
                 getCodeFilme();
+                if (controle == 0)
+                {
+                    Obj_CmdSQL.CommandText = "Insert INTO sessoes(codigo, filme, sala, ingressos, preco, dia, horario) VALUES(@Codigo, @Filme, @Sala, @Ingressos, @Preço, @Dia, @Horario)";
+                }
+                else if (controle == 1)
+                {
+                    Obj_CmdSQL.CommandText = $"UPDATE sessoes SET codigo = @Codigo, filme = @Filme, sala = @Sala, ingressos = @Ingressos, preco = @Preço, dia = @Dia, horario = @Horario WHERE codigo = @CodigoAtual";
+                    Obj_CmdSQL.Parameters.AddWithValue("@CodigoAtual", sessaoNmr.Value);
+                }
 
                 Obj_CmdSQL.Parameters.AddWithValue("@Codigo", Convert.ToInt32(sessaoNmr.Value));
                 Obj_CmdSQL.Parameters.AddWithValue("@Filme", Convert.ToInt32(codeFilme));
@@ -239,8 +239,6 @@ namespace ProjetoFinalLP1
                 string Dia = diaFilme.Value.ToString("yyyy-MM-dd");
                 Obj_CmdSQL.Parameters.AddWithValue("@Dia", Dia);
                 Obj_CmdSQL.Parameters.AddWithValue("@Horario", Convert.ToString(horarioValor.SelectedItem));
-
-                Obj_CmdSQL.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
