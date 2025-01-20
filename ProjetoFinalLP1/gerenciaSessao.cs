@@ -38,21 +38,29 @@ namespace ProjetoFinalLP1
 
                 if (Dados.HasRows)
                 {
-                    string diaFormatado;
                     DataTable dt = new DataTable();
                     dt.Load(Dados);
+
 
                     buscaExibir.Rows.Clear();
                     foreach (DataRow row in dt.Rows)
                     {
+
+                        string precoFormatado = Convert.ToDecimal(row["preco"]).ToString("C2", new System.Globalization.CultureInfo("pt-BR"));
+                        string nomeFilme = getNomeFilme(Convert.ToInt32(row["filme"]));
+                        string diaFormatado = ((DateTime)row["dia"]).ToString("dd/MM/yyyy");
+                        if (string.IsNullOrEmpty(nomeFilme))
+                        {
+                            nomeFilme = "Desconhecido";
+                        }
                         buscaExibir.Rows.Add(
                             row["codigo"],
-                            row["filme"],
+                            nomeFilme,
                             row["sala"],
-                            diaFormatado = ((DateTime)row["dia"]).ToString("dd/MM/yyyy"),
+                            diaFormatado,
                             row["horario"],
                             row["ingressos"],
-                            row["preco"]
+                            precoFormatado
                         );
                     }
                 }
@@ -161,6 +169,35 @@ namespace ProjetoFinalLP1
             editSessoes adicionaSessao = new editSessoes(2, -1);
             adicionaSessao.ShowDialog();
             refresh();
+        }
+
+        private string getNomeFilme(int codigo) 
+        {
+            string nome = string.Empty;
+            try
+            {
+                Obj_CmdSQL.CommandText = "SELECT nome FROM filmes WHERE codigo = @CodigoAtual";
+                Obj_CmdSQL.Parameters.Clear();
+                Obj_CmdSQL.Parameters.AddWithValue("@CodigoAtual", Convert.ToString(codigo));
+
+                using (Dados = Obj_CmdSQL.ExecuteReader())
+                {
+                    if (Dados.Read())
+                    {
+                        nome = Convert.ToString(Dados["Nome"]);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Filme não encontrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
+            return nome;
         }
     }
 }
