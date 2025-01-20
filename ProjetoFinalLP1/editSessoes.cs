@@ -216,6 +216,8 @@ namespace ProjetoFinalLP1
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            
+            
             Obj_CmdSQL.Parameters.Clear();
 
             try
@@ -231,6 +233,7 @@ namespace ProjetoFinalLP1
                     Obj_CmdSQL.Parameters.AddWithValue("@CodigoAtual", sessaoNmr.Value);
                 }
 
+
                 Obj_CmdSQL.Parameters.AddWithValue("@Codigo", Convert.ToInt32(sessaoNmr.Value));
                 Obj_CmdSQL.Parameters.AddWithValue("@Filme", Convert.ToInt32(codeFilme));
                 Obj_CmdSQL.Parameters.AddWithValue("@Sala", Convert.ToInt32(numeroSala.Value));
@@ -239,6 +242,8 @@ namespace ProjetoFinalLP1
                 string Dia = diaFilme.Value.ToString("yyyy-MM-dd");
                 Obj_CmdSQL.Parameters.AddWithValue("@Dia", Dia);
                 Obj_CmdSQL.Parameters.AddWithValue("@Horario", Convert.ToString(horarioValor.SelectedItem));
+                
+                Obj_CmdSQL.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
