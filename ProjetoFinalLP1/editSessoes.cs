@@ -89,6 +89,9 @@ namespace ProjetoFinalLP1
 
             if (controle == 0)
             {
+                DateTime today = DateTime.Today;
+                diaFilme.Value = today;
+                diaFilme.MinDate = today;
                 Obj_CmdSQL.CommandText = "SELECT MAX(codigo) FROM sessoes";
                 Dados = Obj_CmdSQL.ExecuteReader();
 

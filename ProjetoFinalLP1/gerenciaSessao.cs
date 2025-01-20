@@ -38,6 +38,7 @@ namespace ProjetoFinalLP1
 
                 if (Dados.HasRows)
                 {
+                    string diaFormatado;
                     DataTable dt = new DataTable();
                     dt.Load(Dados);
 
@@ -48,7 +49,7 @@ namespace ProjetoFinalLP1
                             row["codigo"],
                             row["filme"],
                             row["sala"],
-                            row["dia"],
+                            diaFormatado = ((DateTime)row["dia"]).ToString("dd/MM/yyyy"),
                             row["horario"],
                             row["ingressos"],
                             row["preco"]
