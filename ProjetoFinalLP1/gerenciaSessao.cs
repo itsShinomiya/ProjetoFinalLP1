@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,7 @@ namespace ProjetoFinalLP1
                         string precoFormatado = Convert.ToDecimal(row["preco"]).ToString("C2", new System.Globalization.CultureInfo("pt-BR"));
                         string nomeFilme = getNomeFilme(Convert.ToInt32(row["filme"]));
                         string diaFormatado = ((DateTime)row["dia"]).ToString("dd/MM/yyyy");
+                        string tipoSala = getTipoSala(Convert.ToInt32(row["sala"]));
                         if (string.IsNullOrEmpty(nomeFilme))
                         {
                             nomeFilme = "Desconhecido";
@@ -57,6 +59,7 @@ namespace ProjetoFinalLP1
                             row["codigo"],
                             nomeFilme,
                             row["sala"],
+                            tipoSala,
                             diaFormatado,
                             row["horario"],
                             row["ingressos"],
@@ -199,5 +202,81 @@ namespace ProjetoFinalLP1
             }
             return nome;
         }
+
+        private string getTipoSala(int codigo) 
+        {
+            string tipo = string.Empty;
+            try
+            {
+                Obj_CmdSQL.CommandText = "SELECT tipo FROM sala WHERE numero = @CodigoAtual";
+                Obj_CmdSQL.Parameters.Clear();
+                Obj_CmdSQL.Parameters.AddWithValue("@CodigoAtual", Convert.ToString(codigo));
+
+                using (Dados = Obj_CmdSQL.ExecuteReader())
+                {
+                    if (Dados.Read())
+                    {
+                        tipo = Convert.ToString(Dados["Tipo"]);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sala não encontrada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
+            return tipo;
+        }
+
+        private void buscaExibir_SelectionChanged(object sender, EventArgs e)
+        {
+            if (buscaExibir.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
+
+                codeValor.Text = selectedRow.Cells["codigo"].Value.ToString();
+                nomeValor.Text = selectedRow.Cells["filme"].Value.ToString();
+                salaValor.Text = selectedRow.Cells["sala"].Value.ToString();
+                ingressosValor.Text = selectedRow.Cells["ingressos"].Value.ToString();
+                diaValor.Text = selectedRow.Cells["dia"].Value.ToString();
+                horarioValor.Text = selectedRow.Cells["horario"].Value.ToString();
+                valorValor.Text = selectedRow.Cells["preço"].Value.ToString();
+                tipoValor.Text = selectedRow.Cells["tipoSala"].Value.ToString();
+
+                string comando = "SELECT banner FROM filmes WHERE nome = @Nome";
+                Obj_CmdSQL.Parameters.Clear();
+                Obj_CmdSQL.CommandText = comando;
+                Obj_CmdSQL.Parameters.AddWithValue("@Nome", nomeValor.Text);
+                try
+                {
+                    Dados = Obj_CmdSQL.ExecuteReader();
+                    Dados.Read();
+                    byte[] rawData;
+                    if (!DBNull.Value.Equals(Dados[0]))
+                    {
+                        rawData = (byte[])Dados[0];
+                        MemoryStream Imagem = new MemoryStream(rawData);
+                        banner.Image = Image.FromStream(Imagem);
+                    }
+                    else
+                    {
+                        banner.Image = null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    Dados.Close();
+                }
+            }
+        }
+
     }
 }

@@ -37,9 +37,6 @@
             this.alterarStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.buscaSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.buscaTexto = new System.Windows.Forms.ToolStripTextBox();
-            this.buscaBotao = new System.Windows.Forms.ToolStripButton();
-            this.buscaSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.buscaExibir = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,20 +46,20 @@
             this.atualizaBtn = new System.Windows.Forms.Button();
             this.alteraFilme = new System.Windows.Forms.Button();
             this.painelFilme = new System.Windows.Forms.Panel();
-            this.banner = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.codeTxt = new System.Windows.Forms.Label();
-            this.nomeTxt = new System.Windows.Forms.Label();
-            this.descricaoTxt = new System.Windows.Forms.Label();
-            this.nomeValor = new System.Windows.Forms.TextBox();
             this.descricaoValor = new System.Windows.Forms.RichTextBox();
-            this.dadoFilme = new System.Windows.Forms.Label();
+            this.nomeValor = new System.Windows.Forms.TextBox();
             this.codeValor = new System.Windows.Forms.TextBox();
+            this.descricaoTxt = new System.Windows.Forms.Label();
+            this.nomeTxt = new System.Windows.Forms.Label();
+            this.codeTxt = new System.Windows.Forms.Label();
+            this.banner = new System.Windows.Forms.PictureBox();
+            this.dadoFilme = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.painelFilme.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.banner)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.banner)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -71,10 +68,7 @@
             this.arquivoStrip,
             this.ferramentasStrip,
             this.ajudaStrip,
-            this.buscaSeparator1,
-            this.buscaTexto,
-            this.buscaBotao,
-            this.buscaSeparator2});
+            this.buscaSeparator1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1105, 25);
@@ -95,7 +89,7 @@
             // sairStrip
             // 
             this.sairStrip.Name = "sairStrip";
-            this.sairStrip.Size = new System.Drawing.Size(93, 22);
+            this.sairStrip.Size = new System.Drawing.Size(180, 22);
             this.sairStrip.Text = "&Sair";
             this.sairStrip.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -138,27 +132,6 @@
             // 
             this.buscaSeparator1.Name = "buscaSeparator1";
             this.buscaSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // buscaTexto
-            // 
-            this.buscaTexto.AutoSize = false;
-            this.buscaTexto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.buscaTexto.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buscaTexto.Name = "buscaTexto";
-            this.buscaTexto.Size = new System.Drawing.Size(100, 23);
-            // 
-            // buscaBotao
-            // 
-            this.buscaBotao.Image = ((System.Drawing.Image)(resources.GetObject("buscaBotao.Image")));
-            this.buscaBotao.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.buscaBotao.Name = "buscaBotao";
-            this.buscaBotao.Size = new System.Drawing.Size(62, 22);
-            this.buscaBotao.Text = "&Buscar";
-            // 
-            // buscaSeparator2
-            // 
-            this.buscaSeparator2.Name = "buscaSeparator2";
-            this.buscaSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // buscaExibir
             // 
@@ -251,18 +224,6 @@
             this.painelFilme.Size = new System.Drawing.Size(253, 502);
             this.painelFilme.TabIndex = 6;
             // 
-            // banner
-            // 
-            this.banner.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.banner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.banner.Image = global::ProjetoFinalLP1.Properties.Resources.no_photo_or_blank_image_icon_loading_images_or_missing_image_mark_image_not_available_or_image_coming_soon_sign_simple_nature_silhouette_in_frame_isolated_illustration_vector;
-            this.banner.Location = new System.Drawing.Point(44, 10);
-            this.banner.Name = "banner";
-            this.banner.Size = new System.Drawing.Size(160, 201);
-            this.banner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.banner.TabIndex = 0;
-            this.banner.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -277,23 +238,30 @@
             this.panel1.Size = new System.Drawing.Size(200, 253);
             this.panel1.TabIndex = 1;
             // 
-            // codeTxt
+            // descricaoValor
             // 
-            this.codeTxt.AutoSize = true;
-            this.codeTxt.Location = new System.Drawing.Point(16, 17);
-            this.codeTxt.Name = "codeTxt";
-            this.codeTxt.Size = new System.Drawing.Size(43, 13);
-            this.codeTxt.TabIndex = 0;
-            this.codeTxt.Text = "Código:";
+            this.descricaoValor.Location = new System.Drawing.Point(19, 119);
+            this.descricaoValor.Name = "descricaoValor";
+            this.descricaoValor.ReadOnly = true;
+            this.descricaoValor.Size = new System.Drawing.Size(160, 120);
+            this.descricaoValor.TabIndex = 5;
+            this.descricaoValor.Text = "";
             // 
-            // nomeTxt
+            // nomeValor
             // 
-            this.nomeTxt.AutoSize = true;
-            this.nomeTxt.Location = new System.Drawing.Point(16, 60);
-            this.nomeTxt.Name = "nomeTxt";
-            this.nomeTxt.Size = new System.Drawing.Size(38, 13);
-            this.nomeTxt.TabIndex = 1;
-            this.nomeTxt.Text = "Nome:";
+            this.nomeValor.Location = new System.Drawing.Point(19, 76);
+            this.nomeValor.Name = "nomeValor";
+            this.nomeValor.ReadOnly = true;
+            this.nomeValor.Size = new System.Drawing.Size(160, 20);
+            this.nomeValor.TabIndex = 4;
+            // 
+            // codeValor
+            // 
+            this.codeValor.Location = new System.Drawing.Point(19, 33);
+            this.codeValor.Name = "codeValor";
+            this.codeValor.ReadOnly = true;
+            this.codeValor.Size = new System.Drawing.Size(52, 20);
+            this.codeValor.TabIndex = 3;
             // 
             // descricaoTxt
             // 
@@ -304,22 +272,35 @@
             this.descricaoTxt.TabIndex = 2;
             this.descricaoTxt.Text = "Descrição";
             // 
-            // nomeValor
+            // nomeTxt
             // 
-            this.nomeValor.Location = new System.Drawing.Point(19, 76);
-            this.nomeValor.Name = "nomeValor";
-            this.nomeValor.ReadOnly = true;
-            this.nomeValor.Size = new System.Drawing.Size(160, 20);
-            this.nomeValor.TabIndex = 4;
+            this.nomeTxt.AutoSize = true;
+            this.nomeTxt.Location = new System.Drawing.Point(16, 60);
+            this.nomeTxt.Name = "nomeTxt";
+            this.nomeTxt.Size = new System.Drawing.Size(38, 13);
+            this.nomeTxt.TabIndex = 1;
+            this.nomeTxt.Text = "Nome:";
             // 
-            // descricaoValor
+            // codeTxt
             // 
-            this.descricaoValor.Location = new System.Drawing.Point(19, 119);
-            this.descricaoValor.Name = "descricaoValor";
-            this.descricaoValor.ReadOnly = true;
-            this.descricaoValor.Size = new System.Drawing.Size(160, 120);
-            this.descricaoValor.TabIndex = 5;
-            this.descricaoValor.Text = "";
+            this.codeTxt.AutoSize = true;
+            this.codeTxt.Location = new System.Drawing.Point(16, 17);
+            this.codeTxt.Name = "codeTxt";
+            this.codeTxt.Size = new System.Drawing.Size(43, 13);
+            this.codeTxt.TabIndex = 0;
+            this.codeTxt.Text = "Código:";
+            // 
+            // banner
+            // 
+            this.banner.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.banner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.banner.Image = global::ProjetoFinalLP1.Properties.Resources.no_photo_or_blank_image_icon_loading_images_or_missing_image_mark_image_not_available_or_image_coming_soon_sign_simple_nature_silhouette_in_frame_isolated_illustration_vector;
+            this.banner.Location = new System.Drawing.Point(44, 10);
+            this.banner.Name = "banner";
+            this.banner.Size = new System.Drawing.Size(160, 201);
+            this.banner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.banner.TabIndex = 0;
+            this.banner.TabStop = false;
             // 
             // dadoFilme
             // 
@@ -329,14 +310,6 @@
             this.dadoFilme.Size = new System.Drawing.Size(80, 13);
             this.dadoFilme.TabIndex = 7;
             this.dadoFilme.Text = "Dados do filme:";
-            // 
-            // codeValor
-            // 
-            this.codeValor.Location = new System.Drawing.Point(19, 33);
-            this.codeValor.Name = "codeValor";
-            this.codeValor.ReadOnly = true;
-            this.codeValor.Size = new System.Drawing.Size(52, 20);
-            this.codeValor.TabIndex = 3;
             // 
             // gerenciaFilme
             // 
@@ -361,9 +334,9 @@
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).EndInit();
             this.painelFilme.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.banner)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.banner)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,9 +346,6 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator buscaSeparator1;
-        private System.Windows.Forms.ToolStripTextBox buscaTexto;
-        private System.Windows.Forms.ToolStripButton buscaBotao;
-        private System.Windows.Forms.ToolStripSeparator buscaSeparator2;
         private System.Windows.Forms.ToolStripDropDownButton ajudaStrip;
         private System.Windows.Forms.ToolStripDropDownButton arquivoStrip;
         private System.Windows.Forms.ToolStripDropDownButton ferramentasStrip;
