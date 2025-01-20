@@ -105,8 +105,7 @@
             this.descricaoTexto.Name = "descricaoTexto";
             this.descricaoTexto.Size = new System.Drawing.Size(271, 87);
             this.descricaoTexto.TabIndex = 11;
-            this.descricaoTexto.Text = "Insira a Descrição";
-            this.descricaoTexto.Click += new System.EventHandler(this.descricaoTexto_Click);
+            this.descricaoTexto.Text = "";
             // 
             // descricaoTxt
             // 
@@ -130,6 +129,7 @@
             // 
             this.bannerImagem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.bannerImagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bannerImagem.Image = global::ProjetoFinalLP1.Properties.Resources.no_photo_or_blank_image_icon_loading_images_or_missing_image_mark_image_not_available_or_image_coming_soon_sign_simple_nature_silhouette_in_frame_isolated_illustration_vector;
             this.bannerImagem.Location = new System.Drawing.Point(317, 28);
             this.bannerImagem.Name = "bannerImagem";
             this.bannerImagem.Size = new System.Drawing.Size(165, 237);

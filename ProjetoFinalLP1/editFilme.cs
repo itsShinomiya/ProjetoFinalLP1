@@ -128,11 +128,7 @@ namespace ProjetoFinalLP1
 
         private void descricaoTexto_Click(object sender, EventArgs e)
         {
-            if (prmClick == 1)
-            {
-                descricaoTexto.Text = "";
-            }
-            prmClick = 0;
+
         }
 
         private void carregarImagem_Click(object sender, EventArgs e)
