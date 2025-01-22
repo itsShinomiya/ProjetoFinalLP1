@@ -161,7 +161,7 @@ namespace ProjetoFinalLP1
                 MessageBox.Show("O campo 'Descrição' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (string.IsNullOrWhiteSpace(bannerImagem.Text))
+            if (bannerImagem.Image == null)
             {
                 MessageBox.Show("O campo 'Banner' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
