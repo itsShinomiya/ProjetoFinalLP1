@@ -113,7 +113,6 @@ namespace ProjetoFinalLP1
             {
                 alteraSala.Enabled = false;
                 removeSala.Enabled = false;
-                alterarStrip.Enabled = false;
             }
             else if(lvl == 1)
             {
@@ -160,18 +159,6 @@ namespace ProjetoFinalLP1
         private void adicionarStrip_Click(object sender, EventArgs e)
         {
             adicionaSala.PerformClick();
-        }
-
-        private void alterarStrip_Click(object sender, EventArgs e)
-        {
-            controle = 2;
-
-            //DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-            //int valor = Convert.ToInt32(selectedRow.Cells["numero"].Value);
-
-            editSessoes adicionaSessao = new editSessoes(2, -1);
-            adicionaSessao.ShowDialog();
-            refresh();
         }
 
         private string getNomeFilme(int codigo) 

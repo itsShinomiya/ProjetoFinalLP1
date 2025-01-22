@@ -116,7 +116,6 @@ namespace ProjetoFinalLP1
             {
                 alteraFilme.Enabled = false;
                 removeFilme.Enabled = false;
-                alterarStrip.Enabled = false;
             }
             else if (lvl == 1)
             {
@@ -163,14 +162,6 @@ namespace ProjetoFinalLP1
         private void adicionarStrip_Click(object sender, EventArgs e)
         {
             adicionaFilme.PerformClick();
-        }
-        private void alterarStrip_Click(object sender, EventArgs e)
-        {
-               controle = 2;
-
-               editFilme adicionaFilme = new editFilme(2, 0);
-               adicionaFilme.ShowDialog();
-               refresh();          
         }
 
         private void buscaExibir_CurrentCellChanged(object sender, EventArgs e)

@@ -48,7 +48,7 @@ namespace ProjetoFinalLP1
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (controle == 0 || controle == 2) 
+            if (controle == 0) 
             {
                 Obj_CmdSQL.CommandText = "SELECT MAX(codigo) FROM filmes";
             }
@@ -105,24 +105,7 @@ namespace ProjetoFinalLP1
                     {
                         Dados.Close();
                     }
-                }
-                if (controle == 2)
-                {                 
-                    try
-                    {
-                        Dados.Read();
-                        filmeNmr.Maximum = Convert.ToInt32(Dados[0]);
-                        filmeNmr.Enabled = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Ocorreu um erro:" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    finally
-                    {
-                        Dados.Close();
-                    }
-                }
+                }             
             }   
         }
 

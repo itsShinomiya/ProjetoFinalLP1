@@ -34,8 +34,6 @@
             this.sairStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ferramentasStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.adicionarStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.buscaSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.buscaExibir = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,11 +70,10 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoStrip,
             this.ferramentasStrip,
-            this.ajudaStrip,
             this.buscaSeparator1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1473, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1105, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -88,13 +85,13 @@
             this.arquivoStrip.Image = ((System.Drawing.Image)(resources.GetObject("arquivoStrip.Image")));
             this.arquivoStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.arquivoStrip.Name = "arquivoStrip";
-            this.arquivoStrip.Size = new System.Drawing.Size(75, 24);
+            this.arquivoStrip.Size = new System.Drawing.Size(62, 22);
             this.arquivoStrip.Text = "&Arquivo";
             // 
             // sairStrip
             // 
             this.sairStrip.Name = "sairStrip";
-            this.sairStrip.Size = new System.Drawing.Size(117, 26);
+            this.sairStrip.Size = new System.Drawing.Size(93, 22);
             this.sairStrip.Text = "&Sair";
             this.sairStrip.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -102,41 +99,24 @@
             // 
             this.ferramentasStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.ferramentasStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarStrip,
-            this.alterarStrip});
+            this.adicionarStrip});
             this.ferramentasStrip.Image = ((System.Drawing.Image)(resources.GetObject("ferramentasStrip.Image")));
             this.ferramentasStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ferramentasStrip.Name = "ferramentasStrip";
-            this.ferramentasStrip.Size = new System.Drawing.Size(104, 24);
+            this.ferramentasStrip.Size = new System.Drawing.Size(85, 22);
             this.ferramentasStrip.Text = "&Ferramentas";
             // 
             // adicionarStrip
             // 
             this.adicionarStrip.Name = "adicionarStrip";
-            this.adicionarStrip.Size = new System.Drawing.Size(156, 26);
+            this.adicionarStrip.Size = new System.Drawing.Size(125, 22);
             this.adicionarStrip.Text = "&Adicionar";
             this.adicionarStrip.Click += new System.EventHandler(this.adicionarStrip_Click);
-            // 
-            // alterarStrip
-            // 
-            this.alterarStrip.Name = "alterarStrip";
-            this.alterarStrip.Size = new System.Drawing.Size(156, 26);
-            this.alterarStrip.Text = "&Alterar";
-            this.alterarStrip.Click += new System.EventHandler(this.alterarStrip_Click);
-            // 
-            // ajudaStrip
-            // 
-            this.ajudaStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.ajudaStrip.Image = ((System.Drawing.Image)(resources.GetObject("ajudaStrip.Image")));
-            this.ajudaStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ajudaStrip.Name = "ajudaStrip";
-            this.ajudaStrip.Size = new System.Drawing.Size(62, 24);
-            this.ajudaStrip.Text = "&Ajuda";
             // 
             // buscaSeparator1
             // 
             this.buscaSeparator1.Name = "buscaSeparator1";
-            this.buscaSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.buscaSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // buscaExibir
             // 
@@ -151,14 +131,13 @@
             this.codigo,
             this.nome,
             this.descricao});
-            this.buscaExibir.Location = new System.Drawing.Point(353, 46);
-            this.buscaExibir.Margin = new System.Windows.Forms.Padding(4);
+            this.buscaExibir.Location = new System.Drawing.Point(265, 37);
             this.buscaExibir.MultiSelect = false;
             this.buscaExibir.Name = "buscaExibir";
             this.buscaExibir.ReadOnly = true;
             this.buscaExibir.RowHeadersWidth = 51;
             this.buscaExibir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.buscaExibir.Size = new System.Drawing.Size(743, 724);
+            this.buscaExibir.Size = new System.Drawing.Size(557, 588);
             this.buscaExibir.TabIndex = 1;
             this.buscaExibir.SelectionChanged += new System.EventHandler(this.buscaExibir_SelectionChanged);
             // 
@@ -191,10 +170,9 @@
             this.adicionaFilme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adicionaFilme.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adicionaFilme.Image = ((System.Drawing.Image)(resources.GetObject("adicionaFilme.Image")));
-            this.adicionaFilme.Location = new System.Drawing.Point(18, 490);
-            this.adicionaFilme.Margin = new System.Windows.Forms.Padding(4);
+            this.adicionaFilme.Location = new System.Drawing.Point(14, 398);
             this.adicionaFilme.Name = "adicionaFilme";
-            this.adicionaFilme.Size = new System.Drawing.Size(298, 79);
+            this.adicionaFilme.Size = new System.Drawing.Size(224, 64);
             this.adicionaFilme.TabIndex = 2;
             this.adicionaFilme.Text = "Adicionar";
             this.adicionaFilme.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -210,10 +188,9 @@
             this.removeFilme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeFilme.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeFilme.Image = ((System.Drawing.Image)(resources.GetObject("removeFilme.Image")));
-            this.removeFilme.Location = new System.Drawing.Point(18, 600);
-            this.removeFilme.Margin = new System.Windows.Forms.Padding(4);
+            this.removeFilme.Location = new System.Drawing.Point(14, 488);
             this.removeFilme.Name = "removeFilme";
-            this.removeFilme.Size = new System.Drawing.Size(298, 79);
+            this.removeFilme.Size = new System.Drawing.Size(224, 64);
             this.removeFilme.TabIndex = 3;
             this.removeFilme.Text = "Remover";
             this.removeFilme.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -229,10 +206,9 @@
             this.atualizaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.atualizaBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atualizaBtn.Image = ((System.Drawing.Image)(resources.GetObject("atualizaBtn.Image")));
-            this.atualizaBtn.Location = new System.Drawing.Point(18, 387);
-            this.atualizaBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.atualizaBtn.Location = new System.Drawing.Point(14, 314);
             this.atualizaBtn.Name = "atualizaBtn";
-            this.atualizaBtn.Size = new System.Drawing.Size(298, 79);
+            this.atualizaBtn.Size = new System.Drawing.Size(224, 64);
             this.atualizaBtn.TabIndex = 4;
             this.atualizaBtn.Text = "Atualizar";
             this.atualizaBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -249,10 +225,9 @@
             this.alteraFilme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alteraFilme.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alteraFilme.Image = ((System.Drawing.Image)(resources.GetObject("alteraFilme.Image")));
-            this.alteraFilme.Location = new System.Drawing.Point(18, 287);
-            this.alteraFilme.Margin = new System.Windows.Forms.Padding(4);
+            this.alteraFilme.Location = new System.Drawing.Point(14, 233);
             this.alteraFilme.Name = "alteraFilme";
-            this.alteraFilme.Size = new System.Drawing.Size(298, 79);
+            this.alteraFilme.Size = new System.Drawing.Size(224, 64);
             this.alteraFilme.TabIndex = 5;
             this.alteraFilme.Text = "Alterar";
             this.alteraFilme.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -266,10 +241,9 @@
             this.painelFilme.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.painelFilme.Controls.Add(this.panel1);
             this.painelFilme.Controls.Add(this.banner);
-            this.painelFilme.Location = new System.Drawing.Point(1120, 76);
-            this.painelFilme.Margin = new System.Windows.Forms.Padding(4);
+            this.painelFilme.Location = new System.Drawing.Point(840, 62);
             this.painelFilme.Name = "painelFilme";
-            this.painelFilme.Size = new System.Drawing.Size(337, 694);
+            this.painelFilme.Size = new System.Drawing.Size(253, 564);
             this.painelFilme.TabIndex = 6;
             // 
             // panel1
@@ -281,51 +255,46 @@
             this.panel1.Controls.Add(this.codeTxt);
             this.panel1.Controls.Add(this.nomeTxt);
             this.panel1.Controls.Add(this.descricaoTxt);
-            this.panel1.Location = new System.Drawing.Point(37, 365);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(28, 297);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 311);
+            this.panel1.Size = new System.Drawing.Size(200, 253);
             this.panel1.TabIndex = 1;
             // 
             // descricaoValor
             // 
             this.descricaoValor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descricaoValor.Location = new System.Drawing.Point(25, 146);
-            this.descricaoValor.Margin = new System.Windows.Forms.Padding(4);
+            this.descricaoValor.Location = new System.Drawing.Point(19, 119);
             this.descricaoValor.Name = "descricaoValor";
             this.descricaoValor.ReadOnly = true;
-            this.descricaoValor.Size = new System.Drawing.Size(212, 147);
+            this.descricaoValor.Size = new System.Drawing.Size(160, 120);
             this.descricaoValor.TabIndex = 5;
             this.descricaoValor.Text = "";
             // 
             // nomeValor
             // 
             this.nomeValor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeValor.Location = new System.Drawing.Point(25, 94);
-            this.nomeValor.Margin = new System.Windows.Forms.Padding(4);
+            this.nomeValor.Location = new System.Drawing.Point(19, 76);
             this.nomeValor.Name = "nomeValor";
             this.nomeValor.ReadOnly = true;
-            this.nomeValor.Size = new System.Drawing.Size(212, 25);
+            this.nomeValor.Size = new System.Drawing.Size(160, 21);
             this.nomeValor.TabIndex = 4;
             // 
             // codeValor
             // 
             this.codeValor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codeValor.Location = new System.Drawing.Point(25, 41);
-            this.codeValor.Margin = new System.Windows.Forms.Padding(4);
+            this.codeValor.Location = new System.Drawing.Point(19, 33);
             this.codeValor.Name = "codeValor";
             this.codeValor.ReadOnly = true;
-            this.codeValor.Size = new System.Drawing.Size(68, 25);
+            this.codeValor.Size = new System.Drawing.Size(52, 21);
             this.codeValor.TabIndex = 3;
             // 
             // codeTxt
             // 
             this.codeTxt.AutoSize = true;
             this.codeTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codeTxt.Location = new System.Drawing.Point(21, 19);
-            this.codeTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.codeTxt.Location = new System.Drawing.Point(16, 15);
             this.codeTxt.Name = "codeTxt";
-            this.codeTxt.Size = new System.Drawing.Size(56, 19);
+            this.codeTxt.Size = new System.Drawing.Size(48, 13);
             this.codeTxt.TabIndex = 0;
             this.codeTxt.Text = "Código:";
             // 
@@ -333,10 +302,9 @@
             // 
             this.nomeTxt.AutoSize = true;
             this.nomeTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeTxt.Location = new System.Drawing.Point(21, 73);
-            this.nomeTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nomeTxt.Location = new System.Drawing.Point(16, 59);
             this.nomeTxt.Name = "nomeTxt";
-            this.nomeTxt.Size = new System.Drawing.Size(49, 19);
+            this.nomeTxt.Size = new System.Drawing.Size(40, 13);
             this.nomeTxt.TabIndex = 1;
             this.nomeTxt.Text = "Nome:";
             // 
@@ -344,10 +312,9 @@
             // 
             this.descricaoTxt.AutoSize = true;
             this.descricaoTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descricaoTxt.Location = new System.Drawing.Point(21, 126);
-            this.descricaoTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.descricaoTxt.Location = new System.Drawing.Point(16, 102);
             this.descricaoTxt.Name = "descricaoTxt";
-            this.descricaoTxt.Size = new System.Drawing.Size(67, 19);
+            this.descricaoTxt.Size = new System.Drawing.Size(56, 13);
             this.descricaoTxt.TabIndex = 2;
             this.descricaoTxt.Text = "Descrição";
             // 
@@ -355,10 +322,9 @@
             // 
             this.banner.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.banner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.banner.Location = new System.Drawing.Point(36, 14);
-            this.banner.Margin = new System.Windows.Forms.Padding(4);
+            this.banner.Location = new System.Drawing.Point(27, 11);
             this.banner.Name = "banner";
-            this.banner.Size = new System.Drawing.Size(267, 340);
+            this.banner.Size = new System.Drawing.Size(201, 277);
             this.banner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.banner.TabIndex = 0;
             this.banner.TabStop = false;
@@ -368,10 +334,9 @@
             // 
             this.dadoFilme.AutoSize = true;
             this.dadoFilme.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dadoFilme.Location = new System.Drawing.Point(1115, 54);
-            this.dadoFilme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dadoFilme.Location = new System.Drawing.Point(836, 44);
             this.dadoFilme.Name = "dadoFilme";
-            this.dadoFilme.Size = new System.Drawing.Size(104, 19);
+            this.dadoFilme.Size = new System.Drawing.Size(88, 13);
             this.dadoFilme.TabIndex = 7;
             this.dadoFilme.Text = "Dados do filme:";
             // 
@@ -383,27 +348,29 @@
             this.panel2.Controls.Add(this.removeFilme);
             this.panel2.Controls.Add(this.atualizaBtn);
             this.panel2.Controls.Add(this.alteraFilme);
-            this.panel2.Location = new System.Drawing.Point(0, 21);
+            this.panel2.Location = new System.Drawing.Point(0, 17);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(331, 767);
+            this.panel2.Size = new System.Drawing.Size(248, 623);
             this.panel2.TabIndex = 8;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(18, -21);
+            this.pictureBox1.Location = new System.Drawing.Point(14, -17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(298, 287);
+            this.pictureBox1.Size = new System.Drawing.Size(224, 233);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // gerenciaFilme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1473, 785);
+            this.ClientSize = new System.Drawing.Size(1105, 638);
             this.Controls.Add(this.dadoFilme);
             this.Controls.Add(this.painelFilme);
             this.Controls.Add(this.buscaExibir);
@@ -411,7 +378,6 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "gerenciaFilme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -435,7 +401,6 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator buscaSeparator1;
-        private System.Windows.Forms.ToolStripDropDownButton ajudaStrip;
         private System.Windows.Forms.ToolStripDropDownButton arquivoStrip;
         private System.Windows.Forms.ToolStripDropDownButton ferramentasStrip;
         private System.Windows.Forms.DataGridView buscaExibir;
@@ -445,7 +410,6 @@
         private System.Windows.Forms.Button alteraFilme;
         private System.Windows.Forms.ToolStripMenuItem sairStrip;
         private System.Windows.Forms.ToolStripMenuItem adicionarStrip;
-        private System.Windows.Forms.ToolStripMenuItem alterarStrip;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;

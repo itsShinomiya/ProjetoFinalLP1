@@ -109,34 +109,6 @@ namespace ProjetoFinalLP1
 
                     this.Close();
                 }
-                if (controle == 2)
-                {
-                    string strSQL;
-                    strSQL = $"UPDATE sala SET numero = @Numero, tipo = @Tipo, assentos = @Assentos WHERE numero = {salaNmr.Value}";
-
-                    Obj_CmdSQL.Parameters.Clear();
-
-                    try
-                    {
-                        Obj_CmdSQL.CommandText = strSQL;
-
-                        Obj_CmdSQL.Parameters.AddWithValue("@Numero", Convert.ToInt32(salaNmr.Text));
-                        Obj_CmdSQL.Parameters.AddWithValue("@Tipo", tipo);
-                        Obj_CmdSQL.Parameters.AddWithValue("@Assentos", Convert.ToInt32(numeroAssentos.Value));
-
-                        Obj_CmdSQL.ExecuteNonQuery();
-                    }
-                    catch (Exception erro)
-                    {
-                        MessageBox.Show("Erro: " + erro.Message, "Erro na inclusão de valores!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    finally
-                    {
-                        Obj_CmdSQL.Parameters.Clear();
-                    }
-
-                    this.Close();
-                }
             }
             else
             {
@@ -206,13 +178,6 @@ namespace ProjetoFinalLP1
                         Dados.Close();
                     }
                 }
-            }
-
-            if (controle == 2)
-            {
-                salaNmr.Enabled = true;
-                numeroAssentos.Enabled = false;
-                salaTipo.Enabled = false;
             }
         }
 

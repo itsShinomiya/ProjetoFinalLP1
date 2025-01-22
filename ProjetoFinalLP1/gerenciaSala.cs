@@ -98,7 +98,6 @@ namespace ProjetoFinalLP1
             {
                 alteraSala.Enabled = false;
                 removeSala.Enabled = false;
-                alterarStrip.Enabled = false;
             }
             else if (lvl == 1)
             {
@@ -145,16 +144,6 @@ namespace ProjetoFinalLP1
         private void adicionarStrip_Click(object sender, EventArgs e)
         {
             adicionaSala.PerformClick();
-        }
-
-        private void alterarStrip_Click(object sender, EventArgs e)
-        {
-            controle = 2;
-
-
-            editSala alteraSala = new editSala(controle, -1);
-            alteraSala.ShowDialog();
-            refresh();
         }
     }
 }
