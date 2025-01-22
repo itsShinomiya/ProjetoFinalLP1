@@ -45,7 +45,7 @@
             this.userTxt.BackColor = System.Drawing.Color.WhiteSmoke;
             this.userTxt.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userTxt.Location = new System.Drawing.Point(103, 242);
-            this.userTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userTxt.Margin = new System.Windows.Forms.Padding(4);
             this.userTxt.Name = "userTxt";
             this.userTxt.Size = new System.Drawing.Size(190, 25);
             this.userTxt.TabIndex = 0;
@@ -55,7 +55,7 @@
             this.passTxt.BackColor = System.Drawing.Color.WhiteSmoke;
             this.passTxt.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passTxt.Location = new System.Drawing.Point(103, 304);
-            this.passTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passTxt.Margin = new System.Windows.Forms.Padding(4);
             this.passTxt.Name = "passTxt";
             this.passTxt.PasswordChar = '*';
             this.passTxt.Size = new System.Drawing.Size(190, 25);
@@ -67,10 +67,10 @@
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.FlatAppearance.BorderSize = 0;
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntrar.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.Black;
             this.btnEntrar.Location = new System.Drawing.Point(65, 362);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(228, 37);
             this.btnEntrar.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(368, 430);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -121,7 +121,8 @@
             this.Controls.Add(this.userTxt);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";

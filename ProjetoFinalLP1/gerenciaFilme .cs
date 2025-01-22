@@ -225,6 +225,11 @@ namespace ProjetoFinalLP1
                 }
             }
         }
+
+        private void banner_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
    

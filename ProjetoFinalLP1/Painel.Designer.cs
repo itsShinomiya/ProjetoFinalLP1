@@ -52,7 +52,7 @@
             this.ferramentasStrip});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(607, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(607, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -64,7 +64,7 @@
             this.arquivoStrip.Image = ((System.Drawing.Image)(resources.GetObject("arquivoStrip.Image")));
             this.arquivoStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.arquivoStrip.Name = "arquivoStrip";
-            this.arquivoStrip.Size = new System.Drawing.Size(75, 28);
+            this.arquivoStrip.Size = new System.Drawing.Size(75, 24);
             this.arquivoStrip.Text = "&Arquivo";
             // 
             // sairToolStrip
@@ -92,7 +92,7 @@
             this.gerenciaSalas.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gerenciaSalas.Image = ((System.Drawing.Image)(resources.GetObject("gerenciaSalas.Image")));
             this.gerenciaSalas.Location = new System.Drawing.Point(34, 417);
-            this.gerenciaSalas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gerenciaSalas.Margin = new System.Windows.Forms.Padding(4);
             this.gerenciaSalas.Name = "gerenciaSalas";
             this.gerenciaSalas.Size = new System.Drawing.Size(240, 128);
             this.gerenciaSalas.TabIndex = 1;
@@ -111,7 +111,7 @@
             this.gerenciaFuncionario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gerenciaFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("gerenciaFuncionario.Image")));
             this.gerenciaFuncionario.Location = new System.Drawing.Point(329, 417);
-            this.gerenciaFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gerenciaFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.gerenciaFuncionario.Name = "gerenciaFuncionario";
             this.gerenciaFuncionario.Size = new System.Drawing.Size(240, 128);
             this.gerenciaFuncionario.TabIndex = 2;
@@ -129,7 +129,7 @@
             this.gerenciaFilme.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gerenciaFilme.Image = ((System.Drawing.Image)(resources.GetObject("gerenciaFilme.Image")));
             this.gerenciaFilme.Location = new System.Drawing.Point(34, 232);
-            this.gerenciaFilme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gerenciaFilme.Margin = new System.Windows.Forms.Padding(4);
             this.gerenciaFilme.Name = "gerenciaFilme";
             this.gerenciaFilme.Size = new System.Drawing.Size(240, 128);
             this.gerenciaFilme.TabIndex = 5;
@@ -147,7 +147,7 @@
             this.gerenciaSessão.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gerenciaSessão.Image = ((System.Drawing.Image)(resources.GetObject("gerenciaSessão.Image")));
             this.gerenciaSessão.Location = new System.Drawing.Point(329, 232);
-            this.gerenciaSessão.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gerenciaSessão.Margin = new System.Windows.Forms.Padding(4);
             this.gerenciaSessão.Name = "gerenciaSessão";
             this.gerenciaSessão.Size = new System.Drawing.Size(240, 128);
             this.gerenciaSessão.TabIndex = 6;
@@ -160,9 +160,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(140, -55);
+            this.pictureBox1.Location = new System.Drawing.Point(155, -32);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(331, 289);
+            this.pictureBox1.Size = new System.Drawing.Size(305, 265);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(607, 585);
             this.Controls.Add(this.gerenciaFuncionario);
             this.Controls.Add(this.gerenciaSalas);
@@ -189,7 +189,8 @@
             this.Controls.Add(this.gerenciaFilme);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Painel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

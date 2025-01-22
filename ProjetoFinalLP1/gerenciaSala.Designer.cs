@@ -45,12 +45,17 @@
             this.removeSala = new System.Windows.Forms.Button();
             this.atualizaBtn = new System.Windows.Forms.Button();
             this.alteraSala = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoStrip,
             this.ferramentasStrip,
@@ -58,7 +63,7 @@
             this.buscaSeparator1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1105, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1473, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -70,13 +75,13 @@
             this.arquivoStrip.Image = ((System.Drawing.Image)(resources.GetObject("arquivoStrip.Image")));
             this.arquivoStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.arquivoStrip.Name = "arquivoStrip";
-            this.arquivoStrip.Size = new System.Drawing.Size(62, 22);
+            this.arquivoStrip.Size = new System.Drawing.Size(75, 24);
             this.arquivoStrip.Text = "&Arquivo";
             // 
             // sairStrip
             // 
             this.sairStrip.Name = "sairStrip";
-            this.sairStrip.Size = new System.Drawing.Size(180, 22);
+            this.sairStrip.Size = new System.Drawing.Size(117, 26);
             this.sairStrip.Text = "&Sair";
             this.sairStrip.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -89,20 +94,20 @@
             this.ferramentasStrip.Image = ((System.Drawing.Image)(resources.GetObject("ferramentasStrip.Image")));
             this.ferramentasStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ferramentasStrip.Name = "ferramentasStrip";
-            this.ferramentasStrip.Size = new System.Drawing.Size(85, 22);
+            this.ferramentasStrip.Size = new System.Drawing.Size(104, 24);
             this.ferramentasStrip.Text = "&Ferramentas";
             // 
             // adicionarStrip
             // 
             this.adicionarStrip.Name = "adicionarStrip";
-            this.adicionarStrip.Size = new System.Drawing.Size(125, 22);
+            this.adicionarStrip.Size = new System.Drawing.Size(156, 26);
             this.adicionarStrip.Text = "&Adicionar";
             this.adicionarStrip.Click += new System.EventHandler(this.adicionarStrip_Click);
             // 
             // alterarStrip
             // 
             this.alterarStrip.Name = "alterarStrip";
-            this.alterarStrip.Size = new System.Drawing.Size(125, 22);
+            this.alterarStrip.Size = new System.Drawing.Size(156, 26);
             this.alterarStrip.Text = "&Alterar";
             this.alterarStrip.Click += new System.EventHandler(this.alterarStrip_Click);
             // 
@@ -112,13 +117,13 @@
             this.ajudaStrip.Image = ((System.Drawing.Image)(resources.GetObject("ajudaStrip.Image")));
             this.ajudaStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ajudaStrip.Name = "ajudaStrip";
-            this.ajudaStrip.Size = new System.Drawing.Size(51, 22);
+            this.ajudaStrip.Size = new System.Drawing.Size(62, 24);
             this.ajudaStrip.Text = "&Ajuda";
             // 
             // buscaSeparator1
             // 
             this.buscaSeparator1.Name = "buscaSeparator1";
-            this.buscaSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.buscaSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // buscaExibir
             // 
@@ -133,84 +138,144 @@
             this.numero,
             this.tipo,
             this.assentos});
-            this.buscaExibir.Location = new System.Drawing.Point(12, 124);
+            this.buscaExibir.Location = new System.Drawing.Point(348, 31);
+            this.buscaExibir.Margin = new System.Windows.Forms.Padding(4);
             this.buscaExibir.MultiSelect = false;
             this.buscaExibir.Name = "buscaExibir";
             this.buscaExibir.ReadOnly = true;
+            this.buscaExibir.RowHeadersWidth = 51;
             this.buscaExibir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.buscaExibir.Size = new System.Drawing.Size(793, 502);
+            this.buscaExibir.Size = new System.Drawing.Size(1112, 741);
             this.buscaExibir.TabIndex = 1;
             // 
             // numero
             // 
             this.numero.HeaderText = "Número da Sala";
+            this.numero.MinimumWidth = 6;
             this.numero.Name = "numero";
             this.numero.ReadOnly = true;
             // 
             // tipo
             // 
             this.tipo.HeaderText = "Tipo";
+            this.tipo.MinimumWidth = 6;
             this.tipo.Name = "tipo";
             this.tipo.ReadOnly = true;
             // 
             // assentos
             // 
             this.assentos.HeaderText = "Número de Assentos";
+            this.assentos.MinimumWidth = 6;
             this.assentos.Name = "assentos";
             this.assentos.ReadOnly = true;
             // 
             // adicionaSala
             // 
-            this.adicionaSala.Location = new System.Drawing.Point(12, 54);
+            this.adicionaSala.BackColor = System.Drawing.Color.PowderBlue;
+            this.adicionaSala.FlatAppearance.BorderSize = 0;
+            this.adicionaSala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adicionaSala.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adicionaSala.Image = ((System.Drawing.Image)(resources.GetObject("adicionaSala.Image")));
+            this.adicionaSala.Location = new System.Drawing.Point(16, 514);
+            this.adicionaSala.Margin = new System.Windows.Forms.Padding(4);
             this.adicionaSala.Name = "adicionaSala";
-            this.adicionaSala.Size = new System.Drawing.Size(75, 64);
+            this.adicionaSala.Size = new System.Drawing.Size(298, 79);
             this.adicionaSala.TabIndex = 2;
             this.adicionaSala.Text = "Adicionar";
-            this.adicionaSala.UseVisualStyleBackColor = true;
+            this.adicionaSala.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.adicionaSala.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.adicionaSala.UseVisualStyleBackColor = false;
             this.adicionaSala.Click += new System.EventHandler(this.adicionaSala_Click);
             // 
             // removeSala
             // 
-            this.removeSala.Location = new System.Drawing.Point(255, 54);
+            this.removeSala.BackColor = System.Drawing.Color.PowderBlue;
+            this.removeSala.FlatAppearance.BorderSize = 0;
+            this.removeSala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removeSala.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeSala.Image = ((System.Drawing.Image)(resources.GetObject("removeSala.Image")));
+            this.removeSala.Location = new System.Drawing.Point(16, 621);
+            this.removeSala.Margin = new System.Windows.Forms.Padding(4);
             this.removeSala.Name = "removeSala";
-            this.removeSala.Size = new System.Drawing.Size(75, 64);
+            this.removeSala.Size = new System.Drawing.Size(298, 79);
             this.removeSala.TabIndex = 3;
             this.removeSala.Text = "Remover";
-            this.removeSala.UseVisualStyleBackColor = true;
+            this.removeSala.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.removeSala.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.removeSala.UseVisualStyleBackColor = false;
             this.removeSala.Click += new System.EventHandler(this.removeSala_Click);
             // 
             // atualizaBtn
             // 
-            this.atualizaBtn.Location = new System.Drawing.Point(174, 54);
+            this.atualizaBtn.BackColor = System.Drawing.Color.PowderBlue;
+            this.atualizaBtn.FlatAppearance.BorderSize = 0;
+            this.atualizaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.atualizaBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.atualizaBtn.Image = ((System.Drawing.Image)(resources.GetObject("atualizaBtn.Image")));
+            this.atualizaBtn.Location = new System.Drawing.Point(16, 411);
+            this.atualizaBtn.Margin = new System.Windows.Forms.Padding(4);
             this.atualizaBtn.Name = "atualizaBtn";
-            this.atualizaBtn.Size = new System.Drawing.Size(75, 64);
+            this.atualizaBtn.Size = new System.Drawing.Size(298, 79);
             this.atualizaBtn.TabIndex = 4;
             this.atualizaBtn.Text = "Atualizar";
-            this.atualizaBtn.UseVisualStyleBackColor = true;
+            this.atualizaBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.atualizaBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.atualizaBtn.UseVisualStyleBackColor = false;
             this.atualizaBtn.Click += new System.EventHandler(this.atualizaBtn_Click);
             // 
             // alteraSala
             // 
-            this.alteraSala.Location = new System.Drawing.Point(93, 54);
+            this.alteraSala.BackColor = System.Drawing.Color.PowderBlue;
+            this.alteraSala.FlatAppearance.BorderSize = 0;
+            this.alteraSala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.alteraSala.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alteraSala.Image = ((System.Drawing.Image)(resources.GetObject("alteraSala.Image")));
+            this.alteraSala.Location = new System.Drawing.Point(16, 308);
+            this.alteraSala.Margin = new System.Windows.Forms.Padding(4);
             this.alteraSala.Name = "alteraSala";
-            this.alteraSala.Size = new System.Drawing.Size(75, 64);
+            this.alteraSala.Size = new System.Drawing.Size(298, 79);
             this.alteraSala.TabIndex = 5;
             this.alteraSala.Text = "Alterar";
-            this.alteraSala.UseVisualStyleBackColor = true;
+            this.alteraSala.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.alteraSala.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.alteraSala.UseVisualStyleBackColor = false;
             this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(0, 21);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(331, 767);
+            this.panel2.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(18, -21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(298, 287);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // gerenciaSala
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 638);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1473, 785);
             this.Controls.Add(this.alteraSala);
             this.Controls.Add(this.atualizaBtn);
             this.Controls.Add(this.removeSala);
             this.Controls.Add(this.adicionaSala);
             this.Controls.Add(this.buscaExibir);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "gerenciaSala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -219,6 +284,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +309,7 @@
         private System.Windows.Forms.ToolStripMenuItem sairStrip;
         private System.Windows.Forms.ToolStripMenuItem adicionarStrip;
         private System.Windows.Forms.ToolStripMenuItem alterarStrip;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

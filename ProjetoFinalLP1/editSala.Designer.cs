@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(editSala));
             this.salaNmr = new System.Windows.Forms.NumericUpDown();
             this.nmrSalaTxt = new System.Windows.Forms.Label();
             this.tipoSalaTxt = new System.Windows.Forms.Label();
@@ -43,46 +44,56 @@
             // salaNmr
             // 
             this.salaNmr.Enabled = false;
-            this.salaNmr.Location = new System.Drawing.Point(12, 29);
+            this.salaNmr.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salaNmr.Location = new System.Drawing.Point(52, 40);
+            this.salaNmr.Margin = new System.Windows.Forms.Padding(4);
             this.salaNmr.Name = "salaNmr";
-            this.salaNmr.Size = new System.Drawing.Size(120, 20);
+            this.salaNmr.Size = new System.Drawing.Size(160, 25);
             this.salaNmr.TabIndex = 0;
             this.salaNmr.ValueChanged += new System.EventHandler(this.salaNmr_ValueChanged);
             // 
             // nmrSalaTxt
             // 
             this.nmrSalaTxt.AutoSize = true;
-            this.nmrSalaTxt.Location = new System.Drawing.Point(9, 13);
+            this.nmrSalaTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmrSalaTxt.Location = new System.Drawing.Point(50, 20);
+            this.nmrSalaTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nmrSalaTxt.Name = "nmrSalaTxt";
-            this.nmrSalaTxt.Size = new System.Drawing.Size(83, 13);
+            this.nmrSalaTxt.Size = new System.Drawing.Size(106, 19);
             this.nmrSalaTxt.TabIndex = 1;
             this.nmrSalaTxt.Text = "Número da Sala";
             // 
             // tipoSalaTxt
             // 
             this.tipoSalaTxt.AutoSize = true;
-            this.tipoSalaTxt.Location = new System.Drawing.Point(9, 52);
+            this.tipoSalaTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipoSalaTxt.Location = new System.Drawing.Point(50, 66);
+            this.tipoSalaTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tipoSalaTxt.Name = "tipoSalaTxt";
-            this.tipoSalaTxt.Size = new System.Drawing.Size(28, 13);
+            this.tipoSalaTxt.Size = new System.Drawing.Size(35, 19);
             this.tipoSalaTxt.TabIndex = 2;
             this.tipoSalaTxt.Text = "Tipo";
             // 
             // salaTipo
             // 
             this.salaTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.salaTipo.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salaTipo.FormattingEnabled = true;
             this.salaTipo.Items.AddRange(new object[] {
             "Normal",
             "3D",
             "VIP"});
-            this.salaTipo.Location = new System.Drawing.Point(12, 68);
+            this.salaTipo.Location = new System.Drawing.Point(52, 85);
+            this.salaTipo.Margin = new System.Windows.Forms.Padding(4);
             this.salaTipo.Name = "salaTipo";
-            this.salaTipo.Size = new System.Drawing.Size(120, 21);
+            this.salaTipo.Size = new System.Drawing.Size(160, 25);
             this.salaTipo.TabIndex = 3;
             // 
             // numeroAssentos
             // 
-            this.numeroAssentos.Location = new System.Drawing.Point(12, 108);
+            this.numeroAssentos.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numeroAssentos.Location = new System.Drawing.Point(52, 133);
+            this.numeroAssentos.Margin = new System.Windows.Forms.Padding(4);
             this.numeroAssentos.Maximum = new decimal(new int[] {
             50,
             0,
@@ -94,7 +105,7 @@
             0,
             0});
             this.numeroAssentos.Name = "numeroAssentos";
-            this.numeroAssentos.Size = new System.Drawing.Size(120, 20);
+            this.numeroAssentos.Size = new System.Drawing.Size(160, 25);
             this.numeroAssentos.TabIndex = 4;
             this.numeroAssentos.Value = new decimal(new int[] {
             1,
@@ -105,46 +116,63 @@
             // assentosTxt
             // 
             this.assentosTxt.AutoSize = true;
-            this.assentosTxt.Location = new System.Drawing.Point(9, 92);
+            this.assentosTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assentosTxt.Location = new System.Drawing.Point(50, 113);
+            this.assentosTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.assentosTxt.Name = "assentosTxt";
-            this.assentosTxt.Size = new System.Drawing.Size(105, 13);
+            this.assentosTxt.Size = new System.Drawing.Size(137, 19);
             this.assentosTxt.TabIndex = 5;
             this.assentosTxt.Text = "Número de Assentos";
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(12, 134);
+            this.btnSalvar.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.FlatAppearance.BorderSize = 0;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(52, 165);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(120, 35);
+            this.btnSalvar.Size = new System.Drawing.Size(160, 43);
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(12, 177);
+            this.btnCancelar.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(52, 218);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(120, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(160, 43);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // editSala
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(150, 224);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(274, 276);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.assentosTxt);
             this.Controls.Add(this.numeroAssentos);
             this.Controls.Add(this.salaTipo);
-            this.Controls.Add(this.tipoSalaTxt);
-            this.Controls.Add(this.nmrSalaTxt);
             this.Controls.Add(this.salaNmr);
+            this.Controls.Add(this.nmrSalaTxt);
+            this.Controls.Add(this.tipoSalaTxt);
+            this.Controls.Add(this.assentosTxt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "editSala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

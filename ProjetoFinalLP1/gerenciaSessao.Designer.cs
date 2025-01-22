@@ -46,39 +46,44 @@
             this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ingressos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adicionaSala = new System.Windows.Forms.Button();
-            this.removeSala = new System.Windows.Forms.Button();
-            this.atualizaBtn = new System.Windows.Forms.Button();
-            this.alteraSala = new System.Windows.Forms.Button();
             this.dadoFilme = new System.Windows.Forms.Label();
             this.painelFilme = new System.Windows.Forms.Panel();
             this.painel = new System.Windows.Forms.Panel();
             this.codeValor = new System.Windows.Forms.TextBox();
-            this.codeTxt = new System.Windows.Forms.Label();
             this.horarioValor = new System.Windows.Forms.TextBox();
-            this.horarioTxt = new System.Windows.Forms.Label();
             this.diaValor = new System.Windows.Forms.TextBox();
-            this.diaTxt = new System.Windows.Forms.Label();
             this.valorValor = new System.Windows.Forms.TextBox();
-            this.valortxt = new System.Windows.Forms.Label();
             this.ingressosValor = new System.Windows.Forms.TextBox();
-            this.ingressosTxt = new System.Windows.Forms.Label();
             this.tipoValor = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.nomeValor = new System.Windows.Forms.TextBox();
             this.salaValor = new System.Windows.Forms.TextBox();
-            this.nomeTxt = new System.Windows.Forms.Label();
+            this.codeTxt = new System.Windows.Forms.Label();
             this.salaTxt = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nomeTxt = new System.Windows.Forms.Label();
+            this.ingressosTxt = new System.Windows.Forms.Label();
+            this.valortxt = new System.Windows.Forms.Label();
+            this.diaTxt = new System.Windows.Forms.Label();
+            this.horarioTxt = new System.Windows.Forms.Label();
             this.banner = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.alteraSala = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.adicionaSala = new System.Windows.Forms.Button();
+            this.removeSala = new System.Windows.Forms.Button();
+            this.atualizaBtn = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buscaExibir)).BeginInit();
             this.painelFilme.SuspendLayout();
             this.painel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.banner)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoStrip,
             this.ferramentasStrip,
@@ -86,7 +91,7 @@
             this.buscaSeparator1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1105, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1473, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -98,13 +103,13 @@
             this.arquivoStrip.Image = ((System.Drawing.Image)(resources.GetObject("arquivoStrip.Image")));
             this.arquivoStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.arquivoStrip.Name = "arquivoStrip";
-            this.arquivoStrip.Size = new System.Drawing.Size(62, 22);
+            this.arquivoStrip.Size = new System.Drawing.Size(75, 24);
             this.arquivoStrip.Text = "&Arquivo";
             // 
             // sairStrip
             // 
             this.sairStrip.Name = "sairStrip";
-            this.sairStrip.Size = new System.Drawing.Size(93, 22);
+            this.sairStrip.Size = new System.Drawing.Size(117, 26);
             this.sairStrip.Text = "&Sair";
             this.sairStrip.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -117,20 +122,20 @@
             this.ferramentasStrip.Image = ((System.Drawing.Image)(resources.GetObject("ferramentasStrip.Image")));
             this.ferramentasStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ferramentasStrip.Name = "ferramentasStrip";
-            this.ferramentasStrip.Size = new System.Drawing.Size(85, 22);
+            this.ferramentasStrip.Size = new System.Drawing.Size(104, 24);
             this.ferramentasStrip.Text = "&Ferramentas";
             // 
             // adicionarStrip
             // 
             this.adicionarStrip.Name = "adicionarStrip";
-            this.adicionarStrip.Size = new System.Drawing.Size(125, 22);
+            this.adicionarStrip.Size = new System.Drawing.Size(156, 26);
             this.adicionarStrip.Text = "&Adicionar";
             this.adicionarStrip.Click += new System.EventHandler(this.adicionarStrip_Click);
             // 
             // alterarStrip
             // 
             this.alterarStrip.Name = "alterarStrip";
-            this.alterarStrip.Size = new System.Drawing.Size(125, 22);
+            this.alterarStrip.Size = new System.Drawing.Size(156, 26);
             this.alterarStrip.Text = "&Alterar";
             this.alterarStrip.Click += new System.EventHandler(this.alterarStrip_Click);
             // 
@@ -140,13 +145,13 @@
             this.ajudaStrip.Image = ((System.Drawing.Image)(resources.GetObject("ajudaStrip.Image")));
             this.ajudaStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ajudaStrip.Name = "ajudaStrip";
-            this.ajudaStrip.Size = new System.Drawing.Size(51, 22);
+            this.ajudaStrip.Size = new System.Drawing.Size(62, 24);
             this.ajudaStrip.Text = "&Ajuda";
             // 
             // buscaSeparator1
             // 
             this.buscaSeparator1.Name = "buscaSeparator1";
-            this.buscaSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.buscaSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // buscaExibir
             // 
@@ -166,109 +171,81 @@
             this.horario,
             this.ingressos,
             this.preço});
-            this.buscaExibir.Location = new System.Drawing.Point(12, 124);
+            this.buscaExibir.Location = new System.Drawing.Point(353, 37);
+            this.buscaExibir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buscaExibir.MultiSelect = false;
             this.buscaExibir.Name = "buscaExibir";
             this.buscaExibir.ReadOnly = true;
+            this.buscaExibir.RowHeadersWidth = 51;
             this.buscaExibir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.buscaExibir.Size = new System.Drawing.Size(793, 502);
+            this.buscaExibir.Size = new System.Drawing.Size(749, 737);
             this.buscaExibir.TabIndex = 1;
             this.buscaExibir.SelectionChanged += new System.EventHandler(this.buscaExibir_SelectionChanged);
             // 
             // codigo
             // 
             this.codigo.HeaderText = "Código da Sessão";
+            this.codigo.MinimumWidth = 6;
             this.codigo.Name = "codigo";
             this.codigo.ReadOnly = true;
             // 
             // filme
             // 
             this.filme.HeaderText = "Nome do Filme";
+            this.filme.MinimumWidth = 6;
             this.filme.Name = "filme";
             this.filme.ReadOnly = true;
             // 
             // sala
             // 
             this.sala.HeaderText = "Sala";
+            this.sala.MinimumWidth = 6;
             this.sala.Name = "sala";
             this.sala.ReadOnly = true;
             // 
             // tipoSala
             // 
             this.tipoSala.HeaderText = "Tipo da Sala";
+            this.tipoSala.MinimumWidth = 6;
             this.tipoSala.Name = "tipoSala";
             this.tipoSala.ReadOnly = true;
             // 
             // dia
             // 
             this.dia.HeaderText = "Dia";
+            this.dia.MinimumWidth = 6;
             this.dia.Name = "dia";
             this.dia.ReadOnly = true;
             // 
             // horario
             // 
             this.horario.HeaderText = "Horário";
+            this.horario.MinimumWidth = 6;
             this.horario.Name = "horario";
             this.horario.ReadOnly = true;
             // 
             // ingressos
             // 
             this.ingressos.HeaderText = "Ingressos Disponíveis";
+            this.ingressos.MinimumWidth = 6;
             this.ingressos.Name = "ingressos";
             this.ingressos.ReadOnly = true;
             // 
             // preço
             // 
             this.preço.HeaderText = "Valor";
+            this.preço.MinimumWidth = 6;
             this.preço.Name = "preço";
             this.preço.ReadOnly = true;
-            // 
-            // adicionaSala
-            // 
-            this.adicionaSala.Location = new System.Drawing.Point(12, 54);
-            this.adicionaSala.Name = "adicionaSala";
-            this.adicionaSala.Size = new System.Drawing.Size(75, 64);
-            this.adicionaSala.TabIndex = 2;
-            this.adicionaSala.Text = "Adicionar";
-            this.adicionaSala.UseVisualStyleBackColor = true;
-            this.adicionaSala.Click += new System.EventHandler(this.adicionaSala_Click);
-            // 
-            // removeSala
-            // 
-            this.removeSala.Location = new System.Drawing.Point(255, 54);
-            this.removeSala.Name = "removeSala";
-            this.removeSala.Size = new System.Drawing.Size(75, 64);
-            this.removeSala.TabIndex = 3;
-            this.removeSala.Text = "Remover";
-            this.removeSala.UseVisualStyleBackColor = true;
-            this.removeSala.Click += new System.EventHandler(this.removeSala_Click);
-            // 
-            // atualizaBtn
-            // 
-            this.atualizaBtn.Location = new System.Drawing.Point(174, 54);
-            this.atualizaBtn.Name = "atualizaBtn";
-            this.atualizaBtn.Size = new System.Drawing.Size(75, 64);
-            this.atualizaBtn.TabIndex = 4;
-            this.atualizaBtn.Text = "Atualizar";
-            this.atualizaBtn.UseVisualStyleBackColor = true;
-            this.atualizaBtn.Click += new System.EventHandler(this.atualizaBtn_Click);
-            // 
-            // alteraSala
-            // 
-            this.alteraSala.Location = new System.Drawing.Point(93, 54);
-            this.alteraSala.Name = "alteraSala";
-            this.alteraSala.Size = new System.Drawing.Size(75, 64);
-            this.alteraSala.TabIndex = 5;
-            this.alteraSala.Text = "Alterar";
-            this.alteraSala.UseVisualStyleBackColor = true;
-            this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
             // 
             // dadoFilme
             // 
             this.dadoFilme.AutoSize = true;
-            this.dadoFilme.Location = new System.Drawing.Point(840, 105);
+            this.dadoFilme.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dadoFilme.Location = new System.Drawing.Point(1117, 39);
+            this.dadoFilme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dadoFilme.Name = "dadoFilme";
-            this.dadoFilme.Size = new System.Drawing.Size(92, 13);
+            this.dadoFilme.Size = new System.Drawing.Size(114, 19);
             this.dadoFilme.TabIndex = 9;
             this.dadoFilme.Text = "Dados da sessão:";
             // 
@@ -278,196 +255,333 @@
             this.painelFilme.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.painelFilme.Controls.Add(this.painel);
             this.painelFilme.Controls.Add(this.banner);
-            this.painelFilme.Location = new System.Drawing.Point(840, 124);
+            this.painelFilme.Location = new System.Drawing.Point(1123, 62);
+            this.painelFilme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.painelFilme.Name = "painelFilme";
-            this.painelFilme.Size = new System.Drawing.Size(253, 502);
+            this.painelFilme.Size = new System.Drawing.Size(337, 711);
             this.painelFilme.TabIndex = 8;
             // 
             // painel
             // 
             this.painel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.painel.Controls.Add(this.codeValor);
-            this.painel.Controls.Add(this.codeTxt);
             this.painel.Controls.Add(this.horarioValor);
-            this.painel.Controls.Add(this.horarioTxt);
             this.painel.Controls.Add(this.diaValor);
-            this.painel.Controls.Add(this.diaTxt);
             this.painel.Controls.Add(this.valorValor);
-            this.painel.Controls.Add(this.valortxt);
             this.painel.Controls.Add(this.ingressosValor);
-            this.painel.Controls.Add(this.ingressosTxt);
             this.painel.Controls.Add(this.tipoValor);
-            this.painel.Controls.Add(this.label1);
             this.painel.Controls.Add(this.nomeValor);
             this.painel.Controls.Add(this.salaValor);
-            this.painel.Controls.Add(this.nomeTxt);
+            this.painel.Controls.Add(this.codeTxt);
             this.painel.Controls.Add(this.salaTxt);
-            this.painel.Location = new System.Drawing.Point(25, 239);
+            this.painel.Controls.Add(this.label1);
+            this.painel.Controls.Add(this.nomeTxt);
+            this.painel.Controls.Add(this.ingressosTxt);
+            this.painel.Controls.Add(this.valortxt);
+            this.painel.Controls.Add(this.diaTxt);
+            this.painel.Controls.Add(this.horarioTxt);
+            this.painel.Location = new System.Drawing.Point(36, 409);
+            this.painel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.painel.Name = "painel";
-            this.painel.Size = new System.Drawing.Size(200, 229);
+            this.painel.Size = new System.Drawing.Size(267, 282);
             this.painel.TabIndex = 1;
             // 
             // codeValor
             // 
-            this.codeValor.Location = new System.Drawing.Point(19, 29);
+            this.codeValor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codeValor.Location = new System.Drawing.Point(25, 36);
+            this.codeValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.codeValor.Name = "codeValor";
             this.codeValor.ReadOnly = true;
-            this.codeValor.Size = new System.Drawing.Size(52, 20);
+            this.codeValor.Size = new System.Drawing.Size(68, 25);
             this.codeValor.TabIndex = 17;
-            // 
-            // codeTxt
-            // 
-            this.codeTxt.AutoSize = true;
-            this.codeTxt.Location = new System.Drawing.Point(16, 13);
-            this.codeTxt.Name = "codeTxt";
-            this.codeTxt.Size = new System.Drawing.Size(43, 13);
-            this.codeTxt.TabIndex = 16;
-            this.codeTxt.Text = "Código:";
             // 
             // horarioValor
             // 
-            this.horarioValor.Location = new System.Drawing.Point(102, 189);
+            this.horarioValor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.horarioValor.Location = new System.Drawing.Point(136, 233);
+            this.horarioValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.horarioValor.Name = "horarioValor";
             this.horarioValor.ReadOnly = true;
-            this.horarioValor.Size = new System.Drawing.Size(77, 20);
+            this.horarioValor.Size = new System.Drawing.Size(101, 25);
             this.horarioValor.TabIndex = 15;
-            // 
-            // horarioTxt
-            // 
-            this.horarioTxt.AutoSize = true;
-            this.horarioTxt.Location = new System.Drawing.Point(99, 173);
-            this.horarioTxt.Name = "horarioTxt";
-            this.horarioTxt.Size = new System.Drawing.Size(44, 13);
-            this.horarioTxt.TabIndex = 14;
-            this.horarioTxt.Text = "Horário:";
             // 
             // diaValor
             // 
-            this.diaValor.Location = new System.Drawing.Point(19, 189);
+            this.diaValor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diaValor.Location = new System.Drawing.Point(25, 233);
+            this.diaValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.diaValor.Name = "diaValor";
             this.diaValor.ReadOnly = true;
-            this.diaValor.Size = new System.Drawing.Size(77, 20);
+            this.diaValor.Size = new System.Drawing.Size(101, 25);
             this.diaValor.TabIndex = 13;
-            // 
-            // diaTxt
-            // 
-            this.diaTxt.AutoSize = true;
-            this.diaTxt.Location = new System.Drawing.Point(16, 173);
-            this.diaTxt.Name = "diaTxt";
-            this.diaTxt.Size = new System.Drawing.Size(26, 13);
-            this.diaTxt.TabIndex = 12;
-            this.diaTxt.Text = "Dia:";
             // 
             // valorValor
             // 
-            this.valorValor.Location = new System.Drawing.Point(102, 150);
+            this.valorValor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valorValor.Location = new System.Drawing.Point(136, 185);
+            this.valorValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.valorValor.Name = "valorValor";
             this.valorValor.ReadOnly = true;
-            this.valorValor.Size = new System.Drawing.Size(77, 20);
+            this.valorValor.Size = new System.Drawing.Size(101, 25);
             this.valorValor.TabIndex = 11;
-            // 
-            // valortxt
-            // 
-            this.valortxt.AutoSize = true;
-            this.valortxt.Location = new System.Drawing.Point(99, 134);
-            this.valortxt.Name = "valortxt";
-            this.valortxt.Size = new System.Drawing.Size(34, 13);
-            this.valortxt.TabIndex = 10;
-            this.valortxt.Text = "Valor:";
             // 
             // ingressosValor
             // 
-            this.ingressosValor.Location = new System.Drawing.Point(19, 150);
+            this.ingressosValor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ingressosValor.Location = new System.Drawing.Point(25, 185);
+            this.ingressosValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ingressosValor.Name = "ingressosValor";
             this.ingressosValor.ReadOnly = true;
-            this.ingressosValor.Size = new System.Drawing.Size(77, 20);
+            this.ingressosValor.Size = new System.Drawing.Size(101, 25);
             this.ingressosValor.TabIndex = 9;
-            // 
-            // ingressosTxt
-            // 
-            this.ingressosTxt.AutoSize = true;
-            this.ingressosTxt.Location = new System.Drawing.Point(16, 134);
-            this.ingressosTxt.Name = "ingressosTxt";
-            this.ingressosTxt.Size = new System.Drawing.Size(55, 13);
-            this.ingressosTxt.TabIndex = 8;
-            this.ingressosTxt.Text = "Ingressos:";
             // 
             // tipoValor
             // 
-            this.tipoValor.Location = new System.Drawing.Point(102, 68);
+            this.tipoValor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipoValor.Location = new System.Drawing.Point(136, 84);
+            this.tipoValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tipoValor.Name = "tipoValor";
             this.tipoValor.ReadOnly = true;
-            this.tipoValor.Size = new System.Drawing.Size(77, 20);
+            this.tipoValor.Size = new System.Drawing.Size(101, 25);
             this.tipoValor.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(99, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Tipo:";
             // 
             // nomeValor
             // 
-            this.nomeValor.Location = new System.Drawing.Point(19, 111);
+            this.nomeValor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeValor.Location = new System.Drawing.Point(25, 137);
+            this.nomeValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nomeValor.Name = "nomeValor";
             this.nomeValor.ReadOnly = true;
-            this.nomeValor.Size = new System.Drawing.Size(160, 20);
+            this.nomeValor.Size = new System.Drawing.Size(212, 25);
             this.nomeValor.TabIndex = 4;
             // 
             // salaValor
             // 
-            this.salaValor.Location = new System.Drawing.Point(19, 68);
+            this.salaValor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salaValor.Location = new System.Drawing.Point(25, 84);
+            this.salaValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salaValor.Name = "salaValor";
             this.salaValor.ReadOnly = true;
-            this.salaValor.Size = new System.Drawing.Size(77, 20);
+            this.salaValor.Size = new System.Drawing.Size(101, 25);
             this.salaValor.TabIndex = 3;
             // 
-            // nomeTxt
+            // codeTxt
             // 
-            this.nomeTxt.AutoSize = true;
-            this.nomeTxt.Location = new System.Drawing.Point(16, 95);
-            this.nomeTxt.Name = "nomeTxt";
-            this.nomeTxt.Size = new System.Drawing.Size(80, 13);
-            this.nomeTxt.TabIndex = 1;
-            this.nomeTxt.Text = "Nome do Filme:";
+            this.codeTxt.AutoSize = true;
+            this.codeTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codeTxt.Location = new System.Drawing.Point(21, 15);
+            this.codeTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.codeTxt.Name = "codeTxt";
+            this.codeTxt.Size = new System.Drawing.Size(56, 19);
+            this.codeTxt.TabIndex = 16;
+            this.codeTxt.Text = "Código:";
             // 
             // salaTxt
             // 
             this.salaTxt.AutoSize = true;
-            this.salaTxt.Location = new System.Drawing.Point(16, 52);
+            this.salaTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salaTxt.Location = new System.Drawing.Point(21, 63);
+            this.salaTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.salaTxt.Name = "salaTxt";
-            this.salaTxt.Size = new System.Drawing.Size(31, 13);
+            this.salaTxt.Size = new System.Drawing.Size(36, 19);
             this.salaTxt.TabIndex = 0;
             this.salaTxt.Text = "Sala:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(133, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 19);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Tipo:";
+            // 
+            // nomeTxt
+            // 
+            this.nomeTxt.AutoSize = true;
+            this.nomeTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeTxt.Location = new System.Drawing.Point(21, 116);
+            this.nomeTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nomeTxt.Name = "nomeTxt";
+            this.nomeTxt.Size = new System.Drawing.Size(105, 19);
+            this.nomeTxt.TabIndex = 1;
+            this.nomeTxt.Text = "Nome do Filme:";
+            this.nomeTxt.Click += new System.EventHandler(this.nomeTxt_Click);
+            // 
+            // ingressosTxt
+            // 
+            this.ingressosTxt.AutoSize = true;
+            this.ingressosTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ingressosTxt.Location = new System.Drawing.Point(21, 164);
+            this.ingressosTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ingressosTxt.Name = "ingressosTxt";
+            this.ingressosTxt.Size = new System.Drawing.Size(70, 19);
+            this.ingressosTxt.TabIndex = 8;
+            this.ingressosTxt.Text = "Ingressos:";
+            // 
+            // valortxt
+            // 
+            this.valortxt.AutoSize = true;
+            this.valortxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valortxt.Location = new System.Drawing.Point(133, 164);
+            this.valortxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.valortxt.Name = "valortxt";
+            this.valortxt.Size = new System.Drawing.Size(43, 19);
+            this.valortxt.TabIndex = 10;
+            this.valortxt.Text = "Valor:";
+            // 
+            // diaTxt
+            // 
+            this.diaTxt.AutoSize = true;
+            this.diaTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diaTxt.Location = new System.Drawing.Point(21, 212);
+            this.diaTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.diaTxt.Name = "diaTxt";
+            this.diaTxt.Size = new System.Drawing.Size(32, 19);
+            this.diaTxt.TabIndex = 12;
+            this.diaTxt.Text = "Dia:";
+            // 
+            // horarioTxt
+            // 
+            this.horarioTxt.AutoSize = true;
+            this.horarioTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.horarioTxt.Location = new System.Drawing.Point(133, 212);
+            this.horarioTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.horarioTxt.Name = "horarioTxt";
+            this.horarioTxt.Size = new System.Drawing.Size(58, 19);
+            this.horarioTxt.TabIndex = 14;
+            this.horarioTxt.Text = "Horário:";
             // 
             // banner
             // 
             this.banner.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.banner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.banner.Location = new System.Drawing.Point(44, 10);
+            this.banner.Location = new System.Drawing.Point(36, 18);
+            this.banner.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.banner.Name = "banner";
-            this.banner.Size = new System.Drawing.Size(160, 201);
+            this.banner.Size = new System.Drawing.Size(267, 361);
             this.banner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.banner.TabIndex = 0;
             this.banner.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.alteraSala);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.adicionaSala);
+            this.panel2.Controls.Add(this.removeSala);
+            this.panel2.Controls.Add(this.atualizaBtn);
+            this.panel2.Location = new System.Drawing.Point(0, 27);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(331, 767);
+            this.panel2.TabIndex = 10;
+            // 
+            // alteraSala
+            // 
+            this.alteraSala.BackColor = System.Drawing.Color.PowderBlue;
+            this.alteraSala.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alteraSala.FlatAppearance.BorderSize = 0;
+            this.alteraSala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.alteraSala.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alteraSala.Image = ((System.Drawing.Image)(resources.GetObject("alteraSala.Image")));
+            this.alteraSala.Location = new System.Drawing.Point(25, 286);
+            this.alteraSala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.alteraSala.Name = "alteraSala";
+            this.alteraSala.Size = new System.Drawing.Size(288, 79);
+            this.alteraSala.TabIndex = 5;
+            this.alteraSala.Text = "Alterar";
+            this.alteraSala.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.alteraSala.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.alteraSala.UseVisualStyleBackColor = false;
+            this.alteraSala.Click += new System.EventHandler(this.alteraSala_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(19, -21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(299, 287);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // adicionaSala
+            // 
+            this.adicionaSala.BackColor = System.Drawing.Color.PowderBlue;
+            this.adicionaSala.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.adicionaSala.FlatAppearance.BorderSize = 0;
+            this.adicionaSala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adicionaSala.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adicionaSala.Image = ((System.Drawing.Image)(resources.GetObject("adicionaSala.Image")));
+            this.adicionaSala.Location = new System.Drawing.Point(25, 496);
+            this.adicionaSala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.adicionaSala.Name = "adicionaSala";
+            this.adicionaSala.Size = new System.Drawing.Size(288, 79);
+            this.adicionaSala.TabIndex = 2;
+            this.adicionaSala.Text = "Adicionar";
+            this.adicionaSala.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.adicionaSala.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.adicionaSala.UseVisualStyleBackColor = false;
+            this.adicionaSala.Click += new System.EventHandler(this.adicionaSala_Click);
+            // 
+            // removeSala
+            // 
+            this.removeSala.BackColor = System.Drawing.Color.PowderBlue;
+            this.removeSala.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.removeSala.FlatAppearance.BorderSize = 0;
+            this.removeSala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removeSala.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeSala.Image = ((System.Drawing.Image)(resources.GetObject("removeSala.Image")));
+            this.removeSala.Location = new System.Drawing.Point(25, 606);
+            this.removeSala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.removeSala.Name = "removeSala";
+            this.removeSala.Size = new System.Drawing.Size(288, 79);
+            this.removeSala.TabIndex = 3;
+            this.removeSala.Text = "Remover";
+            this.removeSala.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.removeSala.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.removeSala.UseVisualStyleBackColor = false;
+            this.removeSala.Click += new System.EventHandler(this.removeSala_Click);
+            // 
+            // atualizaBtn
+            // 
+            this.atualizaBtn.BackColor = System.Drawing.Color.PowderBlue;
+            this.atualizaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.atualizaBtn.FlatAppearance.BorderSize = 0;
+            this.atualizaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.atualizaBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.atualizaBtn.Image = ((System.Drawing.Image)(resources.GetObject("atualizaBtn.Image")));
+            this.atualizaBtn.Location = new System.Drawing.Point(25, 393);
+            this.atualizaBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.atualizaBtn.Name = "atualizaBtn";
+            this.atualizaBtn.Size = new System.Drawing.Size(288, 79);
+            this.atualizaBtn.TabIndex = 4;
+            this.atualizaBtn.Text = "Atualizar";
+            this.atualizaBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.atualizaBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.atualizaBtn.UseVisualStyleBackColor = false;
+            this.atualizaBtn.Click += new System.EventHandler(this.atualizaBtn_Click);
+            // 
             // gerenciaSessao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 638);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1473, 785);
             this.Controls.Add(this.dadoFilme);
             this.Controls.Add(this.painelFilme);
-            this.Controls.Add(this.alteraSala);
-            this.Controls.Add(this.atualizaBtn);
-            this.Controls.Add(this.removeSala);
-            this.Controls.Add(this.adicionaSala);
             this.Controls.Add(this.buscaExibir);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "gerenciaSessao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -480,6 +594,8 @@
             this.painel.ResumeLayout(false);
             this.painel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.banner)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,10 +609,6 @@
         private System.Windows.Forms.ToolStripDropDownButton arquivoStrip;
         private System.Windows.Forms.ToolStripDropDownButton ferramentasStrip;
         private System.Windows.Forms.DataGridView buscaExibir;
-        private System.Windows.Forms.Button adicionaSala;
-        private System.Windows.Forms.Button removeSala;
-        private System.Windows.Forms.Button atualizaBtn;
-        private System.Windows.Forms.Button alteraSala;
         private System.Windows.Forms.ToolStripMenuItem sairStrip;
         private System.Windows.Forms.ToolStripMenuItem adicionarStrip;
         private System.Windows.Forms.ToolStripMenuItem alterarStrip;
@@ -528,5 +640,11 @@
         private System.Windows.Forms.Label valortxt;
         private System.Windows.Forms.TextBox ingressosValor;
         private System.Windows.Forms.Label ingressosTxt;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button adicionaSala;
+        private System.Windows.Forms.Button alteraSala;
+        private System.Windows.Forms.Button removeSala;
+        private System.Windows.Forms.Button atualizaBtn;
     }
 }

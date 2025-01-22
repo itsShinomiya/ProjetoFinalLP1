@@ -278,5 +278,9 @@ namespace ProjetoFinalLP1
             }
         }
 
+        private void nomeTxt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
