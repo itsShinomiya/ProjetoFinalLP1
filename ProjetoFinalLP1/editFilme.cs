@@ -146,6 +146,26 @@ namespace ProjetoFinalLP1
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(filmeNmr.Text))
+            {
+                MessageBox.Show("O campo 'Filme' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(filmeNomeValor.Text))
+            {
+                MessageBox.Show("O campo 'Nome' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(descricaoTexto.Text))
+            {
+                MessageBox.Show("O campo 'Descrição' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(bannerImagem.Text))
+            {
+                MessageBox.Show("O campo 'Banner' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string strSQL;
             if (controle == 0)
             {

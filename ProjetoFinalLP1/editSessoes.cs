@@ -219,8 +219,43 @@ namespace ProjetoFinalLP1
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            
-            
+            if (string.IsNullOrWhiteSpace(sessaoNmr.Text))
+            {
+                MessageBox.Show("O campo 'Sessão' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(nomeFilmeValor.Text))
+            {
+                MessageBox.Show("O campo 'Filme' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(numeroSala.Text))
+            {
+                MessageBox.Show("O campo 'Sala' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(salaTipo.Text))
+            {
+                MessageBox.Show("O campo 'Tipo de Sala' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(ingressosQtd.Text))
+            {
+                MessageBox.Show("O campo 'Ingresso' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(valorNumero.Text))
+            {
+                MessageBox.Show("O campo 'Valor' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(horarioValor.Text))
+            {
+                MessageBox.Show("O campo 'Horário' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             Obj_CmdSQL.Parameters.Clear();
 
             try

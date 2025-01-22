@@ -116,13 +116,13 @@ namespace ProjetoFinalLP1
         private void removeSala_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = buscaExibir.SelectedRows[0];
-            string valor = Convert.ToString(selectedRow.Cells["cpf"].Value);
-            DialogResult exc = MessageBox.Show("Deseja realmente excluir esse funcionário?", "Excluir?", MessageBoxButtons.YesNo);
+            string valor = Convert.ToString(selectedRow.Cells["numero"].Value);
+            DialogResult exc = MessageBox.Show("Deseja realmente excluir essa sala?", "Excluir?", MessageBoxButtons.YesNo);
             if (exc == DialogResult.Yes)
             {
                 try
                 {
-                    Obj_CmdSQL.CommandText = "DELETE FROM usuarios WHERE cpf = " + valor;
+                    Obj_CmdSQL.CommandText = "DELETE FROM sala WHERE numero = " + valor;
                     int deletar = Obj_CmdSQL.ExecuteNonQuery();
                     refresh();
                 }

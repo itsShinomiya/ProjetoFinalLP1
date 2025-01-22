@@ -99,6 +99,41 @@ namespace ProjetoFinalLP1
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(nomeValor.Text))
+            {
+                MessageBox.Show("O campo 'Nome' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            cpfValor.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+
+            if (string.IsNullOrWhiteSpace(cpfValor.Text))
+            {
+                MessageBox.Show("O campo 'CPF' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cpfValor.TextMaskFormat = MaskFormat.IncludePromptAndLiterals; // Restaura a máscara
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(tipoValor.Text))
+            {
+                MessageBox.Show("O campo 'Nível' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(usuarioValor.Text))
+            {
+                MessageBox.Show("O campo 'Usuário' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(senhaValor.Text))
+            {
+                MessageBox.Show("O campo 'Senha' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(statusValor.Text))
+            {
+                MessageBox.Show("O campo 'Status' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+
             string strSQL;
             MemoryStream streamFoto = new MemoryStream();
             byte[] rawData;

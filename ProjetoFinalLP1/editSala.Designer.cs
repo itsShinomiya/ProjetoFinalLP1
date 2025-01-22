@@ -62,6 +62,7 @@
             this.nmrSalaTxt.Size = new System.Drawing.Size(106, 19);
             this.nmrSalaTxt.TabIndex = 1;
             this.nmrSalaTxt.Text = "Número da Sala";
+            this.nmrSalaTxt.Click += new System.EventHandler(this.nmrSalaTxt_Click);
             // 
             // tipoSalaTxt
             // 

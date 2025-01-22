@@ -33,6 +33,21 @@ namespace ProjetoFinalLP1
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(salaNmr.Text))
+            {
+                MessageBox.Show("O campo 'Número' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(salaTipo.Text))
+            {
+                MessageBox.Show("O campo 'Tipo' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(numeroAssentos.Text))
+            {
+                MessageBox.Show("O campo 'Número de Assentos' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string tipo = salaTipo.Text.Trim();
 
             if (tipo != "") {
@@ -241,6 +256,11 @@ namespace ProjetoFinalLP1
                
                 Dados.Close();
             }
+        }
+
+        private void nmrSalaTxt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
