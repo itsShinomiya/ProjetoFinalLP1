@@ -5,6 +5,11 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFinalLP1", "ProjetoFinalLP1\ProjetoFinalLP1.csproj", "{A6A11B7B-41B6-4CBD-A16F-A6D1D0ABBBB2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{A6C80E60-8F05-44DA-91E7-6F56A1386653}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\Cls_Validacoes.cs = ..\..\..\..\Downloads\Cls_Validacoes.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C72D4BF5-D66F-444B-85E1-45AE6EE2346F}
 	EndGlobalSection
 EndGlobal

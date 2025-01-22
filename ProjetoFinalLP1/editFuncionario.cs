@@ -112,6 +112,11 @@ namespace ProjetoFinalLP1
                 cpfValor.TextMaskFormat = MaskFormat.IncludePromptAndLiterals; // Restaura a máscara
                 return;
             }
+            if (Cls_Validacoes.ValidaCPF(cpfValor.Text) == false)
+            {
+                MessageBox.Show("CPF inválido", "Inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (string.IsNullOrWhiteSpace(tipoValor.Text))
             {
                 MessageBox.Show("O campo 'Nível' é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
